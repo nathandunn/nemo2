@@ -12,7 +12,7 @@
 <g:if test="${experimentHeader?.id}">
     <div class="nav" role="navigation">
         <ul>
-            <li><g:link class="list" action="list">All  ${entityName}</g:link></li>
+            %{--<li><g:link class="list" action="list">All  ${entityName}</g:link></li>--}%
             <sec:ifAllGranted roles="ROLE_VERIFIED">
                 <li><g:link class="create" action="create" id="${experimentHeader?.id}"><g:message
                         code="default.new.label"

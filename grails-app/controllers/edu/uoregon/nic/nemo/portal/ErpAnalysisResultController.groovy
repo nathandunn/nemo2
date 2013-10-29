@@ -161,9 +161,11 @@ class ErpAnalysisResultController {
         PatternExtractionCondition conditionOfInterest = null
         PatternExtractionCondition baselineCondition = null
 
-        if (erpAnalysisResultInstance.erpPatternExpression) {
-            conditionOfInterest = erpAnalysisResultInstance.erpPatternExpression.conditionOfInterest
-            baselineCondition = erpAnalysisResultInstance.erpPatternExpression.baselineCondition
+        if(experiment?.erpAnalysisResults?.size()==1){
+            if (experiment?.erpAnalysisResults.get(0)?.erpPatternExpression) {
+                conditionOfInterest = experiment?.erpAnalysisResults.get(0).erpPatternExpression.conditionOfInterest
+                baselineCondition = experiment?.erpAnalysisResults.get(0).erpPatternExpression.baselineCondition
+            }
         }
 
         [erpAnalysisResultInstance: new ErpAnalysisResult(params), erpDataPreprocessings: ErpDataPreprocessing.findAllByExperiment(experiment), experimentInstance: experiment

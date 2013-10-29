@@ -19,7 +19,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: erpAnalysisResultInstance, field: 'erpPatternExpression', 'error')} ">
     <label>
-        Associated <g:message code="condition.erpPatternExpression.label" default="ERP Pattern Expression"/>
+        Associated <g:message code="condition.erpPatternExpression.label" default="ERP Pattern Extraction"/>
     </label>
     <g:select name="erpPatternExpression.id" from="${erpPatternExtractions}"
               optionKey="id" optionValue="artifactFileName"

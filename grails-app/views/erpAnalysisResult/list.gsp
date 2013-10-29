@@ -44,10 +44,10 @@
 
             <g:sortableColumn property="artifactFileName" params="[related: related?.relatedLookup]"
                               title="${message(code: 'erpAnalysisResult.identifier.label', default: 'Filename')}"/>
-            <g:sortableColumn property="dependentVariable"
-                              title="${message(code: 'erpAnalysisResult.set.label', default: 'Condition of Interest')}"/>
-            <g:sortableColumn property="independentVariable"
-                              title="${message(code: 'erpAnalysisResult.set.label', default: 'Baseline Condition')}"/>
+            %{--<g:sortableColumn property="dependentVariable"--}%
+                              %{--title="${message(code: 'erpAnalysisResult.set.label', default: 'Condition of Interest')}"/>--}%
+            %{--<g:sortableColumn property="independentVariable"--}%
+                              %{--title="${message(code: 'erpAnalysisResult.set.label', default: 'Baseline Condition')}"/>--}%
             <g:sortableColumn property="analysisMethod"
                               title="${message(code: 'erpAnalysisResult.set.label', default: 'Analysis Method')}"/>
             %{--<g:sortableColumn property="format" params="[related: related?.relatedLookup]"--}%
@@ -75,12 +75,12 @@
                         <div style="color: graytext;">${erpAnalysisResultInstance.artifactFileName} Not uploaded</div>
                     </g:else>
                 </td>
-                <td>
+                %{--<td>--}%
                     %{--<g:renderOntological input="${erpAnalysisResultInstance.dependentVariable}" related="erpAnalysisResult"/>--}%
-                </td>
-                <td>
+                %{--</td>--}%
+                %{--<td>--}%
                     %{--<g:renderOntological input="${erpAnalysisResultInstance.independentVariable}" related="erpAnalysisResult"/>--}%
-                </td>
+                %{--</td>--}%
                 <td>
                     <g:renderOntological input="${erpAnalysisResultInstance.analysisMethod}" related="erpAnalysisResult"/>
                 </td>

@@ -14,7 +14,7 @@
             %{--<th>ID</th>--}%
             %{--<th>Download File</th>--}%
             <th>File</th>
-            <th>Data File Contents</th>
+            <th>File Contents</th>
             <th>Condition of Interest</th>
             <th>Baseline Condition</th>
             <th>Analysis Method</th>
@@ -116,7 +116,7 @@
         <sec:ifAllGranted roles="ROLE_VERIFIED">
             <div class="nav" style="width: auto;">
                 <g:link class="create" action="create" controller="erpAnalysisResult" id="${experimentInstance.id}">
-                    New Data File
+                    New Erp Analysis Result
                 </g:link>
             </div>
         </sec:ifAllGranted>

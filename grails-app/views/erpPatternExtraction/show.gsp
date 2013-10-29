@@ -87,9 +87,9 @@
                       term="NEMO_7752000" ontological="${erpPatternExtractionInstance.baselineCondition}" related="erpPatternExtraction"/>
         <g:tableEntry key="Condition of Interest" number="10.4"
                       term="NEMO_2813000" ontological="${erpPatternExtractionInstance.conditionOfInterest}"  related="erpPatternExtraction"/>
-        <g:tableEntry key="Data file format" number="10.5"
+        <g:tableEntry key="Data format" number="10.5"
                       term="NEMO_1194000" ontological="${erpPatternExtractionInstance.format}" />
-        <g:tableEntry key="Data file contents" number="10.6"
+        <g:tableEntry key="Data contents" number="10.6"
                       term="IAO_0000100" ontological="${erpPatternExtractionInstance.set}"/>
 
     </table>

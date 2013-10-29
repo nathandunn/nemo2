@@ -146,7 +146,7 @@
 
 
 <div class="fieldcontain ${hasErrors(bean: erpAnalysisResultInstance, field: 'dataSet', 'error')}  required">
-    <g:propertyEntry key="Data file contents" number="11.8" term="IAO_0000100" required="true"/>
+    <g:propertyEntry key="Data content" number="11.8" term="IAO_0000100" required="true"/>
     <g:select name="set.id"
               from="${edu.uoregon.nic.nemo.portal.DataSet.findAll("from DataSet ds where url like '%NEMO_3872000' ")}"
               optionKey="id" optionValue="name"

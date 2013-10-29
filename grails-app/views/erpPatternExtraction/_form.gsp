@@ -81,7 +81,7 @@
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: erpPatternExtractionInstance, field: 'dataSet', 'error')} ">
-    <g:propertyEntry key="Data file contents" number="10.6" term="IAO_0000100" required="true"/>
+    <g:propertyEntry key="Data content" number="10.6" term="IAO_0000100" required="true"/>
     <g:select name="set.id"
               from="${edu.uoregon.nic.nemo.portal.DataSet.findAllByNameLike("script%")}"
               optionKey="id" optionValue="name"

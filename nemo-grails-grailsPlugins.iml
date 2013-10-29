@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
-    <facet type="hibernate" name="Hibernate">
-      <configuration>
-        <datasource-map />
-      </configuration>
-    </facet>
     <facet type="web" name="GrailsWeb">
       <configuration>
         <webroots>
           <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/rest-0.7/web-app" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/spring-security-ui-0.2/web-app" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/spring-security-ui-0.2/grails-app/views" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/cached-resources-1.0/web-app" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/cached-resources-1.0/grails-app/views" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/mail-1.0.1/grails-app/views" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/database-migration-1.3.2/grails-app/views" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/cache-headers-1.1.5/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/spring-security-ui-0.2/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/spring-security-ui-0.2/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/jquery-1.7.1/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/jquery-ui-1.8.24/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/mail-1.0.1/grails-app/views" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/cached-resources-1.0/web-app" relative="/" />
+          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/cached-resources-1.0/grails-app/views" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/zipped-resources-1.0/web-app" relative="/" />
           <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/zipped-resources-1.0/grails-app/views" relative="/" />
-          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/jquery-1.7.1/web-app" relative="/" />
         </webroots>
         <sourceRoots />
+      </configuration>
+    </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map />
       </configuration>
     </facet>
   </component>
@@ -108,15 +108,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/grails/dist/grails-2.2.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="grails-2.2.3" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="grails-2.2.3" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gwt-user" level="project" />
@@ -125,10 +116,14 @@
         <CLASSES>
           <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/plugins/gwt-0.9.1/lib" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/postgresql/postgresql/jars/postgresql-9.0-801.jdbc4.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.3.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework/spring-test/jars/spring-test-3.1.0.RELEASE.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-web/jars/spring-security-web-3.0.7.RELEASE.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-core/jars/spring-security-core-3.0.7.RELEASE.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codehaus.groovy.modules.http-builder/http-builder/jars/http-builder-0.5.2.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-io/commons-io/jars/commons-io-2.4.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.quartz-scheduler/quartz/jars/quartz-1.8.4.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/javax.activation/activation/jars/activation-1.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/javax.mail/mail/jars/mail-1.4.3.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/xml-resolver/xml-resolver/jars/xml-resolver-1.2.jar!/" />
@@ -136,22 +131,17 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/net.sourceforge.nekohtml/nekohtml/jars/nekohtml-1.9.9.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/net.sf.ezmorph/ezmorph/jars/ezmorph-1.0.6.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/net.sf.json-lib/json-lib/jars/json-lib-2.3-jdk15.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-web/jars/spring-security-web-3.0.7.RELEASE.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-core/jars/spring-security-core-3.0.7.RELEASE.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.quartz-scheduler/quartz/jars/quartz-1.8.4.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codehaus.groovy.modules.http-builder/http-builder/jars/http-builder-0.5.2.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-io/commons-io/jars/commons-io-2.4.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/junit/junit/jars/junit-4.8.2.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.ant/ant-launcher/jars/ant-launcher-1.7.1.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.ant/ant/jars/ant-1.7.1.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.gmetrics/GMetrics/jars/GMetrics-0.5.jar!/" />
-          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codenarc/CodeNarc/jars/CodeNarc-0.19.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.json/json/jars/json-20090211.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/com.google.gwt/gwt-codeserver/jars/gwt-codeserver-2.5.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/com.google.gwt/gwt-servlet/jars/gwt-servlet-2.5.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/com.google.gwt/gwt-user/jars/gwt-user-2.5.1.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/com.google.gwt/gwt-dev/jars/gwt-dev-2.5.1.jar!/" />
-          <root url="file://$USER_HOME$/.grails/2.2.3/projects/nemo/gwtclasses" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/junit/junit/jars/junit-4.8.2.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.ant/ant-launcher/jars/ant-launcher-1.7.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.apache.ant/ant/jars/ant-1.7.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.gmetrics/GMetrics/jars/GMetrics-0.5.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codenarc/CodeNarc/jars/CodeNarc-0.19.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

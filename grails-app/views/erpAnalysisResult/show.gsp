@@ -166,10 +166,10 @@
         <g:tableEntry key="Statistical Threshold Quality (corrected, uncorrected…)" number="11.6"
                       term="NEMO_6587000" ontological="${erpAnalysisResultInstance.thresholdQuality}"/>
 
-        <g:tableEntry key="Data file format" number="11.7"
+        <g:tableEntry key="Data format" number="11.7"
                       term="NEMO_1194000" ontological="${erpAnalysisResultInstance.format}"/>
 
-        <g:tableEntry key="Data file contents" number="11.8"
+        <g:tableEntry key="Data contents" number="11.8"
                       term="IAO_0000100" ontological="${erpAnalysisResultInstance.set}"/>
         %{--<g:tableEntry key="Artifact File Name" number="11.4"--}%
         %{--term="NEMO_3087000" url="${erpAnalysisResultInstance.dataFormat}"/>--}%

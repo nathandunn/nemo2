@@ -59,7 +59,7 @@
         <sec:ifAllGranted roles="ROLE_VERIFIED">
             <div class="nav" style="width: auto;">
                 <g:link class="create" action="create" controller="erpPatternExtraction" id="${experimentInstance.id}">
-                    New Data File
+                    New Erp Pattern Extraction
                 </g:link>
             </div>
         </sec:ifAllGranted>

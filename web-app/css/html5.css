@@ -1,0 +1,26 @@
+/* line 3, ../../../app/stylesheets/html5.scss */
+article, aside, figure, footer, header,
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 14, ../../../app/stylesheets/html5.scss */
+article, aside, figure, footer, header,
+hgroup, nav, section {
+  display: block;
+}
+
+/* line 16, ../../../app/stylesheets/html5.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}

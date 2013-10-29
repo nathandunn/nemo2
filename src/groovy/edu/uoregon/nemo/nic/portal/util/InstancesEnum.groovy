@@ -1,0 +1,19 @@
+package edu.uoregon.nemo.nic.portal.util
+
+/**
+ */
+public enum InstancesEnum {
+
+NEMO_6713000,
+NEMO_9909000,
+NEMO_3171000,
+NEMO_3056000,
+NEMO_2289000,
+NEMO_6379000,
+NEMO_7015000,
+NEMO_4551000,
+NEMO_2938000,
+NEMO_2978000,
+NEMO_0290000,
+
+}

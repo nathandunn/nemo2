@@ -1,0 +1,12 @@
+package edu.uoregon.nic.nemo.portal
+
+class ResponseModality extends Ontological{
+
+    static hasMany = [
+            responses: Response
+    ]
+
+    static belongsTo = [
+            Response
+    ]
+}

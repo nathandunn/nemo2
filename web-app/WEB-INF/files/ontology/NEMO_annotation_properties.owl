@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >   
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY core "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
+    <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
+    <!ENTITY ontology "http://purl.bioontology.org/NEMO/ontology/" >
+    <!ENTITY NEMO_annot "http://purl.bioontology.org/NEMO/ontology/NEMO_annotation_properties.owl#" >
+    <!ENTITY NEMO_deprecated "http://purl.bioontology.org/NEMO/ontology/NEMO_deprecated.owl#" >  
+]>    	
+    	
+ <rdf:RDF 
+    xmlns="&ontology;NEMO_annotation_properties.owl#"
+ 	xml:base="&ontology;NEMO_annotation_properties.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:core="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
+    xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
+    xmlns:ontology="http://purl.bioontology.org/NEMO/ontology/"
+    xmlns:NEMO_annot="&ontology;NEMO_annotation_properties.owl#"
+    xmlns:NEMO_deprecated="&ontology;NEMO_deprecated.owl#">
+    	  	
+   <owl:Ontology rdf:about="">
+	    <rdfs:label rdf:datatype="&xsd;string">NEMO_annotation_properties</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">NEMO_annotation_properties</pref_label>
+		<comment rdf:datatype="&xsd;string">This file contains OWL Annotation Properties that are used for curation of the NEMO ontology.</comment>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<created_date rdf:datatype="&xsd;string">2009-06-01</created_date>
+		<modified_date rdf:datatype="&xsd;string">2013-08-22</modified_date>
+		<owl:versionInfo rdf:datatype="&xsd;string">v3.00</owl:versionInfo>
+	</owl:Ontology>
+	
+
+	<!--  AnnotationProperty information modified from NIF's OBO_annotation_properties.owl  -->
+
+	<owl:AnnotationProperty rdf:ID="annotation_type">
+		<pref_label rdf:datatype="&xsd;string">annotation_type</pref_label>
+	    <rdfs:label rdf:datatype="&xsd;string">annotation_type</rdfs:label>
+		<definition rdf:datatype="&xsd;string">A category designed to help data processing systems automatically determine how to process a given annotation.</definition>
+		<comment rdf:datatype="&xsd;string">The only valid values for this property are DC or SKOS (core) AnnotationProperty URIs.</comment>
+		<comment rdf:datatype="&xsd;string">The legal cardinality range for annotationType applied to AnnotationProperties = 0...n - i.e., it is neither required, nor is it limited to a cardinality of 1, though it is recommend there be at least one annotationType for each AnnotationProperty, whenever there is an appropriate super-class available.</comment>
+		<comment rdf:datatype="&xsd;string">The current use of this meta-property is to identify types of definitions (nemo_annot:definition) and types of external source ID (dc:identifier) (BB: 2007-08-03).</comment>
+		<comment rdf:datatype="&xsd;string">This is required, since sub-classing AnnotationProperties is not allowed in OWL-DL.  Using this descriptive metadata AnnotationProperties, we can construct a chained code representation of a classification graph for AnnotationProperities very likely to be useful for information systems built to parse and process OWL content.</comment>
+		<definition_source rdf:datatype="&xsd;string">http://ontology.neuinfo.org/NIF/Backend/OBO_annotation_properties.owl#annotationType</definition_source>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+
+	
+
+
+	<!--  Begin NEMO Annotation Property definitions  -->
+
+	<owl:AnnotationProperty rdf:ID="pref_label">
+	    <rdfs:label rdf:datatype="&xsd;string">pref_label</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">pref_label</pref_label>
+		<definition rdf:datatype="&xsd;string">An underscore-delimited, human-readable name.</definition>
+		<comment rdf:datatype="&xsd;string">Same as core:prefLabel. Only one label is allowed per concept. Otherwise, use nemo_annot:synonym.</comment>
+		<comment rdf:datatype="&xsd;string">We are creating a new label for NEMO, which is essentially the same as rdfs:label, so as to keep all annotation properties for NEMO closed.</comment>
+		<comment rdf:datatype="&xsd;string">In order to comply with Protege 4.x display properties and render concepts according to annotations, we may need to duplicate a nemo_annot:label entry with an rdfs:label entry.</comment>
+		<annotation_type rdf:resource="&core;prefLabel"/>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+
+	<owl:AnnotationProperty rdf:ID="definition">
+	    <rdfs:label rdf:datatype="&xsd;string">definition</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">definition</pref_label>
+		<definition rdf:datatype="&xsd;string">This definition uses natural language (English) to express the real-world (scientific) meaning defining the NEMO ontology term and adheres, as far as possible, to Aristotelian constraints.</definition>
+		<annotation_type rdf:resource="&core;definition"/>
+        <comment rdf:datatype="&xsd;string">This definition &quot;stores&quot; the text of the formerly called textDefinition, which was previously included as the first definition within the NEMO_annot:definition.</comment>
+		<comment rdf:datatype="&xsd;string">The source of this definition is often traceable and should be documented, whenever possible, using NEMO_annot:definition_source</comment>
+		<comment rdf:datatype="&xsd;string">We are creating our own nemo_annot:definition so as to keep all annotation properties for NEMO closed.</comment>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+	    <modified_date rdf:datatype="&xsd;string">2010-07-21</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+	    <curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+
+
+	<owl:AnnotationProperty rdf:ID="onto_definition">
+	    <rdfs:label rdf:datatype="&xsd;string">onto_definition</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">onto_definition</pref_label>
+		<definition rdf:datatype="&xsd;string">This definition uses natural language (English), adheres to Aristotelian constraints and restates precisely the information that has been encoded in NEMO_annot:definition, including class restrictions, disjoint classes, and so forth.</definition>
+		<comment rdf:datatype="&xsd;string">This definition &quot;stores&quot; the text of the formerly called ontoDefinition, which was previously included as the second definition within the NEMO_annot:definition.</comment>
+		<created_date rdf:datatype="&xsd;string">2010-07-21</created_date>
+		<modified_date rdf:datatype="&xsd;string">2011-07-16</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+	    <curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+
+
+
+	<owl:AnnotationProperty rdf:ID="created_date">
+	    <rdfs:label rdf:datatype="&xsd;string">created_date</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">created_date</pref_label>
+		<definition rdf:datatype="&xsd;string">The date when the current concept was created.</definition>
+		<annotation_type rdf:resource="&dc;date"/>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<modified_date rdf:datatype="&xsd;string">2011-07-16</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+	    <curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+
+	<owl:AnnotationProperty rdf:ID="modified_date">
+	    <rdfs:label rdf:datatype="&xsd;string">modified_date</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">modified_date</pref_label>
+		<definition rdf:datatype="&xsd;string">The date when the current concept was last updated.</definition>
+		<annotation_type rdf:resource="&dc;date"/>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<modified_date rdf:datatype="&xsd;string">2011-07-16</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+	    <curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+
+	<owl:AnnotationProperty rdf:ID="comment">
+		<pref_label rdf:datatype="&xsd;string">comment</pref_label>
+		<rdfs:label rdf:datatype="&xsd;string">comment</rdfs:label>
+		<definition rdf:datatype="&xsd;string">A general comment.</definition>
+	    <annotation_type rdf:resource="&core;note"/>
+		<comment rdf:datatype="&xsd;string">We are creating our own nemo_annot:comment so as to keep all annotation properties for NEMO closed.  Otherwise, we consider nemo_annot:comment to be equivalent to rdfs:comment and core:note.</comment>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+
+	<owl:AnnotationProperty rdf:ID="example">
+		<rdfs:label rdf:datatype="&xsd;string">example</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">example</pref_label>
+		<definition rdf:datatype="&xsd;string">An example of a given concept.</definition>
+		<annotation_type rdf:resource="&core;example"/>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:ID="replaced_by">
+        <rdfs:label rdf:datatype="&xsd;string">replaced_by</rdfs:label>
+        <pref_label rdf:datatype="&xsd;string">replaced_by</pref_label>
+        <created_date rdf:datatype="&xsd;string">2010-03-12</created_date>
+        <curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+        <namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+        <definition rdf:datatype="&xsd;string">This property indicates that an annotation property X has been replaced by another annotation property Y.</definition>
+        <comment rdf:datatype="&xsd;string">We are using this kind property to keep track of changes we made to the old/retired/deprectated properties.</comment>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:ID="source_ontology">
+        <rdfs:label rdf:datatype="&xsd;string">source_ontology</rdfs:label>
+        <pref_label rdf:datatype="&xsd;string">source_ontology</pref_label>
+		<created_date rdf:datatype="&xsd;string">2010-04-23</created_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+        <definition rdf:datatype="&xsd;string">This property indicates an ontology that a term has been imported from.</definition>
+    </owl:AnnotationProperty>
+
+
+	<owl:AnnotationProperty rdf:ID="synonym">
+	    <rdfs:label rdf:datatype="&xsd;string">synonym</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">synonym</pref_label>
+		<definition rdf:datatype="&xsd;string">A lexical variant carrying the same latent semantic value.</definition>
+		<annotation_type rdf:resource="&core;altLabel"/>
+		<definition_source rdf:datatype="&xsd;string">http://ontology.neuinfo.org/NIF/Backend/OBO_annotation_properties.owl#annotationType</definition_source>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+
+	<owl:AnnotationProperty rdf:ID="acronym">
+	    <rdfs:label rdf:datatype="&xsd;string">acronym</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">acronym</pref_label>
+		<definition rdf:datatype="&xsd;string">An acronym consisting of a sequence of letters typically taken from the beginning of words of which either the preferred label or another synonym are composed.</definition>
+		<annotation_type rdf:resource="&core;altLabel"/>
+		<definition_source rdf:datatype="&xsd;string">http://ontology.neuinfo.org/NIF/Backend/OBO_annotation_properties.owl#annotationType</definition_source>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+
+	<owl:AnnotationProperty rdf:ID="definition_source">
+	    <rdfs:label rdf:datatype="&xsd;string">definition_source</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">definition_source</pref_label>
+		<definition rdf:datatype="&xsd;string">A traceable source for the current definition.</definition>
+		<comment rdf:datatype="&xsd;string">In free-form text, a source could be a person's name, a URI, an informal publication reference, a PubMed ID, whatever most succinctly identifies a source.</comment>
+		<comment rdf:datatype="&xsd;string">We originally had an EnumerationClass of Definition_Sources but decided that was too constrictive.</comment>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+  
+    
+	<owl:ObjectProperty rdf:about="#_limbo_property">
+		<rdfs:label rdf:datatype="&xsd;string">_limbo_property</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">_limbo_property</pref_label>
+		<definition rdf:datatype="&xsd;string">A property that has been created by curators but has an uncertain place within the ontology. By implication, the property has no definition or one that is minimally specified.</definition>
+		<created_date rdf:datatype="&xsd;string">2009-05-07</created_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>	
+	</owl:ObjectProperty>
+
+	<owl:Class rdf:about="#_limbo">
+	    <pref_label rdf:datatype="&xsd;string">_limbo</pref_label>
+		<rdfs:label rdf:datatype="&xsd;string">_limbo</rdfs:label>
+		<definition rdf:datatype="&xsd;string">A class that has been created by curators but has not been assigned to a superclass and therefore has an uncertain place within the ontology class hierarchy. By implication, the class has no definition or one that is minimally specified.</definition>
+		<created_date rdf:datatype="&xsd;string">2009-05-07</created_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>	
+	</owl:Class>
+
+	
+	<owl:AnnotationProperty rdf:ID="namespace">
+		<rdfs:label rdf:datatype="&xsd;string">namespace</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">namespace</pref_label>
+		<definition rdf:datatype="&xsd;string">This property defines the NEMO namespace for a concept.</definition>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<modified_date rdf:datatype="&xsd;string">2010-05-27</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+		<comment rdf:datatype="&xsd;string">The following is the list of all NEMO namespaces: NEMO_annotation, NEMO_data, NEMO_erp, NEMO_functional, NEMO_imported_classes, NEMO_metrics, NEMO_relations, NEMO_spatial and NEMO_temporal.</comment>
+	</owl:AnnotationProperty>
+
+
+    <owl:Class rdf:about="&ontology;NEMO_annotation_properties.owl#_annotation">
+        <rdfs:label rdf:datatype="&xsd;string">_annotation</rdfs:label>
+        <pref_label rdf:datatype="&xsd;string">_annotation</pref_label>
+		<created_date rdf:datatype="&xsd;string">2010-11-30</created_date>
+	    <modified_date rdf:datatype="&xsd;string">2010-11-30</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+        <definition rdf:datatype="&xsd;string">This is a parent class of all annotation property value classes used in NEMO.</definition> 
+        <curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+    </owl:Class>
+
+
+ <!-- evidence_code Annotation Property, NEMO_evidence_code Class of Values and  NEMO_evidence_code Instances -->
+
+    <owl:AnnotationProperty rdf:ID="evidence_code">
+        <rdfs:label rdf:datatype="&xsd;string">evidence_code</rdfs:label>
+        <pref_label rdf:datatype="&xsd;string">evidence_code</pref_label>
+		<created_date rdf:datatype="&xsd;string">2010-09-07</created_date>
+	    <modified_date rdf:datatype="&xsd;string">2011-01-13</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+        <definition rdf:datatype="&xsd;string">This property indicates a level of ERP pattern related data traceability accross available scientific literature.</definition>	
+    </owl:AnnotationProperty>
+
+    <owl:Class rdf:about="&ontology;NEMO_annotation_properties.owl#NEMO_evidence_code">
+        <rdfs:label rdf:datatype="&xsd;string">NEMO_evidence_code</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;NEMO_annotation_properties.owl#_annotation"/>
+        <created_date rdf:datatype="&xsd;string">2010-11-30</created_date>
+        <modified_date rdf:datatype="&xsd;string">2011-01-13</modified_date>
+        <namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+        <definition rdf:datatype="&xsd;string">This class represents a strict set of allowed values for evidence_code annotation property range.</definition>
+        <comment rdf:datatype="&xsd;string">Valid values for this property are: (1) traceable_experiment_data; (2) traceable_metaanalysis_data; (3) untraceable_author_statement; (4) traceable_metaanalysis_report; (5) traceable_experiment_report; and (6) traceable_author_statement.</comment>
+        <pref_label rdf:datatype="&xsd;string">NEMO_evidence_code</pref_label>
+        <curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+        <curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+    </owl:Class>
+    
+    <owl:NamedIndividual rdf:ID="untraceable_author_statement">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_evidence_code"/>
+		<rdfs:label rdf:datatype="&xsd;string">untraceable_author_statement</rdfs:label>
+		<definition rdf:datatype="&xsd;string">This evidence code should be used when an author (curator) provides a definition based on prior knowledge, without reference to a specific traceable (published) source.</definition>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:ID="traceable_author_statement">
+    	<rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_evidence_code"/>
+		<rdfs:label rdf:datatype="&xsd;string">traceable_author_statement</rdfs:label>
+		<definition rdf:datatype="&xsd;string">This evidence code should be used to indicate that the pattern rule is based on a traceable author statement from a peer-reviewed paper, textbook, or other source that can be retrieved from a publicly available database.</definition>
+		<comment rdf:datatype="&xsd;string">The use of this code implies that the statement is made without reference to specific experiment results.</comment>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:ID="traceable_experiment_report">
+        <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_evidence_code"/>
+		<rdfs:label rdf:datatype="&xsd;string">traceable_experiment_report</rdfs:label>
+		<definition rdf:datatype="&xsd;string">This evidence code should be used to indicate that the pattern rule is based on results from one or more published studies.</definition>
+		<comment rdf:datatype="&xsd;string">The use of this code implies that the raw experiment data are not publicly available. Therefore, it is not possible to verify the report directly or to reanalyze the data using alternative methods. However, the data summary and report are available and can be retrieved from a publicly available database.</comment>
+	</owl:NamedIndividual>
+	
+	  <owl:NamedIndividual rdf:ID="traceable_experiment_data">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_evidence_code"/>
+        <rdfs:label rdf:datatype="&xsd;string">traceable_experiment_data</rdfs:label>
+        <definition rdf:datatype="&xsd;string">This evidence code should be used to indicate that the pattern rule is based on a traceable author statement from a peer-reviewed paper, textbook, or other source that can be retrieved from a publicly available database.</definition>
+	    <comment rdf:datatype="&xsd;string">The use of this code implies that the statement is made without reference to specific experiment results.</comment>
+    </owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:ID="traceable_metaanalysis_report">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_evidence_code"/>
+		<rdfs:label rdf:datatype="&xsd;string">traceable_metaanalysis_report</rdfs:label>
+		<definition rdf:datatype="&xsd;string">This evidence code should be used to indicate that the pattern rule is based on results from one or more published meta-analyses.</definition>
+		<comment rdf:datatype="&xsd;string">The use of this code implies that the raw experiment data are not publicly available. Therefore, it is not possible to verify the report directly or to reanalyze the data using alternative methods. However, the meta-analysis summary and report are available and can be retrieved from a publicly available database.</comment>
+	</owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:ID="traceable_metaanalysis_data">
+    	<rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_evidence_code"/>
+		<rdfs:label rdf:datatype="&xsd;string">traceable_metaanalysis_data</rdfs:label>
+		<definition rdf:datatype="&xsd;string">This evidence code should be used to indicate that the pattern rule is based on results from one or more publicly available, annotated datasets that include data from multiple experiments (and, ideally, from multiple labs).</definition>
+		<comment rdf:datatype="&xsd;string">The data and methods used to preprocess and analyze the data are  assumed to be clearly documented and publicly available. Therefore, it should be possible to verify the meta-analysis results directly or to reanalyze the data using alternative methods.</comment>
+	</owl:NamedIndividual>
+     
+
+<!-- curator annotation property, NEMO_curator property value calss and NEMO_curator class instances -->
+
+	<owl:AnnotationProperty rdf:ID="curator">
+	    <rdfs:label rdf:datatype="&xsd;string">curator</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">curator</pref_label>
+		<definition rdf:datatype="&xsd;string">This property provides information about the NEMO ontology curators who've contributed to ontology terms' defining and annotating.</definition>
+		<annotation_type rdf:resource="&dc;contributor"/>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<modified_date rdf:datatype="&xsd;string">2010-11-30</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+		<comment rdf:datatype="&xsd;string">Names of NEMO curators should be written strictly in following manner: first name - underscore - last name; For example &quot;Gwen_Frishkoff&quot;</comment>
+	    <comment rdf:datatype="&xsd;string">More than one instance of this property is valid.</comment>
+	</owl:AnnotationProperty>
+	
+    <owl:Class rdf:about="&ontology;NEMO_annotation_properties.owl#NEMO_curator">
+        <rdfs:subClassOf rdf:resource="&ontology;NEMO_annotation_properties.owl#_annotation"/>
+        <rdfs:label rdf:datatype="&xsd;string">NEMO_curator</rdfs:label>
+        <created_date rdf:datatype="&xsd;string">2009-11-30</created_date>
+        <modified_date rdf:datatype="&xsd;string">2010-11-30</modified_date>
+        <namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+        <comment rdf:datatype="&xsd;string">Names of NEMO curators should be written strictly in following manner: first name - underscore - last name; For example &quot;Gwen_Frishkoff&quot;</comment>
+        <definition rdf:datatype="&xsd;string">This property defines the NEMO ontology curators who&#39;ve contributed to the definition of a class.  More than one instance of this property is valid.  In the case of multiple curators, the individual curator name may also be associated with the definition, if that person was primarily responsible for it.</definition>
+        <pref_label rdf:datatype="&xsd;string">NEMO_curator</pref_label>
+        <curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+        <curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+    </owl:Class>
+	
+	<owl:NamedIndividual rdf:ID="Gwen_Frishkoff">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Gwen_Frishkoff</rdfs:label>
+    </owl:NamedIndividual>
+    
+ 	<owl:NamedIndividual rdf:ID="Snezana_Nikolic">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Snezana_Nikolic</rdfs:label>
+    </owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:ID="Paea_LePendu">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Paea_LePendu</rdfs:label>
+    </owl:NamedIndividual>
+
+	<owl:NamedIndividual rdf:ID="Dejing_Dou">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Dejing_Dou</rdfs:label>
+    </owl:NamedIndividual>
+    
+   <owl:NamedIndividual rdf:ID="Allen_Malony">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Allen_Malony</rdfs:label>
+    </owl:NamedIndividual>
+    
+   <owl:NamedIndividual rdf:ID="Robert_Frank">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Robert_Frank</rdfs:label>
+    </owl:NamedIndividual>
+
+   <owl:NamedIndividual rdf:ID="Jason_Sydes">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Jason_Sydes</rdfs:label>
+    </owl:NamedIndividual>
+
+
+   <owl:NamedIndividual rdf:ID="Haishan_Liu">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Haishan_Liu</rdfs:label>
+    </owl:NamedIndividual>
+    
+   <owl:NamedIndividual rdf:ID="Usman_Khan">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Usman_Khan</rdfs:label>
+    </owl:NamedIndividual>
+
+   <owl:NamedIndividual rdf:ID="Kurt_Mueller">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Kurt_Mueller</rdfs:label>
+    </owl:NamedIndividual>
+
+   <owl:NamedIndividual rdf:ID="Tim_Curran">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Tim_Curran</rdfs:label>
+    </owl:NamedIndividual>
+
+   <owl:NamedIndividual rdf:ID="Kerry_Kilborn">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Kerry_Kilborn</rdfs:label>
+    </owl:NamedIndividual>
+
+   <owl:NamedIndividual rdf:ID="Dennis_Molfese">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Dennis_Molfese</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:ID="Chuck_Perfetti">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Chuck_Perfetti</rdfs:label>
+    </owl:NamedIndividual>
+    
+       <owl:NamedIndividual rdf:ID="Don_Tucker">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Don_Tucker</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:ID="John_Connolly">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">John_Connolly</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:ID="Jessica_Turner">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Jessica_Turner</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:ID="Anita_Bandrowski">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Anita_Bandrowski</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:ID="Angela_Laird">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Angela_Laird</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:ID="Chris_Bird">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Chris_Bird</rdfs:label>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:ID="Stephanie_Connel">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Stephanie_Connel</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:ID="Srinivas_Kota">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Srinivas_Kota</rdfs:label>
+    </owl:NamedIndividual>
+    
+     <owl:NamedIndividual rdf:ID="Caitlin_Hudac">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Caitlin_Hudac</rdfs:label>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:ID="Sivaram_Arabandi">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Sivaram_Arabandi</rdfs:label>
+    </owl:NamedIndividual>
+    
+     <owl:NamedIndividual rdf:ID="Alex_Beaverston">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curator"/>
+        <rdfs:label rdf:datatype="&xsd;string">Alex_Beaverston</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+  <!-- curation_status annotation property, NEMO_curation_status class and its instances  -->
+
+	<owl:AnnotationProperty rdf:ID="curation_status">
+	    <rdfs:label rdf:datatype="&xsd;string">curation_status</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">curation_status</pref_label>
+		<definition rdf:datatype="&xsd;string">This provides specific information on the level of curation a given class has received and is specifically design to promote automated reporting on the status of classes in an ontology. It is likely some classes will require more than one instance of this property to fully describe their status. Is a type of skos_editorial_note.</definition>
+		<annotation_type rdf:resource="&core;editorialNote"/>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+		<modified_date rdf:datatype="&xsd;string">2010-11-30</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+   </owl:AnnotationProperty>
+   
+   <owl:Class rdf:about="&ontology;NEMO_annotation_properties.owl#NEMO_curation_status">
+		<rdfs:subClassOf rdf:resource="&ontology;NEMO_annotation_properties.owl#_annotation"/>
+		<rdfs:label rdf:datatype="&xsd;string">NEMO_curation_status</rdfs:label> 
+		<pref_label rdf:datatype="&xsd;string">NEMO_curation_status</pref_label>
+		<definition rdf:datatype="&xsd;string">This provides specific info on the level of curation a given class has received and is specifically design to promote automated reporting on the status of classes in an ontology.  It is likely some classes will require more than one instance of this property to fully describe their status. Is a type of skos_editorial_note.</definition>
+		<created_date rdf:datatype="&xsd;string">2009-06-03</created_date>
+	    <modified_date rdf:datatype="&xsd;string">2011-01-13</modified_date>
+	    <comment rdf:datatype="&xsd;string">Valid values for this property are: (1) limbo_class; (2) limbo_property; (3) definition_incomplete; (4) pending_final_vetting; (5) curation_complete; (7) direct_import; (8) metadata_incomplete and (9) deprecated.</comment>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Paea_LePendu"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+	</owl:Class>
+			
+	<owl:NamedIndividual rdf:ID="limbo_class">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curation_status"/>
+		<rdfs:label rdf:datatype="&xsd;string">limbo_class</rdfs:label>
+	    <definition rdf:datatype="&xsd;string">Indicates a class has been created by curators but has not been assigned to a superclass and therefore has an uncertain place within the ontology class hierarchy. By implication, such class has no definition or one that is minimally specified.</definition>
+		<comment rdf:datatype="&xsd;string">By implication, the next curation steps required are to: identify a valid definition_source, specify the definition_source, update the curation_status from limbo_class to definition_incomplete or pending_final_vetting.</comment>
+	</owl:NamedIndividual>
+		
+	<owl:NamedIndividual rdf:ID="limbo_property">
+		<rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curation_status"/>
+		<rdfs:label rdf:datatype="&xsd;string">limbo_property</rdfs:label>
+		<definition rdf:datatype="&xsd;string">Indicates a property has been created by curators but has an uncertain place within the ontology. By implication, the property has no definition or one that is minimally specified.</definition>
+		<comment rdf:datatype="&xsd;string">By implication, the next steps required are to: identify a valid definition_source, specify the definition_source, update the curation_status from limbo_property to definition_incomplete or pending_final_vetting.</comment>
+	</owl:NamedIndividual>
+		
+	<owl:NamedIndividual rdf:ID="definition_incomplete">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curation_status"/>
+		<rdfs:label rdf:datatype="&xsd;string">definition_incomplete</rdfs:label>
+		<definition rdf:datatype="&xsd;string">Indicates a class has been assigned to a superclass and therefore has a clear place within the ontology class hierarchy and at least a minimal definition. However, the definition may require considerable amending before it complies with Aristotelian/OBO requirements for a good, noncircular definition. </definition>
+		<comment rdf:datatype="&xsd;string">By implication, the next steps required are to: verify the definition adheres to Aristotelian constraints, update curation_status from definition_incomplete to pending_final_vetting.</comment>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:ID="pending_final_vetting">
+		<rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curation_status"/>
+		<rdfs:label rdf:datatype="&xsd;string">pending_final_vetting</rdfs:label>
+		<definition rdf:datatype="&xsd;string">Indicates a class needs to be vetted by two or more NEMO curation authorities.</definition>
+		<comment rdf:datatype="&xsd;string">By implication, the next steps required are to: vet the definition among NEMO consortium members, update curation_status from pending_final_vetting curation_complete.</comment>
+	</owl:NamedIndividual>
+		
+	<owl:NamedIndividual rdf:ID="curation_complete">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curation_status"/>
+		<rdfs:label rdf:datatype="&xsd;string">curation_complete</rdfs:label>
+		<definition rdf:datatype="&xsd;string">Indicates a class has been fully vetted by NEMO curation authorities and deemed ready for use.</definition>
+   </owl:NamedIndividual>
+   
+   	<owl:NamedIndividual rdf:ID="direct_import">
+   		<rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curation_status"/>
+		<rdfs:label rdf:datatype="&xsd;string">direct_import</rdfs:label>
+		<definition rdf:datatype="&xsd;string">Indicates that a class or an object property has been imported from another ontology (i.e., the class URI is the URI assigned within the source_ontology).</definition>
+		<comment rdf:datatype="&xsd;string">The annotation property source_ontology is used to specify the ontology from which the term has been is imported.</comment>
+	</owl:NamedIndividual>
+		
+	<owl:NamedIndividual rdf:ID="metadata_incomplete">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curation_status"/>
+		<rdfs:label rdf:datatype="&xsd;string">metadata_incomplete</rdfs:label>
+		<definition rdf:datatype="&xsd;string">Indicates that other annotation properties&apos; values for this term, other than value for definition, are incomplete or missing.</definition>
+		<comment rdf:datatype="&xsd;string">This annotation property value is similar, but not parallel, to OBI curation status value &quot;metadata incomplete&quot;, because in NEMO ontologies &quot;metadata_incomplete&quot; excludes the &quot;incompleteness&quot; of a term definition which has already been defined by curation status value &quot;definition_incomplete&quot;.</comment>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:ID="deprecated">
+		<rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_curation_status"/>
+		<rdfs:label rdf:datatype="&xsd;string">deprecated</rdfs:label>
+		<definition rdf:datatype="&xsd;string">Indicates that a term has been deprecated (i.e. not longer used in NEMO ontologies). Once a term has been deprecated, no further changes will be made to the term annotations. Accordingly, curation_status of such a term should be &quot;deprecated&quot;.</definition>
+	</owl:NamedIndividual>
+		
+		
+		
+	<!-- deprecation_reason annotaton property, NEMO_deprecation_reason class and its instances -->	
+		
+	<owl:AnnotationProperty rdf:ID="deprecation_reason">
+	    <rdfs:label rdf:datatype="&xsd;string">deprecation_reason</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">deprecation_reason</pref_label>
+		<definition rdf:datatype="&xsd;string">This property provides an information about the specific reason for term deprecation.</definition>
+		<created_date rdf:datatype="&xsd;string">2010-04-23</created_date>
+	    <modified_date rdf:datatype="&xsd;string">2010-11-30</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Snezana_Nikolic"/>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:AnnotationProperty>
+		
+	<owl:Class rdf:about="&ontology;NEMO_annotation_properties.owl#NEMO_deprecation_reason">
+	    <rdfs:subClassOf rdf:resource="&ontology;NEMO_annotation_properties.owl#_annotation"/>
+		<rdfs:label rdf:datatype="&xsd;string">NEMO_deprecation_reason</rdfs:label>
+		<pref_label rdf:datatype="&xsd;string">NEMO_deprecation_reason</pref_label>
+		<definition rdf:datatype="&xsd;string">This class is created to enumerate a valid set of deprecation_reason values.</definition>
+		<comment rdf:datatype="&xsd;string">Valid values for this property are: (1) retired; (2) replaced and (3) equivalent_term_imported.</comment>
+		<created_date rdf:datatype="&xsd;string">2010-04-23</created_date>
+	    <modified_date rdf:datatype="&xsd;string">2013-05-23</modified_date>
+		<curator rdf:resource="&ontology;NEMO_annotation_properties.owl#Gwen_Frishkoff"/>
+		<namespace rdf:datatype="&xsd;string">NEMO_annotation</namespace>
+	</owl:Class>
+
+	<owl:NamedIndividual  rdf:ID="retired">
+		<rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_deprecation_reason"/>
+		<rdfs:label rdf:datatype="&xsd;string">retired</rdfs:label>
+		<definition rdf:datatype="&xsd;string">Indicates that a class, instance, object property, or annotation property is no longer used in NEMO ontology.</definition>
+	</owl:NamedIndividual>
+
+	<owl:NamedIndividual  rdf:ID="replaced">
+	    <rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_deprecation_reason"/>
+		<rdfs:label rdf:datatype="&xsd;string">replaced</rdfs:label>
+		<definition rdf:datatype="&xsd;string">Indicates that a class, instance, object property, or annotation property has been replaced by a different term.</definition>
+	</owl:NamedIndividual>	
+	
+	<owl:NamedIndividual rdf:ID="equivalent_term_imported">
+		<rdf:type rdf:resource="&ontology;NEMO_annotation_properties.owl#NEMO_deprecation_reason"/>
+		<rdfs:label rdf:datatype="&xsd;string">equivalent_term_imported</rdfs:label>
+		<definition rdf:datatype="&xsd;string">Indicates that a class, instance, object property, or annotation property has been replaced by an imported term from another ontology.</definition>
+    </owl:NamedIndividual>
+
+
+</rdf:RDF>
+
+<!-- Generated manually by Paea LePendu. -->
+<!-- Modified by Gwen Frishkoff and Snezana Nikolic. -->
+
+    

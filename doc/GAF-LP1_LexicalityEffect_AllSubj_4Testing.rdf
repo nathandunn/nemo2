@@ -1,0 +1,1495 @@
+################################################################################
+# NEMO Metric Extraction RDF Version: 20120622
+# NEMO OWL Compatible Ontology Version: 02.950
+# Time/Date Stamp: 20121024T002355
+################################################################################
+
+
+# RDF OWL-Ontology Assertion: GAF-LP1_+NN-+NW_ERP_data
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://www.w3.org/2002/07/owl#Ontology>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data>    <http://www.w3.org/2002/07/owl#imports>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl>.
+
+
+################################################################################
+# Functional Metric Block: Diffwave Data GAF-LP1_+NN-+NW
+################################################################################
+
+# RDF Experiment-Condition-Level Instance Assertion 002: GAF-LP1_+NN-+NW_ERP_data_transformation Has_Type Subtraction_Data_Transformation
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data_transformation>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0660000>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 003: GAF-LP1_+NN-+NW_ERP_data Has_Type Averaged_EEG_Data_Set
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0000495>.
+# RDF Experiment-Condition-Level Instance Predication 003: GAF-LP1_+NN-+NW_ERP_data Is_Specified_Output_Of GAF-LP1_+NN-+NW_ERP_data_transformation
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data>    <http://purl.obolibrary.org/obo/OBI_0000312>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data_transformation>.
+
+
+# PCA Instance Assertion 004: GAF-LP1_+NN-+NW_p_value_threshold Has_Type Statistical_Significance_Threshold
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_p_value_threshold>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8259000>.
+# PCA Instance Assertion 004: GAF-LP1_+NN-+NW_p_value_threshold Has_Numeric_Value +0.050
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_p_value_threshold>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+0.050"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# PCA Instance Assertion 004: GAF-LP1_+NN-+NW_p_value_threshold_quality Has_Type Not_Corrected_For_Multiple_Comparisons
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_p_value_threshold_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2003000>.
+# PCA Instance Assertion 004: GAF-LP1_+NN-+NW_p_value_threshold Has_Quality GAF-LP1_+NN-+NW_p_value_threshold_quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_p_value_threshold>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_p_value_threshold_quality>.
+
+
+################################################################################
+# Functional Metric Block: Condition Of Interest GAF-LP1_+NN
+################################################################################
+
+# RDF Experiment-Condition-Level Instance Assertion 006: GAF-LP1_+NN_expt_condition_execution Has_Type Experimental_Condition_Execution
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_expt_condition_execution>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6332000>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 007: GAF-LP1_+NN_ERP_data Has_Type Averaged_EEG_Data_Set
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_ERP_data>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0000495>.
+# RDF Experiment-Condition-Level Instance Predication 007: GAF-LP1_+NN_ERP_data Is_Specified_Input_Of GAF-LP1_+NN-+NW_ERP_data_transformation
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_ERP_data>    <http://purl.obolibrary.org/obo/OBI_0000295>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data_transformation>.
+# RDF Experiment-Condition-Level Instance Predication 007: GAF-LP1_+NN_ERP_data Is_About GAF-LP1_+NN_ERP
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_ERP_data>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_ERP>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 008: GAF-LP1_+NN_event_type Has_Type stimulus_onset
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_event_type>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4762000>.
+# RDF Experiment-Condition-Level Instance Predication 008: GAF-LP1_+NN_event_type Proper_Part_Of GAF-LP1_+NN_expt_condition_execution
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_event_type>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_expt_condition_execution>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 009: GAF-LP1_analysis001_condition_of_interest Has_Type Condition_Of_Interest
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_analysis001_condition_of_interest>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2813000>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 010: GAF-LP1_+NN_expt_condition Has_Type pseudoword_condition
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_expt_condition>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2255000>.
+# RDF Experiment-Condition-Level Instance Predication 010: GAF-LP1_+NN_expt_condition Has_Role GAF-LP1_analysis001_condition_of_interest
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_expt_condition>    <http://purl.obolibrary.org/obo/OBI_0000316>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_analysis001_condition_of_interest>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 011: GAF-LP1_+NN_expt_condition_plan Has_Type Plan
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_expt_condition_plan>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6892000>.
+# RDF Experiment-Condition-Level Instance Predication 011: GAF-LP1_+NN_expt_condition_plan Is_Concretization_Of GAF-LP1_+NN_expt_condition
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_expt_condition_plan>    <http://purl.obolibrary.org/obo/OBI_0000294>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_expt_condition>.
+# RDF Experiment-Condition-Level Instance Predication 011: GAF-LP1_+NN_expt_condition_plan Is_Realized_As GAF-LP1_+NN_expt_condition_execution
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_expt_condition_plan>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1896000>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_expt_condition_execution>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 012: GAF-LP1_+NN_ERP Has_Type Scalp_Recorded_ERP
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_ERP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8225000>.
+# RDF Experiment-Condition-Level Instance Predication 012: GAF-LP1_+NN_ERP Occurs_In_Response_To GAF-LP1_+NN_event_type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_ERP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0367000>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_event_type>.
+# RDF Experiment-Condition-Level Instance Predication 012: GAF-LP1_+NN_ERP Has_ICE GAF-LP1_+NN_ERP_data
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_ERP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3427000>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_ERP_data>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 013: GAF-LP1_+NN_object Has_Type pseudoword
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_object>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0000420>.
+# RDF Experiment-Condition-Level Instance Predication 013: GAF-LP1_+NN_object Object_Of GAF-LP1_+NN_event_type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_object>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2532000>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_event_type>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 014: GAF-LP1_+NN_stimulus_quality Has_Type visual
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_stimulus_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0000453>.
+# RDF Experiment-Condition-Level Instance Predication 014: GAF-LP1_+NN_stimulus_quality Quality_Of GAF-LP1_+NN_object
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_stimulus_quality>    <http://purl.org/obo/owl/OBO_REL#quality_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_object>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 015: GAF-LP1_+NN_stimulus_role Has_Type target_stimulus
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_stimulus_role>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6440000>.
+## RDF Experiment-Condition-Level Instance Predication 015: GAF-LP1_+NN_stimulus_role Role_Of GAF-LP1_+NN_object
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_stimulus_role>    <http://purl.org/obo/owl/OBO_REL#role_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN_object>.
+
+
+################################################################################
+# Functional Metric Block: Baseline Condition GAF-LP1_+NW
+################################################################################
+
+# RDF Experiment-Condition-Level Instance Assertion 017: GAF-LP1_+NW_expt_condition_execution Has_Type Experimental_Condition_Execution
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_expt_condition_execution>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6332000>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 018: GAF-LP1_+NW_ERP_data Has_Type Averaged_EEG_Data_Set
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_ERP_data>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0000495>.
+# RDF Experiment-Condition-Level Instance Predication 018: GAF-LP1_+NW_ERP_data Is_Specified_Input_Of GAF-LP1_+NN-+NW_ERP_data_transformation
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_ERP_data>    <http://purl.obolibrary.org/obo/OBI_0000295>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data_transformation>.
+# RDF Experiment-Condition-Level Instance Predication 018: GAF-LP1_+NW_ERP_data Is_About GAF-LP1_+NW_ERP
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_ERP_data>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_ERP>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 019: GAF-LP1_+NW_event_type Has_Type stimulus_onset
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_event_type>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4762000>.
+# RDF Experiment-Condition-Level Instance Predication 019: GAF-LP1_+NW_event_type Proper_Part_Of GAF-LP1_+NW_expt_condition_execution
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_event_type>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_expt_condition_execution>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 020: GAF-LP1_analysis001_baseline_condition Has_Type Baseline_Condition
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_analysis001_baseline_condition>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7752000>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 021: GAF-LP1_+NW_expt_condition Has_Type word_condition
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_expt_condition>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3122000>.
+# RDF Experiment-Condition-Level Instance Predication 021: GAF-LP1_+NW_expt_condition Has_Role GAF-LP1_analysis001_baseline_condition
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_expt_condition>    <http://purl.obolibrary.org/obo/OBI_0000316>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_analysis001_baseline_condition>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 022: GAF-LP1_+NW_expt_condition_plan Has_Type Plan
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_expt_condition_plan>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6892000>.
+# RDF Experiment-Condition-Level Instance Predication 022: GAF-LP1_+NW_expt_condition_plan Is_Concretization_Of GAF-LP1_+NW_expt_condition
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_expt_condition_plan>    <http://purl.obolibrary.org/obo/OBI_0000294>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_expt_condition>.
+# RDF Experiment-Condition-Level Instance Predication 022: GAF-LP1_+NW_expt_condition_plan Is_Realized_As GAF-LP1_+NW_expt_condition_execution
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_expt_condition_plan>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1896000>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_expt_condition_execution>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 023: GAF-LP1_+NW_ERP Has_Type Scalp_Recorded_ERP
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_ERP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8225000>.
+# RDF Experiment-Condition-Level Instance Predication 023: GAF-LP1_+NW_ERP Occurs_In_Response_To GAF-LP1_+NW_event_type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_ERP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0367000>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_event_type>.
+# RDF Experiment-Condition-Level Instance Predication 023: GAF-LP1_+NW_ERP Has_ICE GAF-LP1_+NW_ERP_data
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_ERP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3427000>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_ERP_data>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 024: GAF-LP1_+NW_object Has_Type word
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_object>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0000419>.
+# RDF Experiment-Condition-Level Instance Predication 024: GAF-LP1_+NW_object Object_Of GAF-LP1_+NW_event_type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_object>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2532000>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_event_type>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 025: GAF-LP1_+NW_stimulus_quality Has_Type visual
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_stimulus_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0000453>.
+# RDF Experiment-Condition-Level Instance Predication 025: GAF-LP1_+NW_stimulus_quality Quality_Of GAF-LP1_+NW_object
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_stimulus_quality>    <http://purl.org/obo/owl/OBO_REL#quality_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_object>.
+
+
+# RDF Experiment-Condition-Level Instance Assertion 026: GAF-LP1_+NW_stimulus_role Has_Type target_stimulus
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_stimulus_role>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6440000>.
+# RDF Experiment-Condition-Level Instance Predication 026: GAF-LP1_+NW_stimulus_role Role_Of GAF-LP1_+NW_object
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_stimulus_role>    <http://purl.org/obo/owl/OBO_REL#role_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NW_object>.
+
+
+################################################################################
+# Spatial-Temporal Difference Metric Block: Component Index 001
+################################################################################
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580 Assertion 027: Has_Type/Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0877000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580 Assertion 027: Is_Specified_Output_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>    <http://purl.obolibrary.org/obo/OBI_0000312>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data_transformation>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT Assertion 028: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1898000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+01.06698132"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT Assertion 028: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT_statistical_quality Assertion 028: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT Assertion 028: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT Assertion 029: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3287000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.42109969"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT Assertion 029: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT_statistical_quality Assertion 029: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT Assertion 029: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR Assertion 030: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0603000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.31935580"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR Assertion 030: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR_statistical_quality Assertion 030: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR Assertion 030: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC Assertion 031: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2495000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.82042921"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC Assertion 031: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC_statistical_quality Assertion 031: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC Assertion 031: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT Assertion 032: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2257000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.66058107"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT Assertion 032: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT_statistical_quality Assertion 032: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT Assertion 032: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT Assertion 033: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6976000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.07493545"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT Assertion 033: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT_statistical_quality Assertion 033: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT Assertion 033: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR Assertion 034: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3703000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.90226092"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR Assertion 034: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR_statistical_quality Assertion 034: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR Assertion 034: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC Assertion 035: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8297000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-01.21373388"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC Assertion 035: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC_statistical_quality Assertion 035: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC Assertion 035: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP Assertion 036: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9763000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.59892608"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP Assertion 036: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP_statistical_quality Assertion 036: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP Assertion 036: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP Assertion 037: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4297000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.16305789"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP Assertion 037: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP_statistical_quality Assertion 037: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP Assertion 037: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP Assertion 038: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8146000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-01.10654809"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP Assertion 038: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP_statistical_quality Assertion 038: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP Assertion 038: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP Assertion 039: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1293000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-01.13956414"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP Assertion 039: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP_statistical_quality Assertion 039: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP Assertion 039: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT Assertion 040: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3104000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+01.06712062"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT Assertion 040: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT_statistical_quality Assertion 040: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT Assertion 040: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT Assertion 041: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1941000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.39050209"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT Assertion 041: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT_statistical_quality Assertion 041: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT Assertion 041: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR Assertion 042: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7583000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.27791449"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR Assertion 042: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR_statistical_quality Assertion 042: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR Assertion 042: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC Assertion 043: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4142000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.65527432"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC Assertion 043: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC_statistical_quality Assertion 043: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC Assertion 043: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP Assertion 044: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6334000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+01.08159823"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP Assertion 044: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP_statistical_quality Assertion 044: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP Assertion 044: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP Assertion 045: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6863000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.44269097"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP Assertion 045: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP_statistical_quality Assertion 045: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP Assertion 045: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP Assertion 046: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8986000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.17224272"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP Assertion 046: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP_statistical_quality Assertion 046: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP Assertion 046: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP Assertion 047: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6151000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.41998458"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP Assertion 047: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP_statistical_quality Assertion 047: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP Assertion 047: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP_statistical_quality>.
+
+
+# RDF Component-Level ERP-Metric-Instance Assertion 048: GAF-LP1_+NN-+NW_ERP_+580_peak_latency_measurement_datum
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_peak_latency_measurement_datum>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0745000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_peak_latency_measurement_datum>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+580.00000000"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level ERP-Metric-Instance Predication 048
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_peak_latency_measurement_datum>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580>.
+
+
+################################################################################
+# Inferential-Statistic Metric Block: Component Index 001
+################################################################################
+
+# RDF Component-Level Statistic-Instance Assertion 050: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00000001"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 050
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MFRONT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 051: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00095133"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 051
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MCENT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 052: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.07303990"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 052
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MPAR>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 053: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00000795"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 053
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_MOCC>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 054: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00034457"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 054
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LFRONT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 055: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.57959596"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 055
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCENT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 056: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00000003"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 056
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPAR>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 057: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00000000"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 057
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOCC>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 058: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.01214872"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 058
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LATEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 059: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.30184233"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 059
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LCTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 060: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00000001"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 060
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LPTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 061: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00000002"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 061
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_LOTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 062: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00000557"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 062
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RFRONT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 063: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00254916"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 063
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCENT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 064: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.21426896"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 064
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPAR>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 065: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00063847"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 065
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROCC>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 066: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00000232"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 066
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RATEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 067: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00148742"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 067
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RCTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 068: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.53230937"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 068
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_RPTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 069: GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.06944419"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 069
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+580_mean_intensity_ROTEMP>.
+
+
+################################################################################
+# Spatial-Temporal Difference Metric Block: Component Index 002
+################################################################################
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212 Assertion 070: Has_Type/Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0877000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212 Assertion 070: Is_Specified_Output_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>    <http://purl.obolibrary.org/obo/OBI_0000312>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data_transformation>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT Assertion 071: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1898000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.01768502"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT Assertion 071: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT_statistical_quality Assertion 071: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT Assertion 071: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT Assertion 072: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3287000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.22546107"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT Assertion 072: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT_statistical_quality Assertion 072: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT Assertion 072: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR Assertion 073: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0603000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.27096444"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR Assertion 073: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR_statistical_quality Assertion 073: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR Assertion 073: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC Assertion 074: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2495000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.15801616"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC Assertion 074: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC_statistical_quality Assertion 074: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC Assertion 074: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT Assertion 075: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2257000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.16462752"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT Assertion 075: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT_statistical_quality Assertion 075: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT Assertion 075: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT Assertion 076: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6976000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.05862345"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT Assertion 076: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT_statistical_quality Assertion 076: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT Assertion 076: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR Assertion 077: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3703000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.09054638"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR Assertion 077: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR_statistical_quality Assertion 077: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR Assertion 077: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC Assertion 078: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8297000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.02289136"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC Assertion 078: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC_statistical_quality Assertion 078: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC Assertion 078: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP Assertion 079: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9763000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.41713066"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP Assertion 079: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP_statistical_quality Assertion 079: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP Assertion 079: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP Assertion 080: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4297000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.11309914"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP Assertion 080: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP_statistical_quality Assertion 080: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP Assertion 080: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP Assertion 081: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8146000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.31164697"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP Assertion 081: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP_statistical_quality Assertion 081: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP Assertion 081: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP Assertion 082: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1293000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.43428680"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP Assertion 082: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP_statistical_quality Assertion 082: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP Assertion 082: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT Assertion 083: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3104000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.08695591"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT Assertion 083: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT_statistical_quality Assertion 083: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT Assertion 083: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT Assertion 084: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1941000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.23281057"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT Assertion 084: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT_statistical_quality Assertion 084: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT Assertion 084: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR Assertion 085: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7583000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.25592244"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR Assertion 085: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR_statistical_quality Assertion 085: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR Assertion 085: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC Assertion 086: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4142000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.22305392"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC Assertion 086: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC_statistical_quality Assertion 086: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC Assertion 086: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP Assertion 087: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6334000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.06139712"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP Assertion 087: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP_statistical_quality Assertion 087: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP Assertion 087: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP Assertion 088: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6863000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.08410955"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP Assertion 088: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP_statistical_quality Assertion 088: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP Assertion 088: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP Assertion 089: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8986000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.13814072"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP Assertion 089: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP_statistical_quality Assertion 089: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP Assertion 089: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP Assertion 090: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6151000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.06059291"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP Assertion 090: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP_statistical_quality Assertion 090: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP Assertion 090: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP_statistical_quality>.
+
+
+# RDF Component-Level ERP-Metric-Instance Assertion 091: GAF-LP1_+NN-+NW_ERP_+212_peak_latency_measurement_datum
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_peak_latency_measurement_datum>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0745000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_peak_latency_measurement_datum>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+212.00000000"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level ERP-Metric-Instance Predication 091
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_peak_latency_measurement_datum>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212>.
+
+
+################################################################################
+# Inferential-Statistic Metric Block: Component Index 002
+################################################################################
+
+# RDF Component-Level Statistic-Instance Assertion 093: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.28179860"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 093
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MFRONT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 094: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.03087140"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 094
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MCENT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 095: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.22616913"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 095
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MPAR>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 096: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.80899754"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 096
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_MOCC>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 097: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.91211770"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 097
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LFRONT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 098: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.90753631"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 098
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCENT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 099: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.40307398"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 099
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPAR>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 100: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.30106176"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 100
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOCC>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 101: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.22329163"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 101
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LATEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 102: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.91972546"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 102
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LCTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 103: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00955385"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 103
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LPTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 104: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00921208"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 104
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_LOTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 105: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.33632068"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 105
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RFRONT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 106: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.13010147"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 106
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCENT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 107: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.42210343"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 107
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPAR>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 108: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.73392067"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 108
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROCC>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 109: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.51399482"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 109
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RATEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 110: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.39286158"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 110
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RCTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 111: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.75645309"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 111
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_RPTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 112: GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.71589680"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 112
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+212_mean_intensity_ROTEMP>.
+
+
+################################################################################
+# Spatial-Temporal Difference Metric Block: Component Index 003
+################################################################################
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372 Assertion 113: Has_Type/Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0877000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372 Assertion 113: Is_Specified_Output_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>    <http://purl.obolibrary.org/obo/OBI_0000312>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_data_transformation>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT Assertion 114: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1898000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.42082502"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT Assertion 114: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT_statistical_quality Assertion 114: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT Assertion 114: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT Assertion 115: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3287000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.54852137"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT Assertion 115: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT_statistical_quality Assertion 115: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT Assertion 115: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR Assertion 116: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0603000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.28086225"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR Assertion 116: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR_statistical_quality Assertion 116: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR Assertion 116: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC Assertion 117: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2495000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.10400101"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC Assertion 117: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC_statistical_quality Assertion 117: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC Assertion 117: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT Assertion 118: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_2257000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.08929028"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT Assertion 118: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT_statistical_quality Assertion 118: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT Assertion 118: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT Assertion 119: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6976000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.08958144"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT Assertion 119: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT_statistical_quality Assertion 119: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT Assertion 119: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR Assertion 120: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3703000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.13804305"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR Assertion 120: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR_statistical_quality Assertion 120: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR Assertion 120: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC Assertion 121: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8297000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.32043277"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC Assertion 121: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC_statistical_quality Assertion 121: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC Assertion 121: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP Assertion 122: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9763000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.46087180"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP Assertion 122: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP_statistical_quality Assertion 122: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP Assertion 122: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP Assertion 123: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4297000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.21231022"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP Assertion 123: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP_statistical_quality Assertion 123: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP Assertion 123: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP Assertion 124: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8146000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.57500018"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP Assertion 124: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP_statistical_quality Assertion 124: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP Assertion 124: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP Assertion 125: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1293000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.81358601"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP Assertion 125: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP_statistical_quality Assertion 125: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP Assertion 125: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT Assertion 126: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_3104000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.58264423"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT Assertion 126: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT_statistical_quality Assertion 126: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT Assertion 126: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT Assertion 127: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_1941000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.60290657"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT Assertion 127: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT_statistical_quality Assertion 127: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT Assertion 127: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR Assertion 128: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7583000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.36151174"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR Assertion 128: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR_statistical_quality Assertion 128: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR Assertion 128: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC Assertion 129: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4142000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.16657529"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC Assertion 129: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC_statistical_quality Assertion 129: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC Assertion 129: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP Assertion 130: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6334000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.20350242"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP Assertion 130: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP_statistical_quality Assertion 130: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP Assertion 130: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP Assertion 131: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6863000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.32486592"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP Assertion 131: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP_statistical_quality Assertion 131: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_9658000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP Assertion 131: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP Assertion 132: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8986000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "-00.11065457"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP Assertion 132: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP_statistical_quality Assertion 132: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP Assertion 132: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP_statistical_quality>.
+
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP Assertion 133: Has_Type/Has_Numeric_Value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_6151000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.08184077"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP Assertion 133: Proper_Part_Of
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP_statistical_quality Assertion 133: Has_Type
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP_statistical_quality>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_8286000>.
+
+# PcaDiff GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP Assertion 133: Has_Quality
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP>    <http://purl.obolibrary.org/obo/OBI_0000298>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP_statistical_quality>.
+
+
+# RDF Component-Level ERP-Metric-Instance Assertion 134: GAF-LP1_+NN-+NW_ERP_+372_peak_latency_measurement_datum
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_peak_latency_measurement_datum>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_0745000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_peak_latency_measurement_datum>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+372.00000000"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level ERP-Metric-Instance Predication 134
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_peak_latency_measurement_datum>    <http://www.obofoundry.org/ro/ro.owl#proper_part_of>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372>.
+
+
+################################################################################
+# Inferential-Statistic Metric Block: Component Index 003
+################################################################################
+
+# RDF Component-Level Statistic-Instance Assertion 136: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.01535514"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 136
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MFRONT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 137: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00757299"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 137
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MCENT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 138: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.02515729"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 138
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MPAR>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 139: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.31747861"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 139
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_MOCC>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 140: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.58731868"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 140
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LFRONT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 141: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.75588423"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 141
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCENT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 142: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.26364965"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 142
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPAR>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 143: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.02677900"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 143
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOCC>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 144: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.01398782"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 144
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LATEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 145: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.12652146"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 145
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LCTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 146: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00084094"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 146
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LPTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 147: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00028637"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 147
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_LOTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 148: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00048925"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 148
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RFRONT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 149: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00000334"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 149
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCENT>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 150: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00228388"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 150
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPAR>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 151: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.20114867"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 151
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROCC>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 152: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.26198963"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 152
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RATEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 153: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.00259916"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 153
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RCTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 154: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.49247583"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 154
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_RPTEMP>.
+
+
+# RDF Component-Level Statistic-Instance Assertion 155: GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP_p_value
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP_p_value>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_4918000>.
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP_p_value>    <http://purl.bioontology.org/NEMO/ontology/NEMO.owl#NEMO_7943000>    "+00.63400161"^^<http://www.w3.org/2001/XMLSchema#decimal>.
+# RDF Component-Level Statistic-Instance Predication 155
+<http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP_p_value>    <http://purl.obolibrary.org/obo/IAO_0000136>    <http://purl.bioontology.org/NEMO/data/GAF-LP1_+NN-+NW_ERP_+372_mean_intensity_ROTEMP>.

@@ -1,0 +1,26 @@
+diff -r c43df9c7062e grails-app/conf/BuildConfig.groovy
+--- a/grails-app/conf/BuildConfig.groovy	Tue Oct 16 13:20:38 2012 -0400
++++ b/grails-app/conf/BuildConfig.groovy	Wed Oct 17 01:23:55 2012 -0400
+@@ -34,7 +34,8 @@
+         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
+ 
+ //        runtime 'mysql:mysql-connector-java:5.1.16'
+-        runtime 'postgresql:postgresql:9.0-801.jdbc4'
++        // runtime 'postgresql:postgresql:9.0-801.jdbc4'
++	runtime 'postgresql:postgresql:8.4-702.jdbc4'
+         runtime 'commons-io:commons-io:2.4'
+     }
+ 
+diff -r c43df9c7062e grails-app/conf/Config.groovy
+--- a/grails-app/conf/Config.groovy	Tue Oct 16 13:20:38 2012 -0400
++++ b/grails-app/conf/Config.groovy	Wed Oct 17 01:23:55 2012 -0400
+@@ -50,7 +50,8 @@
+ // Set to false to use the new Grails 1.2 JSONBuilder in the render method
+ grails.json.legacy.builder = false
+ // enabled native2ascii conversion of i18n properties files
+-grails.enable.native2ascii = true
++// grails.enable.native2ascii = true
++grails.enable.native2ascii = false 
+ // packages to include in Spring bean scanning
+ grails.spring.bean.packages = []
+ // whether to disable processing of multi part requests

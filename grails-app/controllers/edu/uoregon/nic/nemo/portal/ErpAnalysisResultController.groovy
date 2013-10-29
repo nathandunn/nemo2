@@ -104,22 +104,19 @@ class ErpAnalysisResultController {
             def relatedClass = params.related.split("_")[0].trim()
             def relatedID = params.related.split("_")[1].trim()
 
-            if (relatedClass?.indexOf("AnalysisVariable")>=0) {
+            if (relatedClass?.indexOf("AnalysisVariable") >= 0) {
                 AnalysisVariable analysisVariable = AnalysisVariable.findById(relatedID)
                 model = [erpAnalysisResultInstanceList: ErpAnalysisResult.findAllByDependentVariableOrIndependentVariable(analysisVariable, analysisVariable, params)
                         , erpAnalysisResultInstanceTotal: ErpAnalysisResult.countByDependentVariableOrIndependentVariable(analysisVariable, analysisVariable)
                         , related: analysisVariable]
-            }
-            else
-            if (relatedClass?.indexOf("AnalysisMethod")>=0) {
+            } else if (relatedClass?.indexOf("AnalysisMethod") >= 0) {
                 AnalysisMethod analysisMethod = AnalysisMethod.findById(relatedID)
                 model = [erpAnalysisResultInstanceList: ErpAnalysisResult.findAllByAnalysisMethod(analysisMethod, params)
                         , erpAnalysisResultInstanceTotal: ErpAnalysisResult.countByAnalysisMethod(analysisMethod)
                         , related: analysisMethod]
-            }
-            else {
+            } else {
                 log.error "error handling related class: " + relatedClass + " for " + params.related
-				model = getRelatedErpAnalysisResults(id)
+                model = getRelatedErpAnalysisResults(id)
             }
         } else {
             model = getRelatedErpAnalysisResults(id)
@@ -160,7 +157,19 @@ class ErpAnalysisResultController {
     @Secured(['ROLE_VERIFIED'])
     def create(Integer id) {
         def experiment = Experiment.get(id)
-        [erpAnalysisResultInstance: new ErpAnalysisResult(params), erpDataPreprocessings: ErpDataPreprocessing.findAllByExperiment(experiment), experimentInstance: experiment]
+
+        PatternExtractionCondition conditionOfInterest = null
+        PatternExtractionCondition baselineCondition = null
+
+        if (erpAnalysisResultInstance.erpPatternExpression) {
+            conditionOfInterest = erpAnalysisResultInstance.erpPatternExpression.conditionOfInterest
+            baselineCondition = erpAnalysisResultInstance.erpPatternExpression.baselineCondition
+        }
+
+        [erpAnalysisResultInstance: new ErpAnalysisResult(params), erpDataPreprocessings: ErpDataPreprocessing.findAllByExperiment(experiment), experimentInstance: experiment
+                , conditionOfInterest: conditionOfInterest
+                , baselineCondition: baselineCondition
+        ]
     }
 
     @Secured(['ROLE_VERIFIED'])
@@ -241,7 +250,20 @@ class ErpAnalysisResultController {
             return
         }
 
-        render view: "show", model: [erpAnalysisResultInstance: erpAnalysisResultInstance, experimentHeader: erpAnalysisResultInstance.experiment]
+
+        PatternExtractionCondition conditionOfInterest = null
+        PatternExtractionCondition baselineCondition = null
+
+        if (erpAnalysisResultInstance.erpPatternExpression) {
+            conditionOfInterest = erpAnalysisResultInstance.erpPatternExpression.conditionOfInterest
+            baselineCondition = erpAnalysisResultInstance.erpPatternExpression.baselineCondition
+        }
+
+
+        render view: "show", model: [erpAnalysisResultInstance: erpAnalysisResultInstance, experimentHeader: erpAnalysisResultInstance.experiment
+                , conditionOfInterest: conditionOfInterest
+                , baselineCondition: baselineCondition
+        ]
     }
 
     def showIndividuals(Long id, Integer time) {
@@ -267,8 +289,8 @@ class ErpAnalysisResultController {
             return
         }
 
-        if(locationName==null){
-           locationName = BrainLocationEnum.MFRONT
+        if (locationName == null) {
+            locationName = BrainLocationEnum.MFRONT
         }
 //        List<Integer> times = (List<Integer>) Individual.executeQuery("select i.peakTime from Individual i where i.erpAnalysisResult = :erpAnalysisResult  group by i.peakTime order by i.peakTime asc"
 //        ,["erpAnalysisResult":erpAnalysisResultInstance])
@@ -321,9 +343,9 @@ class ErpAnalysisResultController {
         List<Individual> individualList = Individual.findAllByErpAnalysisResultAndLocation(erpAnalysisResultInstance, location)
 
         log.warn "Failed to find individuals for location ${locationName}"
-        if(!individualList){
+        if (!individualList) {
 //            render "<h4>No data found for ${locationName}</h4>"
-            render view:"noDataFound"
+            render view: "noDataFound"
             return
         }
 
@@ -368,7 +390,18 @@ class ErpAnalysisResultController {
         }
         println "size: ${ErpPatternExtraction.findAllByExperiment(erpAnalysisResultInstance.experiment)}"
 
-        render view: "edit", model: [erpAnalysisResultInstance: erpAnalysisResultInstance, erpPatternExtractions: ErpPatternExtraction.findAllByExperiment(erpAnalysisResultInstance.experiment)]
+        PatternExtractionCondition conditionOfInterest = null
+        PatternExtractionCondition baselineCondition = null
+
+        if (erpAnalysisResultInstance.erpPatternExpression) {
+            conditionOfInterest = erpAnalysisResultInstance.erpPatternExpression.conditionOfInterest
+            baselineCondition = erpAnalysisResultInstance.erpPatternExpression.baselineCondition
+        }
+
+        render view: "edit", model: [erpAnalysisResultInstance: erpAnalysisResultInstance, erpPatternExtractions: ErpPatternExtraction.findAllByExperiment(erpAnalysisResultInstance.experiment)
+                , conditionOfInterest: conditionOfInterest
+                , baselineCondition: baselineCondition
+        ]
     }
 
     @Secured(['ROLE_VERIFIED'])

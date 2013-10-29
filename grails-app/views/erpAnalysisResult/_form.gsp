@@ -86,21 +86,27 @@
 
 
 <div class="fieldcontain ${hasErrors(bean: erpAnalysisResultInstance, field: 'dependentVariable', 'error')}  required">
-    <g:propertyEntry key="Condition of Interest" number="11.2" term="NEMO_2494000" required="false"/>
-    <g:select name="dependentVariable.id"
-              from="${edu.uoregon.nic.nemo.portal.AnalysisVariable.listOrderByName()}"
-              optionKey="id" optionValue="name"
-              value="${erpAnalysisResultInstance?.dependentVariable?.id}"
-              class="many-to-one"/>
+    %{--<g:propertyEntry key="Condition of Interest" number="11.2" term="NEMO_2494000" required="false"/>--}%
+    <g:propertyEntry key="Condition of Interest"  term="NEMO_2494000" required="false"/>
+
+    <g:renderOntological term="NEMO_2494000" input="${conditionOfInterest}"/>
+    %{--<g:select name="dependentVariable.id"--}%
+              %{--from="${edu.uoregon.nic.nemo.portal.AnalysisVariable.listOrderByName()}"--}%
+              %{--optionKey="id" optionValue="name"--}%
+              %{--value="${erpAnalysisResultInstance?.dependentVariable?.id}"--}%
+              %{--class="many-to-one"/>--}%
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: erpAnalysisResultInstance, field: 'independentVariable', 'error')}  required">
-    <g:propertyEntry key="Baseline Condition" number="11.3" term="NEMO_9335000" required="false"/>
-    <g:select name="independentVariable.id"
-              from="${edu.uoregon.nic.nemo.portal.AnalysisVariable.listOrderByName()}"
-              optionKey="id" optionValue="name"
-              value="${erpAnalysisResultInstance?.independentVariable?.id}"
-              class="many-to-one"/>
+    %{--<g:propertyEntry key="Baseline Condition" number="11.3" term="NEMO_9335000" required="false"/>--}%
+    <g:propertyEntry key="Baseline Condition" term="NEMO_9335000" required="false"/>
+
+    <g:renderOntological term="NEMO_9335000" input="${baselineCondition}"/>
+    %{--<g:select name="independentVariable.id"--}%
+              %{--from="${edu.uoregon.nic.nemo.portal.AnalysisVariable.listOrderByName()}"--}%
+              %{--optionKey="id" optionValue="name"--}%
+              %{--value="${erpAnalysisResultInstance?.independentVariable?.id}"--}%
+              %{--class="many-to-one"/>--}%
 </div>
 
 

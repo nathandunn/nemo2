@@ -155,10 +155,17 @@
                       %{--term="NEMO_2494000" ontological="${erpAnalysisResultInstance.dependentVariable}"/>--}%
         %{--<g:tableEntry key="Baseline Condition" number="11.3" related="erpAnalysisResult"--}%
                       %{--term="NEMO_9335000" ontological="${erpAnalysisResultInstance.independentVariable}"/>--}%
-        <g:tableEntry key="Condition of Interest" number="11.2" related="erpAnalysisResult"
-                      term="NEMO_2494000" ontological=""/>
-        <g:tableEntry key="Baseline Condition" number="11.3" related="erpAnalysisResult"
-                      term="NEMO_9335000" ontological=""/>
+        %{--<g:tableEntry key="Condition of Interest" number="11.2" related="erpAnalysisResult"--}%
+                      %{--term="NEMO_2494000" ontological=""/>--}%
+        %{--<g:tableEntry key="Baseline Condition" number="11.3" related="erpAnalysisResult"--}%
+                      %{--term="NEMO_9335000" ontological=""/>--}%
+
+
+        <g:tableEntry key="Condition of Interest"  related="erpAnalysisResult"
+                      term="NEMO_2494000" ontological="${conditionOfInterest}"/>
+        <g:tableEntry key="Baseline Condition"  related="erpAnalysisResult"
+                      term="NEMO_9335000" ontological="${baselineCondition}"/>
+
         <g:tableEntry key="Statistical Analysis Method (ANOVA, ttest, etc.)" number="11.4" related="erpAnalysisResult"
                       term="NEMO_6879000" ontological="${erpAnalysisResultInstance.analysisMethod}"/>
         <g:tableEntry key="Statistical Significance Threshold" number="11.5"

@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/edu/uoregon/nic/nemo/portal/ErpAnalysisResultController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/edu/uoregon/nic/nemo/portal/ErpAnalysisResultController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/taglib/edu/uoregon/nic/nemo/portal/OntologyLookupTagLib.groovy" afterPath="$PROJECT_DIR$/grails-app/taglib/edu/uoregon/nic/nemo/portal/OntologyLookupTagLib.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/erpAnalysisResult/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/erpAnalysisResult/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/erpAnalysisResult/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/erpAnalysisResult/show.gsp" />
     </list>
     <ignored path="nemo-grails.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
     <file path="/DataFileController.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1370629243348" ignored="false" />
-    <file path="/_form.gsp" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1382990421251" ignored="false" />
+    <file path="/_form.gsp" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1383089773270" ignored="false" />
     <file path="/edit.gsp" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1377014088996" ignored="false" />
-    <file path="/show.gsp" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1383067097802" ignored="false" />
+    <file path="/show.gsp" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1383089469429" ignored="false" />
     <file path="/create.gsp" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1382118370713" ignored="false" />
     <file path="/SubjectGroupController.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1370458643794" ignored="false" />
     <file path="/ExperimentController.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1382989692855" ignored="false" />
@@ -53,7 +57,7 @@
     <file path="/EegDataCollectionController.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1370458798593" ignored="false" />
     <file path="/ErpDataPreprocessingController.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1370458856831" ignored="false" />
     <file path="/main.css" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1382986769553" ignored="false" />
-    <file path="/main.gsp" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1382636927821" ignored="false" />
+    <file path="/main.gsp" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1383089240013" ignored="false" />
     <file path="/DataFile.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1377022065847" ignored="false" />
     <file path="/OntologyService.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1382643496566" ignored="false" />
     <file path="/BootStrap.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1382988433423" ignored="false" />
@@ -154,7 +158,7 @@
     <file path="$PROJECT_DIR$/../Instant-Search/src/main/java/org/precog/instantsearch/tracker/FixUrl.java" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1360888046576" ignored="false" />
     <file path="$PROJECT_DIR$/../Instant-Search/src/test/java/org/precog/instantsearch/TrackingTest.java" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1364238426714" ignored="false" />
     <file path="$PROJECT_DIR$/../Instant-Search/src/main/java/org/precog/instantsearch/tracker/TrackLogAction.java" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1360888046576" ignored="false" />
-    <file path="/OntologyLookupTagLib.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1382637242186" ignored="false" />
+    <file path="/OntologyLookupTagLib.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1383089430696" ignored="false" />
     <file path="$PROJECT_DIR$/../Instant-Search/src/main/resources/atlassian-plugin.xml" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1364238426714" ignored="false" />
     <file path="$PROJECT_DIR$/../Instant-Search/src/main/resources/org/precog/instantsearch/instantsearchaction.vm" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1376418718497" ignored="false" />
     <file path="$PROJECT_DIR$/../Instant-Search/README.txt" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1360889417499" ignored="false" />
@@ -384,7 +388,7 @@
     <file path="$PROJECT_DIR$/web-app/WEB-INF/tld/fmt.tld" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1375210045327" ignored="false" />
     <file path="/Convert.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1375288337664" ignored="false" />
     <file path="/ErpPatternExtraction.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1376948026827" ignored="false" />
-    <file path="/ErpAnalysisResultController.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1382637881775" ignored="false" />
+    <file path="/ErpAnalysisResultController.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1383089852189" ignored="false" />
     <file path="/instantsearchaction.vm" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1376418696755" ignored="false" />
     <file path="/InstantSearchMacro.java" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1376421507011" ignored="false" />
     <file path="/ErpAnalysisResult.groovy" changelist="c9a09f7b-65f3-45fe-981f-5cb057d6cb83" time="1376949826999" ignored="false" />
@@ -710,8 +714,23 @@
           <file leaf-file-name="_form.gsp" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/grails-app/views/erpAnalysisResult/_form.gsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="21" column="102" selection-start="992" selection-end="992" vertical-scroll-proportion="0.33333334">
+                <state line="101" column="46" selection-start="4781" selection-end="4781" vertical-scroll-proportion="0.78740156">
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.gsp" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="118" column="11" selection-start="4968" selection-end="4968" vertical-scroll-proportion="-8.125">
+                  <folding>
+                    <marker date="1383089240000" expanded="true" signature="1864:2236" placeholder="{...}" />
+                    <marker date="1383089240000" expanded="true" signature="2280:2584" placeholder="{...}" />
+                    <marker date="1383089240000" expanded="true" signature="2336:2383" placeholder="{...}" />
+                    <marker date="1383089240000" expanded="true" signature="2413:2476" placeholder="{...}" />
+                    <marker date="1383089240000" expanded="true" signature="2508:2571" placeholder="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -719,12 +738,24 @@
           <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grails-app/views/erpAnalysisResult/show.gsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="178" column="0" selection-start="9247" selection-end="9247" vertical-scroll-proportion="-5.893617">
+                <state line="163" column="52" selection-start="8237" selection-end="8237" vertical-scroll-proportion="-3.1914895">
                   <folding>
-                    <marker date="1383088492000" expanded="true" signature="4454:4749" placeholder="{...}" />
-                    <marker date="1383088492000" expanded="true" signature="4843:5138" placeholder="{...}" />
+                    <marker date="1383089613000" expanded="true" signature="4454:4749" placeholder="{...}" />
+                    <marker date="1383089613000" expanded="true" signature="4843:5138" placeholder="{...}" />
                   </folding>
                 </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ErpAnalysisResult.groovy" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/ErpAnalysisResult.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="39" column="27" selection-start="1045" selection-end="1045" vertical-scroll-proportion="-3.9">
+                  <folding />
+                </state>
+              </provider>
+              <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+                <state />
               </provider>
             </entry>
           </file>
@@ -750,27 +781,6 @@
             <entry file="file://$PROJECT_DIR$/grails-app/views/subjectGroup/list.gsp">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="17" column="19" selection-start="679" selection-end="679" vertical-scroll-proportion="-5.425532">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ErpAnalysisResult.groovy" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/ErpAnalysisResult.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="28" selection-start="530" selection-end="530" vertical-scroll-proportion="-5.4">
-                  <folding />
-                </state>
-              </provider>
-              <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-                <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="section.gsp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/views/erpPatternExtraction/section.gsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="61" column="45" selection-start="3011" selection-end="3011" vertical-scroll-proportion="-6.06383">
                   <folding />
                 </state>
               </provider>
@@ -804,33 +814,6 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="ExperimentService.groovy" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/services/edu/uoregon/nic/nemo/portal/ExperimentService.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="65" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Experiment.groovy" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/Experiment.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="36" column="35" selection-start="957" selection-end="957" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ExperimentController.groovy" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/grails-app/controllers/edu/uoregon/nic/nemo/portal/ExperimentController.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="64" column="53" selection-start="2619" selection-end="2619" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="SubjectGroup.groovy" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/SubjectGroup.groovy">
               <provider selected="true" editor-type-id="text-editor">
@@ -849,10 +832,37 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ErpPatternExtraction.groovy" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="ErpPatternExtraction.groovy" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/ErpPatternExtraction.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="37" column="29" selection-start="930" selection-end="930" vertical-scroll-proportion="1.2936709">
+                <state line="16" column="0" selection-start="390" selection-end="390" vertical-scroll-proportion="-8.521739">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DataViewTagLib.groovy" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/grails-app/taglib/edu/uoregon/nic/nemo/portal/DataViewTagLib.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="31" column="20" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OntologyLookupTagLib.groovy" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/grails-app/taglib/edu/uoregon/nic/nemo/portal/OntologyLookupTagLib.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="206" column="6" selection-start="6377" selection-end="6377" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ErpAnalysisResultController.groovy" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/grails-app/controllers/edu/uoregon/nic/nemo/portal/ErpAnalysisResultController.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="169" column="17" selection-start="6943" selection-end="6943" vertical-scroll-proportion="0.7460733">
                   <folding />
                 </state>
               </provider>
@@ -906,10 +916,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/stimulus/_form.gsp" />
-        <option value="$PROJECT_DIR$/application.properties" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/edu/uoregon/nic/nemo/portal/ErpAnalysisResultController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/services/edu/uoregon/nic/nemo/portal/DataStubService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/erpAnalysisResult/showIndividuals.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/erpAnalysisResult/showIndividualsAtLocation.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/ErpAnalysisResult.groovy" />
@@ -917,10 +923,14 @@
         <option value="$PROJECT_DIR$/grails-app/views/erpAnalysisResult/section.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/erpPatternExtraction/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/erpPatternExtraction/_form.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/erpAnalysisResult/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/condition/list.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/publication/list.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/subjectGroup/list.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/taglib/edu/uoregon/nic/nemo/portal/DataViewTagLib.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/taglib/edu/uoregon/nic/nemo/portal/OntologyLookupTagLib.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/erpAnalysisResult/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/edu/uoregon/nic/nemo/portal/ErpAnalysisResultController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/erpAnalysisResult/_form.gsp" />
       </list>
     </option>
@@ -1389,99 +1399,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/edu/uoregon/nic/nemo/portal/ErpAnalysisResultController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="445" column="38" selection-start="21285" selection-end="21285" vertical-scroll-proportion="-5.521739">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/PatternExtractionMethod.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/edu/uoregon/nic/nemo/portal/DataStubService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="911" column="28" selection-start="51045" selection-end="51045" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/erpAnalysisResult/showIndividuals.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="109" selection-start="2157" selection-end="2157" vertical-scroll-proportion="-2.531915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/erpAnalysisResult/showIndividualsAtLocation.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="14" selection-start="2674" selection-end="2674" vertical-scroll-proportion="-5.0851064">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/ErpAnalysisResult.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="530" selection-end="530" vertical-scroll-proportion="-5.4">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="8" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/erpPatternExtraction/section.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="45" selection-start="3011" selection-end="3011" vertical-scroll-proportion="-6.06383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/erpAnalysisResult/section.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="17" selection-start="5968" selection-end="5968" vertical-scroll-proportion="-4.5957446">
-          <folding>
-            <marker date="1383088421000" expanded="true" signature="3224:4062" placeholder="{...}" />
-            <marker date="1383088421000" expanded="true" signature="3338:4026" placeholder="{...}" />
-            <marker date="1383088421000" expanded="true" signature="3465:3628" placeholder="//..." />
-            <marker date="1383088421000" expanded="true" signature="3710:3827" placeholder="{...}" />
-            <marker date="1383088421000" expanded="true" signature="3873:3990" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/erpPatternExtraction/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="32" selection-start="4684" selection-end="4684" vertical-scroll-proportion="-3.6595745">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/erpPatternExtraction/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="83" column="38" selection-start="4331" selection-end="4331" vertical-scroll-proportion="-4.1489363">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/erpAnalysisResult/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="0" selection-start="9247" selection-end="9247" vertical-scroll-proportion="-5.893617">
-          <folding>
-            <marker date="1383088492000" expanded="true" signature="4454:4749" placeholder="{...}" />
-            <marker date="1383088492000" expanded="true" signature="4843:5138" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1506,9 +1427,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/ErpPatternExtraction.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="390" selection-end="390" vertical-scroll-proportion="-8.521739">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/edu/uoregon/nic/nemo/portal/ExperimentService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="65" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/taglib/edu/uoregon/nic/nemo/portal/DataViewTagLib.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="20" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/Experiment.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="35" selection-start="957" selection-end="957" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/taglib/edu/uoregon/nic/nemo/portal/OntologyLookupTagLib.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="206" column="6" selection-start="6377" selection-end="6377" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/edu/uoregon/nic/nemo/portal/ExperimentController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="53" selection-start="2619" selection-end="2619" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/erpPatternExtraction/section.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="45" selection-start="3011" selection-end="3011" vertical-scroll-proportion="-6.06383">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/edu/uoregon/nic/nemo/portal/ErpAnalysisResult.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="27" selection-start="1045" selection-end="1045" vertical-scroll-proportion="-3.9">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/erpAnalysisResult/show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="52" selection-start="8237" selection-end="8237" vertical-scroll-proportion="-3.1914895">
+          <folding>
+            <marker date="1383089613000" expanded="true" signature="4454:4749" placeholder="{...}" />
+            <marker date="1383089613000" expanded="true" signature="4843:5138" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="11" selection-start="4968" selection-end="4968" vertical-scroll-proportion="-8.125">
+          <folding>
+            <marker date="1383089240000" expanded="true" signature="1864:2236" placeholder="{...}" />
+            <marker date="1383089240000" expanded="true" signature="2280:2584" placeholder="{...}" />
+            <marker date="1383089240000" expanded="true" signature="2336:2383" placeholder="{...}" />
+            <marker date="1383089240000" expanded="true" signature="2413:2476" placeholder="{...}" />
+            <marker date="1383089240000" expanded="true" signature="2508:2571" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/edu/uoregon/nic/nemo/portal/ErpAnalysisResultController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="17" selection-start="6943" selection-end="6943" vertical-scroll-proportion="0.7460733">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/erpAnalysisResult/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="102" selection-start="992" selection-end="992" vertical-scroll-proportion="0.33333334">
+        <state line="101" column="46" selection-start="4781" selection-end="4781" vertical-scroll-proportion="0.78740156">
           <folding />
         </state>
       </provider>

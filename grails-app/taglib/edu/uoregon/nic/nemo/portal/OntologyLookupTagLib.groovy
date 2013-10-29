@@ -210,7 +210,10 @@ class OntologyLookupTagLib {
             out << "<br/>"
         }
         out << "<div class='detail-label'>"
-        out << "( " << number << " / "
+        out << "( "
+        if(number){
+            out << number << " / "
+        }
         out << link([action: 'show', controller: 'term', id: fullTerm]) { fullTerm }
         out << " )"
         out << "</div>"

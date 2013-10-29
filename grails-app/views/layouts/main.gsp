@@ -122,6 +122,10 @@
                     class="${params.controller == "experiment" ? "selected" : ""}">
                 <b>${experimentHeader.identifier}</b>
             </g:link>
+            &nbsp;
+            <g:link action="list">
+                X
+            </g:link>
         </h2>
     </div>
 

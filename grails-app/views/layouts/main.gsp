@@ -206,39 +206,6 @@
         </h2>
     </div>
 
-    <div id="second_menu">
-        <g:link action="list" controller="subjectGroup"
-                class="${params.controller == "subjectGroup" ? "selected" : ""}">
-            Subject Groups (${SubjectGroup.count()})
-        </g:link>
-        <g:link action="list" controller="condition"
-                class="${params.controller == "condition" || params.controller == "stimulus" || params.controller == "response" ? "selected" : ""}">
-            Conditions (${Condition.count()})
-        </g:link>
-        <g:link action="list" controller="eegDataCollection"
-                class="${params.controller == "eegDataCollection" ? "selected" : ""}">
-            EEG Data Acquisition (${EegDataCollection.count()})
-        </g:link>
-        <g:link action="list" controller="erpDataPreprocessing"
-                class="${params.controller == "erpDataPreprocessing" ? "selected" : ""}">
-            ERP Data Preprocessing (${ErpDataPreprocessing.count()})
-        </g:link>
-        <g:link action="list" controller="erpPatternExtraction"
-                class="${params.action == "erpPatterns" ? "selected" : ""}">
-            ERP Patterns (${ErpPatternExtraction?.count()})
-        </g:link>
-        <g:link action="list" controller="erpAnalysisResult"
-                class="${params.action == "erpPatterns" ? "selected" : ""}">
-            ERP Results (${ErpAnalysisResult?.count()})
-        </g:link>
-        %{--<g:link action="list" controller="dataFile" id="${experimentHeader.id}"--}%
-        %{--class="${params.controller == "dataFile" && params.action != "erpPatterns" ? "selected" : ""}">--}%
-        %{--Files (${experimentHeader?.dataFiles.size()})--}%
-        %{--</g:link>--}%
-        <g:link action="list" controller="publication"
-                class="${params.controller == "publication" ? "selected" : ""}">
-            Publications (${Publication.count()})
-        </g:link>
 
         %{--<g:if test="${experimentHeader.headItLink}">--}%
         %{--<div class="headit-box">--}%

@@ -117,6 +117,12 @@ img {
 
 .content {
     font-size: 90%;
+
+    margin-left: 180px;
+
+    display: inline;
+    /*margin-left: 150px;*/
+    float: left;
 }
 
 .content h1 {
@@ -1136,16 +1142,17 @@ legend {
 }
 
 .container {
-    /*background-color: #00008b;*/
+    background-color: #00008b;
     background-color: #04203E;
     width: auto;
-    /*margin: 0 auto;*/
+    margin: 0 auto;
     overflow: hidden;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    /**zoom: 1;*/
+    *zoom: 1;
+
 }
 
 #logo {
@@ -1370,24 +1377,30 @@ header {
 #second_menu {
     /*margin: 5px;*/
     /*margin-top: 4px;*/
-    padding-top: 8px;
-    padding-bottom: 5px;
-    border-color: #a9a9a9;
-    border-width: 1px;
+    /*padding-top: 8px;*/
+    /*padding-bottom: 5px;*/
+    /*border-color: #a9a9a9;*/
+    /*border-width: 1px;*/
     /*border-topstyle: solid;*/
-    font-size: small;
-    text-align: left;
-    width: auto;
+    /*font-size: small;*/
+    /*text-align: left;*/
+    /*width: auto;*/
+
+    /*margin-right: 150px;*/
+    width: 140px;
+    display: inline;
+    float: left;
 }
 
 #second_menu a {
-    /*margin: 10px;*/
+    margin: 10px;
     padding: 4px;
-    border-color: #000000;
+    /*border-color: #000000;*/
     background-color: #d3d3d3;
     border-width: 1px;
-    border-style: solid;
+    /*border-style: solid;*/
     text-decoration: none;
+    display: block;
 }
 
 #second_menu a:hover {
@@ -1397,7 +1410,7 @@ header {
 
 #second_menu a.selected {
     background-color: #444444;
-    /*color: #000;*/
+    color: #000;
     color: #ffffff;
 }
 

@@ -1,4 +1,4 @@
-<%@ page import="edu.uoregon.nic.nemo.portal.Experiment" %>
+<%@ page import="edu.uoregon.nic.nemo.portal.SubjectGroup; edu.uoregon.nic.nemo.portal.Condition; edu.uoregon.nic.nemo.portal.EegDataCollection; edu.uoregon.nic.nemo.portal.ErpDataPreprocessing; edu.uoregon.nic.nemo.portal.ErpPatternExtraction; edu.uoregon.nic.nemo.portal.ErpAnalysisResult; edu.uoregon.nic.nemo.portal.Publication; edu.uoregon.nic.nemo.portal.Experiment" %>
 <!doctype html>
 <html>
 <head>
@@ -22,6 +22,41 @@
     </div>
 </sec:ifAllGranted>
 
+<div id="second_menu">
+    <g:link action="list" controller="subjectGroup"
+            class="${params.controller == "subjectGroup" ? "selected" : ""}">
+        Subject Groups (${SubjectGroup.count()})
+    </g:link>
+    <g:link action="list" controller="condition"
+            class="${params.controller == "condition" || params.controller == "stimulus" || params.controller == "response" ? "selected" : ""}">
+        Conditions (${Condition.count()})
+    </g:link>
+    <g:link action="list" controller="eegDataCollection"
+            class="${params.controller == "eegDataCollection" ? "selected" : ""}">
+        EEG Data Acquisition (${EegDataCollection.count()})
+    </g:link>
+    <g:link action="list" controller="erpDataPreprocessing"
+            class="${params.controller == "erpDataPreprocessing" ? "selected" : ""}">
+        ERP Data Preprocessing (${ErpDataPreprocessing.count()})
+    </g:link>
+    <g:link action="list" controller="erpPatternExtraction"
+            class="${params.action == "erpPatterns" ? "selected" : ""}">
+        ERP Patterns (${ErpPatternExtraction?.count()})
+    </g:link>
+    <g:link action="list" controller="erpAnalysisResult"
+            class="${params.action == "erpPatterns" ? "selected" : ""}">
+        ERP Results (${ErpAnalysisResult?.count()})
+    </g:link>
+    %{--<g:link action="list" controller="dataFile" id="${experimentHeader.id}"--}%
+    %{--class="${params.controller == "dataFile" && params.action != "erpPatterns" ? "selected" : ""}">--}%
+    %{--Files (${experimentHeader?.dataFiles.size()})--}%
+    %{--</g:link>--}%
+    <g:link action="list" controller="publication"
+            class="${params.controller == "publication" ? "selected" : ""}">
+        Publications (${Publication.count()})
+    </g:link>
+</div>
+
 <div id="list-experiment" class="content scaffold-list" role="main">
 
 <h1><g:message code="default.list.label" args="[entityName]"/></h1>
@@ -31,6 +66,8 @@
 <g:if test="${flash.message}">
     <div class="message" role="status">${flash.message}</div>
 </g:if>
+
+
 <table>
 <thead>
 <tr>

@@ -5,12 +5,12 @@
     <meta name="layout" content="main">
     <g:set var="entityName" value="${message(code: 'erpPatternExtraction.label', default: 'File')}"/>
     <title>
-    <g:if test="${actionName == 'erpPatterns'}">
-        ERP Results
-    </g:if>
-    <g:else>
-        <g:message code="default.list.label" args="[entityName]"/>
-    </g:else>
+        <g:if test="${actionName == 'erpPatterns'}">
+            ERP Results
+        </g:if>
+        <g:else>
+            <g:message code="default.list.label" args="[entityName]"/>
+        </g:else>
     </title>
     %{--<r:require module="jquery"/>--}%
     <r:require module="jquery"/>
@@ -44,11 +44,11 @@
         <tr>
 
             %{--<g:sortableColumn property="identifier" params="[related: related?.relatedLookup]"--}%
-                              %{--title="${message(code: 'erpPatternExtraction.identifier.label', default: 'Identifier')}"/>--}%
+            %{--title="${message(code: 'erpPatternExtraction.identifier.label', default: 'Identifier')}"/>--}%
             %{--<g:sortableColumn property="set" params="[related: related?.relatedLookup]"--}%
-                              %{--title="${message(code: 'erpPatternExtraction.set.label', default: 'Data Set')}"/>--}%
+            %{--title="${message(code: 'erpPatternExtraction.set.label', default: 'Data Set')}"/>--}%
             %{--<g:sortableColumn property="format" params="[related: related?.relatedLookup]"--}%
-                              %{--title="${message(code: 'erpPatternExtraction.format.label', default: 'Data format ')}"/>--}%
+            %{--title="${message(code: 'erpPatternExtraction.format.label', default: 'Data format ')}"/>--}%
             <g:sortableColumn property="artifactFileName" params="[related: related?.relatedLookup]"
                               title="${message(code: 'erpPatternExtraction.artifactFileName.label', default: 'Artifact File Name')}"/>
             <g:sortableColumn property="method" title="Method"/>
@@ -65,86 +65,90 @@
                 <td><g:link action="show"
                             id="${erpPatternExtractionInstance.id}">${fieldValue(bean: erpPatternExtractionInstance, field: "artifactFileName")}</g:link>
 
-                <g:link controller="erpPatternExtraction" action="download" id="${erpPatternExtractionInstance.id}">
-                    <g:img dir="images/icon" file="download2.png"/>
-                </g:link>
+                <g:if test="${erpPatternExtractionInstance.download}">
+                    <g:link controller="erpPatternExtraction" action="download" id="${erpPatternExtractionInstance.id}">
+                        <g:img dir="images/icon" file="download2.png"/>
+                    </g:link>
+                </g:if>
                 </td>
 
                 <td>
                     <g:renderOntological input="${erpPatternExtractionInstance.method}" related="erpPatternExtraction"/>
                 </td>
                 <td>
-                    <g:renderOntological input="${erpPatternExtractionInstance.baselineCondition}" related="erpPatternExtraction"/>
+                    <g:renderOntological input="${erpPatternExtractionInstance.baselineCondition}"
+                                         related="erpPatternExtraction"/>
                 </td>
                 <td>
-                    <g:renderOntological input="${erpPatternExtractionInstance.conditionOfInterest}" related="erpPatternExtraction"/>
+                    <g:renderOntological input="${erpPatternExtractionInstance.conditionOfInterest}"
+                                         related="erpPatternExtraction"/>
                 </td>
 
                 %{--<td>--}%
-                    %{--<g:renderOntological input="${erpPatternExtractionInstance.set}" related="erpPatternExtraction"/>--}%
+                %{--<g:renderOntological input="${erpPatternExtractionInstance.set}" related="erpPatternExtraction"/>--}%
                 %{--</td>--}%
                 %{--<td>--}%
-                    %{--<g:renderOntological input="${erpPatternExtractionInstance.format}" related="erpPatternExtraction"/>--}%
+                %{--<g:renderOntological input="${erpPatternExtractionInstance.format}" related="erpPatternExtraction"/>--}%
                 %{--</td>--}%
                 %{--<td>--}%
-                    %{--<g:if test="${erpPatternExtractionInstance.isDownloadable()}">--}%
-                    %{--</g:if>--}%
-                    %{--<g:else>--}%
-                        %{--<div style="color: graytext;">${erpPatternExtractionInstance.artifactFileName} Not uploaded</div>--}%
-                    %{--</g:else>--}%
+                %{--<g:if test="${erpPatternExtractionInstance.isDownloadable()}">--}%
+                %{--</g:if>--}%
+                %{--<g:else>--}%
+                %{--<div style="color: graytext;">${erpPatternExtractionInstance.artifactFileName} Not uploaded</div>--}%
+                %{--</g:else>--}%
                 %{--</td>--}%
                 %{--<td>--}%
-                    %{--<g:if test="${erpPatternExtractionInstance?.isRdfAvailable()}">--}%
-                        %{--<r:script>--}%
-                            %{--function showRow(id){--}%
-                                 %{--var linkId = "classificationLink"+id;--}%
-%{--//                                 alert(linkId)--}%
-                                         %{--var element = document.getElementById(linkId);--}%
-                                         %{--if(element.innerHTML.indexOf("Hide")==0){--}%
-                                             %{--element.innerHTML = 'Show';--}%
-                                         %{--}--}%
-                                         %{--else{--}%
-                                             %{--element.innerHTML = 'Hide';--}%
-                                         %{--}--}%
-                            %{--};--}%
+                %{--<g:if test="${erpPatternExtractionInstance?.isRdfAvailable()}">--}%
+                %{--<r:script>--}%
+                %{--function showRow(id){--}%
+                %{--var linkId = "classificationLink"+id;--}%
+                %{--//                                 alert(linkId)--}%
+                %{--var element = document.getElementById(linkId);--}%
+                %{--if(element.innerHTML.indexOf("Hide")==0){--}%
+                %{--element.innerHTML = 'Show';--}%
+                %{--}--}%
+                %{--else{--}%
+                %{--element.innerHTML = 'Hide';--}%
+                %{--}--}%
+                %{--};--}%
 
-                            %{--jQuery('#classificationRow${erpPatternExtractionInstance.id}').hide();--}%
-                                %{--jQuery('#classificationLabel${erpPatternExtractionInstance.id}').click(function() {--}%
-                            %{--jQuery('#classificationRow${erpPatternExtractionInstance.id}').toggle('slow', function() {--}%
-                                       %{--showRow(${erpPatternExtractionInstance.id});--}%
-                                  %{--});--}%
-                                %{--});--}%
+                %{--jQuery('#classificationRow${erpPatternExtractionInstance.id}').hide();--}%
+                %{--jQuery('#classificationLabel${erpPatternExtractionInstance.id}').click(function() {--}%
+                %{--jQuery('#classificationRow${erpPatternExtractionInstance.id}').toggle('slow', function() {--}%
+                %{--showRow(${erpPatternExtractionInstance.id});--}%
+                %{--});--}%
+                %{--});--}%
 
-                                  %{--jQuery('#classificationRow${erpPatternExtractionInstance.id}').hide();--}%
-                        %{--</r:script>--}%
+                %{--jQuery('#classificationRow${erpPatternExtractionInstance.id}').hide();--}%
+                %{--</r:script>--}%
 
-                        %{--<div id="classificationLabel${erpPatternExtractionInstance.id}">--}%
-                            %{--<a id="classificationLink${erpPatternExtractionInstance.id}"--}%
-                               %{--href="javascript:;" onclick="--}%
-                                %{--<g:remoteFunction action="classify" update="classificationBox${erpPatternExtractionInstance.id}"--}%
-                                %{--asynchronous="true"--}%
-                                %{--id="${erpPatternExtractionInstance.id}"--}%
-                                %{--controller="experiment"--}%
-                                %{--/>--}%
-                            %{--">Show</a>--}%
-                        %{--</div>--}%
+                %{--<div id="classificationLabel${erpPatternExtractionInstance.id}">--}%
+                %{--<a id="classificationLink${erpPatternExtractionInstance.id}"--}%
+                %{--href="javascript:;" onclick="--}%
+                %{--<g:remoteFunction action="classify" update="classificationBox${erpPatternExtractionInstance.id}"--}%
+                %{--asynchronous="true"--}%
+                %{--id="${erpPatternExtractionInstance.id}"--}%
+                %{--controller="experiment"--}%
+                %{--/>--}%
+                %{--">Show</a>--}%
+                %{--</div>--}%
 
-                    %{--</g:if>--}%
-                    %{--<g:elseif test="${erpPatternExtractionInstance.isRdfError()}">--}%
-                        %{--<div class="error">There was an Error processing the RDF</div>--}%
-                        %{--<br/>--}%
-                        %{--<a href="">Reprocess via jQuery?</a>--}%
-                    %{--</g:elseif>--}%
-                    %{--<g:elseif test="${erpPatternExtractionInstance.isRdfInProcess()}">--}%
-                        %{--Processing ...--}%
-                    %{--</g:elseif>--}%
+                %{--</g:if>--}%
+                %{--<g:elseif test="${erpPatternExtractionInstance.isRdfError()}">--}%
+                %{--<div class="error">There was an Error processing the RDF</div>--}%
+                %{--<br/>--}%
+                %{--<a href="">Reprocess via jQuery?</a>--}%
+                %{--</g:elseif>--}%
+                %{--<g:elseif test="${erpPatternExtractionInstance.isRdfInProcess()}">--}%
+                %{--Processing ...--}%
+                %{--</g:elseif>--}%
                 %{--</td>--}%
             </tr>
-            %{--<g:if test="${erpPatternExtractionInstance.isRdfAvailable()}">--}%
-                %{--<tr id="classificationRow${erpPatternExtractionInstance.id}" class="nohover">--}%
-                    %{--<td colspan="5"><div id="classificationBox${erpPatternExtractionInstance.id}"></div></td>--}%
-                %{--</tr>--}%
-            %{--</g:if>--}%
+        %{--<g:if test="${erpPatternExtractionInstance.isRdfAvailable()}">--}%
+        %{--<tr id="classificationRow${erpPatternExtractionInstance.id}" class="nohover">--}%
+        %{--<td colspan="5"><div id="classificationBox${erpPatternExtractionInstance.id}"></div></td>--}%
+        %{--</tr>--}%
+        %{--</g:if>--}%
         </g:each>
         </tbody>
     </table>

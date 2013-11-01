@@ -334,10 +334,12 @@ class ErpPatternExtractionController {
             response.status = 404
             return
         }
-        File file = new File(getDownloadsPath() + erpPatternExtraction.artifactFileName)
+//        File file = new File(getDownloadsPath() + erpPatternExtraction.artifactFileName)
         response.setHeader("Content-Disposition", "attachment;filename=${erpPatternExtraction.artifactFileName}")
-        log.debug "setting content type ot string "
+//        log.debug "setting content type ot string "
+
         response.setContentType("text/plain")
+        response.outputStream << erpPatternExtraction.download
         response.outputStream << file.text
     }
 

@@ -31,6 +31,19 @@
         </g:form>
     </div>
     <br/>
+    <div class="hideshow-buttons">
+        <input id="hideButton" type="button" value="Hide Images" onclick="
+            $('.erp-image').hide();
+            $('#showButton').show();
+            $('#hideButton').hide();
+        "/>
+
+        <input id="showButton" type="button" style="display: none;" value="Show Images" onclick="
+            $('.erp-image').show();
+            $('#showButton').hide();
+            $('#hideButton').show();
+        "/>
+    </div>
     <table>
         <thead>
         <tr>
@@ -68,7 +81,7 @@
                                     <div class="image1-div" style="display: inline-table; text-align: center;">
                                         <strong>Extracted ERP Pattern</strong>
                                         <br/>
-                                        <g:link controller="patternImage" action="viewImage"
+                                        <g:link class="erp-image" controller="patternImage" action="viewImage"
                                                 id="${instance.key.encodeAsURL()}">
                                             <img style="max-width: 250px;"
                                                  src="${createLink(controller: 'patternImage', action: 'viewImage', id: instance.key.encodeAsURL())}"
@@ -79,7 +92,7 @@
                                 </g:ifImage>
 
                                 <g:ifRawImage key="${instance.key.encodeAsURL()}">
-                                    <div class="image1-div" style="display: inline-table; text-align: center;">
+                                    <div class="erp-image" class="image1-div" style="display: inline-table; text-align: center;">
                                         <strong>Extracted ERP Pattern</strong>
                                         <strong>Reconstructed ERP Data</strong>
                                         <br/>

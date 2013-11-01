@@ -1900,3 +1900,12 @@ table.resultTable {
 .link-title a{
     color: #00008b !important;
 }
+
+.erp-image{
+ vertical-align: bottom;
+}
+
+.hideshow-buttons{
+  margin-left: 150px;
+
+}

@@ -9,6 +9,21 @@
 
 <body>
 <br/>
+
+<div class="hideshow-buttons">
+    <input id="hideButton" type="button" value="Hide Images" onclick="
+        $('.erp-image').hide();
+        $('#showButton').show();
+        $('#hideButton').hide();
+    "/>
+
+    <input id="showButton" type="button" style="display: none;" value="Show Images" onclick="
+        $('.erp-image').show();
+        $('#showButton').hide();
+        $('#hideButton').show();
+    "/>
+</div>
+<br/>
 <table class="embedded-table">
     <g:if test="${instances.size() == 0}">
         <div style="color: gray; text-align: center;">
@@ -34,6 +49,7 @@
             <tr>
                 <td style="width: 50%;">
                     <a name="${instance.key}"></a>
+
                     <div class="erp-pattern-title">
                         <g:createIndividualLink time="${instance.key}" value="${erpAnalysisResult}"/>
                     </div>
@@ -41,7 +57,8 @@
 
 
                     <g:ifImage key="${instance.key.encodeAsURL()}">
-                        <g:link controller="patternImage" action="viewImage" id="${instance.key.encodeAsURL()}">
+                        <g:link class="erp-image" controller="patternImage" action="viewImage"
+                                id="${instance.key.encodeAsURL()}">
                             <img style="max-width: 400px;"
                                  src="${createLink(controller: 'patternImage', action: 'viewImage', id: instance.key.encodeAsURL())}"
                                  alt="${instance.key} Image"/>
@@ -70,7 +87,8 @@
                     &nbsp;<br/>
 
                     <g:ifRawImage key="${instance.key.encodeAsURL()}">
-                        <g:link controller="patternImage" action="viewRawImage" id="${instance.key.encodeAsURL()}">
+                        <g:link class="erp-image" controller="patternImage" action="viewRawImage"
+                                id="${instance.key.encodeAsURL()}">
                             <img style="max-width: 400px;"
                                  src="${createLink(controller: 'patternImage', action: 'viewRawImage', id: instance.key.encodeAsURL())}"
                                  alt="${instance.key} Image"/>

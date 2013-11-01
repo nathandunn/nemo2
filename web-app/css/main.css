@@ -1887,3 +1887,16 @@ table.resultTable {
     width: 50%;
     height: 40px;
 }
+
+.link-title{
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+    color: #00008b;
+}
+
+.link-title a{
+    color: #00008b !important;
+}

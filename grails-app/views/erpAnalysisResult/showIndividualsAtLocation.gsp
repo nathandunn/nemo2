@@ -79,8 +79,10 @@
         %{--<h3>--}%
         %{--Current Time ${currentTime} ms--}%
         %{--</h3>--}%
-        <h2>Peak Times (ms) versus Mean Intensity (µV)</h2>
-        <br/>
+        %{--<h2>Peak Times (ms) versus Mean Intensity (µV)</h2>--}%
+        %{--<br/>--}%
+
+    <div class="link-title">Peak Times (ms) versus Mean Intensity (µV) for ${currentLocation} ROI</div>
 
 
         <table class="location-table">

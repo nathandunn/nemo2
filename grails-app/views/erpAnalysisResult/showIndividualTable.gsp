@@ -7,14 +7,14 @@
 
 <body>
 
-
 <div id="${currentTime}">
 
     %{--${link}--}%
     %{--<g:link controller="erpAnalysisResult" id="${erpAnalysisResultInstance.id}#${erpAnalysisResultInstance.artifactFileName}" action="show">--}%
     <div class="table-legend">
-        <g:link controller="erpAnalysisResult" id="${erpAnalysisResultInstance.id}" fragment="${link}" action="show">
-            Experimental Contrast at ${currentTime} (ms)
+        <g:link controller="erpAnalysisResult" id="${erpAnalysisResultInstance.id}" fragment="${link}" action="show" class="link-title">
+            Mean Intensity (µV) at ROI's at Peak Time ${currentTime} ms
+        %{--Experimental Contrast at Peak Time ${currentTime} (ms)--}%
         </g:link>
     </div>
     <br/>

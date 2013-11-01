@@ -78,14 +78,14 @@
         %{--<h3>--}%
         %{--Current Time ${currentTime} ms--}%
         %{--</h3>--}%
-        <h2>Peak Times (ms) versus Mean Intensity (µV)</h2>
+        %{--<h2>Mean Intensity (µV) at ROI's for a given Peak Time (ms)</h2>--}%
         <br/>
 
-    <div class="significant">
-        Significant *
-        <div class="significant-positive">Positive </div>&nbsp;
-        <div class="significant-negative">Negative </div>
-    </div>
+        <div class="significant">
+            Significant *
+            <div class="significant-positive">Positive</div>&nbsp;
+            <div class="significant-negative">Negative</div>
+        </div>
 
         <div id="tabs">
             <ul>

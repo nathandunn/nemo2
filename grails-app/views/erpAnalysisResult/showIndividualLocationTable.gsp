@@ -42,8 +42,8 @@
             ]);
 
             var options = {
-                "title": "Peak Timess (ms) versus Mean Intensity (µV)"
-                , "hAxis.minValue": 0
+//                "title": "Peak Times (ms) versus Mean Intensity (µV)"
+                 "hAxis.minValue": 0
                 , "hAxis.maxValue": 1000
                 , hAxis: {title:"Peak Time (ms)"}
                 , vAxis: {title: "Mean Intensity (µV)"}

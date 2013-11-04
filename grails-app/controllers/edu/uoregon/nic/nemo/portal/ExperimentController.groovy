@@ -10,6 +10,7 @@ class ExperimentController {
     def ontologyService
     def userService
     def springSecurityService
+    def nameCreationService
 
     def afterInterceptor = { model ->
         model.experimentHeader = model.experimentHeader ?: model.experiment
@@ -76,6 +77,7 @@ class ExperimentController {
         } else if (currentUser.laboratories?.size() > 1) {
             availableLabs = currentUser.laboratories
         }
+
         [experimentInstance: experiment, availableLabs: availableLabs]
     }
 

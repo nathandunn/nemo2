@@ -10,7 +10,7 @@ class StimulusController {
 
     def userService
     def springSecurityService
-    def conditionService
+    def nameCreationService
 
 
 
@@ -64,7 +64,9 @@ class StimulusController {
     @Secured(['ROLE_VERIFIED'])
     def create(Integer id) {
         def conditionInstance = Condition.get(id)
-        [stimulusInstance: new Stimulus(params), conditionInstance: conditionInstance]
+        def stimulus = new Stimulus(params)
+        stimulus.identifier = nameCreationService.createStimulusIdentifierForCondition(conditionInstance)
+        [stimulusInstance: stimulus, conditionInstance: conditionInstance]
     }
 
     @Secured(['ROLE_VERIFIED'])
@@ -244,7 +246,7 @@ class StimulusController {
         Stimulus newStimulusCopy = new Stimulus(oldStimulusInstance.properties)
         newStimulusCopy.id = null
         newStimulusCopy.condition = condition
-        newStimulusCopy.identifier = conditionService.createIdentifierForStimulus(newStimulusCopy)
+        newStimulusCopy.identifier = nameCreationService.createIdentifierForStimulus(newStimulusCopy)
 //        newStimulusCopy.interStimulusInterval = oldStimulusInstance.interStimulusInterval
 //        newStimulusCopy.stimulusOnsetAsynchrony = oldStimulusInstance.stimulusOnsetAsynchrony
 //        newStimulusCopy.targetType = oldStimulusInstance.targetType

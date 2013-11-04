@@ -9,6 +9,7 @@ class SubjectGroupController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
     def userService
     def springSecurityService
+    def nameCreationService
 
     def afterInterceptor = { model ->
         model.experimentHeader = model.experimentHeader ?: model.subjectGroup?.experiment
@@ -57,7 +58,10 @@ class SubjectGroupController {
     @Secured(['ROLE_VERIFIED'])
     def create(Integer id) {
         def experimentInstance = Experiment.get(id)
-        [subjectGroupInstance: new SubjectGroup(params), experimentInstance: experimentInstance]
+        def subjectGroup = new SubjectGroup(params)
+        subjectGroup.identifier = nameCreationService.createIdentifierForSubjectGroup(experimentInstance)
+
+        [subjectGroupInstance: subjectGroup, experimentInstance: experimentInstance]
     }
 
     @Secured(['ROLE_VERIFIED'])

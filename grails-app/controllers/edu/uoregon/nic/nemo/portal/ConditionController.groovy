@@ -11,7 +11,7 @@ class ConditionController {
     def userService
     def springSecurityService
     def experimentService
-    def conditionService
+    def nameCreationService
 
     def afterInterceptor = { model ->
         model.experimentHeader = model.experimentHeader ?: model.conditionInstance?.experiment
@@ -95,7 +95,7 @@ class ConditionController {
         params.experiment = experiment
         id = null
         Condition condition = new Condition(params)
-        condition.identifier = conditionService.createIdentifierForCondition(experiment)
+        condition.identifier = nameCreationService.createIdentifierForCondition(experiment)
         [conditionInstance: condition]
     }
 

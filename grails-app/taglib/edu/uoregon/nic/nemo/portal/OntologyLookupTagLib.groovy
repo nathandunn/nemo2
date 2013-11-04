@@ -274,7 +274,8 @@ class OntologyLookupTagLib {
         out << "</td></tr>"
         out << "<tr><td class='pattern-table pattern-header'>"
 //        out << "<strong>Significant Results</strong>"
-        out << "<strong>Peak Time (ms) / # locations"
+        out << "<strong>All Effects</strong><br/>"
+        out << "<strong>Peak Time (ms) / ROI's</strong>"
 //        out << "<strong>Results (ms) <br/>(significant&nbsp;locations)</strong>"
         out << "</td><td  class='pattern-table'>"
         List<Individual> individualList = Individual.findAllByStatisticallySignificantAndErpAnalysisResultInList(true, erpAnalysisResultSet as List, [sort: "peakTime", order: "asc"])

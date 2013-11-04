@@ -5,6 +5,8 @@
     <meta name="layout" content="main">
     <g:set var="entityName" value="${message(code: 'datafile.label', default: 'Cross Lab ERP')}"/>
     <title><g:message code="default.show.label" args="[entityName + ': ' + label?.replaceAll('_', ' ')]"/></title>
+    <r:require module="jquery"/>
+    %{--<g:javascript library="jquery"/>--}%
 </head>
 
 <body>
@@ -15,11 +17,11 @@
     <br/>
 
 
-    <div class="pattern-header" style="display: inline;">
+    <div class="pattern-viewer">
         <strong>Viewing Effect</strong>: <g:link action="show" controller="term" id="${id}"><g:renderUrl
             input="${id}"/></g:link>
         <br/>
-        <br/>
+        %{--<br/>--}%
 
         <g:form controller="pattern" action="show">
             Select ERP Effects: <g:select class="list" id="otherInstance" optionKey="key" optionValue="value"
@@ -31,8 +33,20 @@
         </g:form>
     </div>
 
-    <div style="display: inline;">
+    <div class="pattern-summary" id="pattern-summary">
+        <r:script>
+             $('#pattern-summary').hide() ;
+            function addSummaryData(data){
+                $('#pattern-summary').html(data) ;
+                $('#pattern-summary').show('fast') ;
+            }
+
+            <g:remoteFunction action="generateSummary" id="${id}" controller="pattern"
+                              onSuccess="addSummaryData(data) "
+                              onFailure="alert('error')"/>
+        </r:script>
     </div>
+
     <br/>
     <table>
         <thead>
@@ -42,6 +56,7 @@
                 <div style="display: inline-block;">
                     <g:include view="erpAnalysisResult/showHide.gsp"/>
                 </div>
+
                 <div class="erp-header" style="display: inline-block;">
                     Pattern Instances
                     %{--<br/>--}%

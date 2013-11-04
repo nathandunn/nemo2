@@ -2,8 +2,13 @@ package edu.uoregon.nic.nemo.portal
 
 class ConditionService {
 
-    def createIdentifierForCondition() {
-
+    def createIdentifierForCondition(Experiment experiment) {
+        String origIdentifier = experiment.identifier + "Cond"
+        String identifier = origIdentifier
+        while(Condition.findByIdentifier(identifier)){
+            identifier = origIdentifier + UUID.randomUUID().toString().substring(0,4)
+        }
+        return identifier
     }
 
     def createIdentifierForStimulus(Stimulus stimulus) {

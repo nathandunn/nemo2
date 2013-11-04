@@ -269,6 +269,7 @@ class StimulusController {
             render(view: "edit", id: newStimulusCopy.id, model: [stimulusInstance: newStimulusCopy])
         }
 
+        flash.message = message(code: 'default.created.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), newStimulusCopy.identifier])
         redirect(action: "show", controller: "condition", id: condition.id)
 
     }

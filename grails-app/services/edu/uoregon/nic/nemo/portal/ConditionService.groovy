@@ -7,10 +7,10 @@ class ConditionService {
     }
 
     def createIdentifierForStimulus(Stimulus stimulus) {
-        String identifier = stimulus.condition.identifier + "StimType"
+        String origIdentifier = stimulus.condition.identifier + "Stim"
+        String identifier = origIdentifier
         while(Stimulus.findByIdentifier(identifier)){
-
-            identifier += UUID.randomUUID().toString().substring(0,4)
+            identifier = origIdentifier + UUID.randomUUID().toString().substring(0,4)
         }
         return identifier
     }

@@ -336,11 +336,13 @@ class ErpPatternExtractionController {
             response.status = 404
             return
         }
-        File file = new File(getDownloadsPath() + erpPatternExtraction.artifactFileName)
-        response.setHeader("Content-Disposition", "attachment;filename=${erpPatternExtraction.artifactFileName}")
-        log.debug "setting content type ot string "
-        response.setContentType("text/plain")
-        response.outputStream << file.text
+//        File file = new File(getDownloadsPath() + erpPatternExtraction.artifactFileName)
+//        response.setHeader("Content-Disposition", "attachment;filename=${erpPatternExtraction.artifactFileName}")
+//        log.debug "setting content type ot string "
+//        response.setContentType("text/plain")
+        response.setHeader("Content-Disposition", "attachment; filename=" + erpPatternExtraction.artifactFileName)
+        render(text: erpPatternExtraction.download, contentType: "application/download", encoding: "UTF-8")
+//        response.outputStream << erpPatternExtraction.download
     }
 
     private boolean isTextFile(ErpPatternExtraction erpPatternExtraction) {

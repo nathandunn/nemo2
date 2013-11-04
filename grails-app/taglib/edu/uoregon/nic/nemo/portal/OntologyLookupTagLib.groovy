@@ -272,9 +272,10 @@ class OntologyLookupTagLib {
             out << erpAnalsysisResult.artifactFileName << "</a> <br/> "
         }
         out << "</td></tr>"
-        out << "<tr><td class='pattern-table'>"
+        out << "<tr><td class='pattern-table pattern-header'>"
 //        out << "<strong>Significant Results</strong>"
-        out << "<strong>Results (ms) <br/>(significant&nbsp;locations)</strong>"
+        out << "<strong>Peak Time (ms) / # locations"
+//        out << "<strong>Results (ms) <br/>(significant&nbsp;locations)</strong>"
         out << "</td><td  class='pattern-table'>"
         List<Individual> individualList = Individual.findAllByStatisticallySignificantAndErpAnalysisResultInList(true, erpAnalysisResultSet as List, [sort: "peakTime", order: "asc"])
         int counter =0
@@ -286,7 +287,7 @@ class OntologyLookupTagLib {
                 if (individual.peakTime != peakTime) {
 
                     if(counter>0){
-                        out << "(${countAtTime})  "
+                        out << "/${countAtTime}  "
 //                        out << "<br/>"
                     }
 
@@ -295,7 +296,7 @@ class OntologyLookupTagLib {
                     def linkMapTime = [action: 'showIndividuals', controller: 'erpAnalysisResult', id: individual.erpAnalysisResult.id, params: [time: individual.peakTime]]
                     out << "<a href='" << createLink(linkMapTime) << "'>"
 //                    out << "<div class='emphasize-link'>${individual.peakTime}</div></a>&nbsp;"
-                    out << "${individual.peakTime}</a>&nbsp;"
+                    out << "${individual.peakTime}</a>"
                 }
 //                def linkMapLoc = [action: 'showIndividualsAtLocation', controller: 'erpAnalysisResult', id: individual.erpAnalysisResult.id, params: [locationName: individual.location]]
 ////                out << " &nbsp;&nbsp;"
@@ -308,7 +309,7 @@ class OntologyLookupTagLib {
                 ++counter
                 ++countAtTime
             }
-            out << "(${countAtTime})  "
+            out << "/${countAtTime} "
 
         }
         out << "</td></tr>"

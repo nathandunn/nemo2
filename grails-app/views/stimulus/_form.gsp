@@ -94,7 +94,6 @@
     </g:else>
 </div>
 
-
 <div class="fieldcontain ${hasErrors(bean: stimulusInstance, field: 'primeStimulusType', 'error')} ">
     <g:propertyEntry key="Prime stimulus (type)" number="6.8" term="NEMO_0000413"/>
     %{--<g:textField name="primeStimulusType" value="${stimulusInstance?.primeStimulusType}"/>--}%
@@ -126,13 +125,13 @@
 
 
 <div class="fieldcontain ${hasErrors(bean: stimulusInstance, field: 'interStimulusInterval', 'error')} ">
-    <g:propertyEntry key="Prime-Target Internal Stimulus Interval (ms)" number="6.12" term="NEMO_8410000"/>
+    <g:propertyEntry key="Prime-Target internal stimulus (ms)" number="6.12" term="NEMO_8410000"/>
     <g:field type="number" name="interStimulusInterval" step="any" value="${stimulusInstance.interStimulusInterval}"/>
 </div>
 
 
 <div class="fieldcontain ${hasErrors(bean: stimulusInstance, field: 'stimulusOnsetAsynchrony', 'error')} ">
-    <g:propertyEntry key="Prime-Target Stimulus Onset Asynchrony (ms)" number="6.13" term="NEMO_2541000" required="false"/>
+    <g:propertyEntry key="Prime-Target stimulus onset asynchrony (ms)" number="6.13" term="NEMO_2541000" required="false"/>
     <g:field type="number" name="stimulusOnsetAsynchrony" step="any"
              value="${stimulusInstance.stimulusOnsetAsynchrony}"/>
 </div>

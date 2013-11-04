@@ -1,4 +1,5 @@
 package edu.uoregon.nic.nemo.portal
+
 import edu.uoregon.nic.nemo.portal.client.BrainLocationEnum
 import org.apache.commons.validator.UrlValidator
 
@@ -25,7 +26,12 @@ class DataViewTagLib {
         def noLink = attrs.noLink
         def suffix = attrs.suffix
         def related = attrs.related
+        def hideIfNull = attrs.hideIfNull ?: false
         Publication publication = attrs.publication
+
+        if (hideIfNull && value == null && ontological == null) {
+            return
+        }
 
         out << '<tr>'
         out << '            <td class="table-uri" nowrap>'
@@ -333,7 +339,6 @@ class DataViewTagLib {
             Pattern regex = Pattern.compile(".*([0-9]{3,5}).*")
 //            Matcher regexMatcher = regex.matcher(subjectString);
 
-
 //            println "timeString ${timeString} contains 3 digits ${regex.matcher(timeString).matches()}"
 //            if(timeString?.indexOf("ingr-+cngr")>=0){
 //                println "IN A BAD PLACE"
@@ -341,11 +346,11 @@ class DataViewTagLib {
 //            }
 //            else
             // if there are not 3 numbers is a row, then ignore
-            if (timeString? regex.matcher(timeString).matches() : false) {
+            if (timeString ? regex.matcher(timeString).matches() : false) {
                 if (timeString.findAll("\\+").size() > 1) {
 //                    println "should be here ${timeString}"
                     // to support testing
-                    if(searchService==null){
+                    if (searchService == null) {
                         searchService = new SearchService()
                     }
                     time = searchService.parseExponentTimeFromLabel2(timeString)
@@ -358,12 +363,11 @@ class DataViewTagLib {
                         time = null
                     }
                 }
-            }
-            else {
+            } else {
                 log.debug "Number not found for ${timeString}"
             }
 
-            if (time != null && grailsLinkGenerator!=null&&erpAnalysisResult!=null) {
+            if (time != null && grailsLinkGenerator != null && erpAnalysisResult != null) {
                 out << "<a href=\""
                 out << grailsLinkGenerator.link([controller: "erpAnalysisResult", action: "showIndividuals", id: erpAnalysisResult.id, params: ["time": time]])
                 out << "\">"

@@ -55,17 +55,17 @@
         <g:tableEntry key="Target stimulus quality (other)" number="6.7" term="NEMO_0000441"
                       ontological="${stimulusInstance.targetQualities}"/>
         <g:tableEntry key="Prime stimulus (type)" number="6.8" term="NEMO_0000413"
-                      ontological="${stimulusInstance.primeType}" related="stimulus"/>
+                      ontological="${stimulusInstance.primeType}" related="stimulus" hideIfNull="true"/>
         <g:tableEntry key="Prime stimulus modality" number="6.9" term="NEMO_0000443"
-                      ontological="${stimulusInstance.primeModality}" related="stimulus"/>
+                      ontological="${stimulusInstance.primeModality}" related="stimulus" hideIfNull="true"/>
         <g:tableEntry key="Prime stimulus duration (ms)" number="6.10" term="NEMO_5109000"
-                      value="${stimulusInstance.primeStimulusDuration}"/>
+                      value="${stimulusInstance.primeStimulusDuration}" hideIfNull="true"/>
         <g:tableEntry key="Prime stimulus quality (other)" number="6.11" term="NEMO_0000367"
-                      ontological="${stimulusInstance.primeQuality}"/>
+                      ontological="${stimulusInstance.primeQuality}" hideIfNull="true"/>
         <g:tableEntry key="Prime-Target ISI (ms)" number="6.12" term="NEMO_8410000"
-                      value="${stimulusInstance.interStimulusInterval}"/>
+                      value="${stimulusInstance.interStimulusInterval}" hideIfNull="true"/>
         <g:tableEntry key="Prime-Target SOA (ms)" number="6.13" term="NEMO_2541000"
-                      value="${stimulusInstance.stimulusOnsetAsynchrony}"/>
+                      value="${stimulusInstance.stimulusOnsetAsynchrony}" hideIfNull="true"/>
 
     </table>
 

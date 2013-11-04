@@ -28,6 +28,10 @@ class ErpPatternExtraction {
             erpAnalysisResults: ErpAnalysisResult
     ]
 
+    static mapping = {
+        download type: "text"
+    }
+
     DataSet set
     DataFormat format // TODO: only a Matlab file for right now
     String artifactFileName  // erpPatternExtractionId

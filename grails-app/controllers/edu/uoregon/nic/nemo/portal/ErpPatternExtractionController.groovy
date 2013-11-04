@@ -130,15 +130,17 @@ class ErpPatternExtractionController {
 
     private void handleBinaryUpload(ErpPatternExtraction erpPatternExtraction, CommonsMultipartFile inputFile) {
 
-        File file = new File(getDownloadsPath() + erpPatternExtraction.artifactFileName)
-        if (isTextFile(erpPatternExtraction)) {
-            file.text = inputFile.inputStream.text
+//        erp
+//
+//        File file = new File(getDownloadsPath() + erpPatternExtraction.artifactFileName)
+//        if (isTextFile(erpPatternExtraction)) {
+//            file.text = inputFile.inputStream.text
+////            inputFile.transferTo(file)
+//        } else {
 //            inputFile.transferTo(file)
-        } else {
-            inputFile.transferTo(file)
-        }
+//        }
         erpPatternExtraction.download = null
-        erpPatternExtraction.download = file.getAbsolutePath()
+        erpPatternExtraction.download = inputFile.inputStream.text
 
         erpPatternExtraction.save(flush: true, validate: true)
     }

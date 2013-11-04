@@ -38,6 +38,11 @@
                     <g:link class="create" action="create" controller="stimulus" id="${conditionInstance.id}">
                         New Stimulus to Condition ${conditionInstance.identifier}
                     </g:link>
+                    <g:select name="stimulus"
+                              from="${edu.uoregon.nic.nemo.portal.Stimulus.listOrderByIdentifier()}"
+                              optionKey="id" optionValue="identifier"
+                              noSelection="['': '- Copy Stimulus To Condition -']"
+                              onchange="document.location.href='${request.contextPath}/stimulus/copyStimulus?id=${conditionInstance.id}&stimulusId='+this.value"/>
                 </div>
             </sec:ifAllGranted>
         </g:editable>

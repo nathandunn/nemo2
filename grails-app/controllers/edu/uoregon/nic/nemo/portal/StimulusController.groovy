@@ -1,8 +1,8 @@
 package edu.uoregon.nic.nemo.portal
 
+import grails.converters.JSON
 import grails.plugins.springsecurity.Secured
 import org.springframework.dao.DataIntegrityViolationException
-import grails.converters.JSON
 
 class StimulusController {
 
@@ -10,6 +10,9 @@ class StimulusController {
 
     def userService
     def springSecurityService
+    def conditionService
+
+
 
     def afterInterceptor = { model ->
         model.experimentHeader = model.experimentHeader ?: model.stimulus?.condition?.experiment
@@ -39,23 +42,20 @@ class StimulusController {
 
             if (relatedClass.contains("StimulusType")) {
                 StimulusType stimulusType = StimulusType.findById(relatedID)
-                List<Stimulus> stimulusList = Stimulus.findAllByTargetType(stimulusType,params)
-                def count  = Stimulus.countByTargetType(stimulusType)
+                List<Stimulus> stimulusList = Stimulus.findAllByTargetType(stimulusType, params)
+                def count = Stimulus.countByTargetType(stimulusType)
                 [stimulusInstanceList: stimulusList
-                        , stimulusInstanceTotal:  count
+                        , stimulusInstanceTotal: count
                         , related: stimulusType]
-            }
-            else
-            if (relatedClass.contains("StimulusModality")) {
+            } else if (relatedClass.contains("StimulusModality")) {
                 StimulusModality stimulusModality = StimulusModality.findById(relatedID)
-                List<Stimulus> stimulusList = Stimulus.findAllByTargetModality(stimulusModality,params)
-                def count  = Stimulus.countByTargetModality(stimulusModality)
+                List<Stimulus> stimulusList = Stimulus.findAllByTargetModality(stimulusModality, params)
+                def count = Stimulus.countByTargetModality(stimulusModality)
                 [stimulusInstanceList: stimulusList
-                        , stimulusInstanceTotal:  count
+                        , stimulusInstanceTotal: count
                         , related: stimulusModality]
             }
-        }
-        else{
+        } else {
             [stimulusInstanceList: Stimulus.list(params), stimulusInstanceTotal: Stimulus.count()]
         }
 
@@ -64,7 +64,7 @@ class StimulusController {
     @Secured(['ROLE_VERIFIED'])
     def create(Integer id) {
         def conditionInstance = Condition.get(id)
-        [stimulusInstance: new Stimulus(params),conditionInstance:conditionInstance]
+        [stimulusInstance: new Stimulus(params), conditionInstance: conditionInstance]
     }
 
     @Secured(['ROLE_VERIFIED'])
@@ -75,14 +75,14 @@ class StimulusController {
             return
         }
 
-		flash.message = message(code: 'default.created.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), stimulusInstance.identifier])
+        flash.message = message(code: 'default.created.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), stimulusInstance.identifier])
         redirect(action: "show", id: stimulusInstance.id)
     }
 
     def show(Integer id) {
         def stimulusInstance = Stimulus.get(id)
         if (!stimulusInstance) {
-			flash.message = message(code: 'default.not.found.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), id])
             redirect(action: "list")
             return
         }
@@ -105,7 +105,7 @@ class StimulusController {
             return
         }
 
-        render view:"edit" , model:[stimulusInstance: stimulusInstance]
+        render view: "edit", model: [stimulusInstance: stimulusInstance]
     }
 
     @Secured(['ROLE_VERIFIED'])
@@ -122,7 +122,7 @@ class StimulusController {
         println "editable ${editable}"
         if (!editable) {
             flash.message = message(code: 'default.cant.edit', args: [message(code: 'job.condition', default: 'Unable to Edit Condition'), id])
-            redirect(action: "show",id: id)
+            redirect(action: "show", id: id)
             return
         }
 
@@ -132,8 +132,8 @@ class StimulusController {
             println "evaluating ${stimulusInstance.version} > ${version} "
             if (stimulusInstance.version > version) {
                 stimulusInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                          [message(code: 'stimulus.label', default: 'Stimulus')] as Object[],
-                          "Another user has updated this Stimulus while you were editing")
+                        [message(code: 'stimulus.label', default: 'Stimulus')] as Object[],
+                        "Another user has updated this Stimulus while you were editing")
                 render(view: "edit", model: [stimulusInstance: stimulusInstance])
                 return
             }
@@ -149,7 +149,7 @@ class StimulusController {
             return
         }
 
-		flash.message = message(code: 'default.updated.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), stimulusInstance.identifier])
+        flash.message = message(code: 'default.updated.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), stimulusInstance.identifier])
         redirect(action: "show", id: stimulusInstance.id)
     }
 
@@ -157,7 +157,7 @@ class StimulusController {
     def delete(Integer id) {
         def stimulusInstance = Stimulus.get(id)
         if (!stimulusInstance) {
-			flash.message = message(code: 'default.not.found.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), id])
             redirect(action: "list")
             return
         }
@@ -180,11 +180,11 @@ class StimulusController {
 
 
             stimulusInstance.delete(flush: true)
-			flash.message = message(code: 'default.deleted.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), stimulusInstance.identifier])
+            flash.message = message(code: 'default.deleted.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), stimulusInstance.identifier])
             redirect(action: "list")
         }
         catch (DataIntegrityViolationException e) {
-			flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'stimulus.label', default: 'Stimulus'),  stimulusInstance.identifier])
+            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'stimulus.label', default: 'Stimulus'), stimulusInstance.identifier])
             redirect(action: "show", id: id)
         }
     }
@@ -193,7 +193,7 @@ class StimulusController {
     def addQuality(Integer id) {
         log.debug "entering adding quality" + params
         Stimulus stimulus = Stimulus.get(id)
-        if (!userService.isAdminOrCurrent( stimulus?.condition?.experiment?.laboratory?.users, springSecurityService.currentUser)) {
+        if (!userService.isAdminOrCurrent(stimulus?.condition?.experiment?.laboratory?.users, springSecurityService.currentUser)) {
             render(view: "/login/denied")
         }
         StimulusQuality stimulusQuality = StimulusQuality.findById(params.qualityId)
@@ -211,7 +211,7 @@ class StimulusController {
     def removeQuality(Integer id) {
         log.debug "entering remove quality " + params
         Stimulus stimulus = Stimulus.get(id)
-        if (!userService.isAdminOrCurrent( stimulus?.condition?.experiment?.laboratory?.users, springSecurityService.currentUser)) {
+        if (!userService.isAdminOrCurrent(stimulus?.condition?.experiment?.laboratory?.users, springSecurityService.currentUser)) {
             render(view: "/login/denied")
         }
         StimulusQuality stimulusQuality = StimulusQuality.findById(params.qualityId)
@@ -220,6 +220,57 @@ class StimulusController {
             stimulus.removeFromTargetQualities(stimulusQuality)
         }
 
-        redirect([action: "edit",id: stimulus.id,controller: "stimulus"])
+        redirect([action: "edit", id: stimulus.id, controller: "stimulus"])
     }
+
+    @Secured(['ROLE_VERIFIED'])
+    def copyStimulus(Integer id) {
+        def condition = Condition.get(id)
+        if (!condition) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'subjectGroup.label', default: 'Condition'), id])
+            redirect(action: "list", controller: "experiment")
+            return
+        }
+        def oldStimulusInstance = Stimulus.get(params.stimulusId)
+        if (!oldStimulusInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'subjectGroup.label', default: 'Stimulus'), params.subjectGroupId])
+            redirect(action: "show", controller: "experiment", id: condition.id)
+            return
+        }
+
+        if (!userService.isAdminOrCurrent(oldStimulusInstance?.condition?.experiment?.laboratory?.users, springSecurityService.currentUser)) {
+            render(view: "/login/denied")
+        }
+        Stimulus newStimulusCopy = new Stimulus(oldStimulusInstance.properties)
+        newStimulusCopy.id = null
+        newStimulusCopy.condition = condition
+        newStimulusCopy.identifier = conditionService.createIdentifierForStimulus(newStimulusCopy)
+//        newStimulusCopy.interStimulusInterval = oldStimulusInstance.interStimulusInterval
+//        newStimulusCopy.stimulusOnsetAsynchrony = oldStimulusInstance.stimulusOnsetAsynchrony
+//        newStimulusCopy.targetType = oldStimulusInstance.targetType
+//        newStimulusCopy.targetModality = oldStimulusInstance.targetModality
+//        newStimulusCopy.targetStimulusDuration = oldStimulusInstance.targetStimulusDuration
+//        newStimulusCopy.primeType = oldStimulusInstance.primeType
+//        newStimulusCopy.primeModality = oldStimulusInstance.primeModality
+//        newStimulusCopy.primeStimulusDuration = oldStimulusInstance.primeStimulusDuration
+//        newStimulusCopy.primeQuality = oldStimulusInstance.primeQuality
+//        newStimulusCopy.presentationDevice = oldStimulusInstance.presentationDevice
+//        newStimulusCopy.presentationSoftware = oldStimulusInstance.presentationSoftware
+
+        newStimulusCopy.targetQualities = null
+
+
+        oldStimulusInstance.targetQualities.each { quality ->
+            newStimulusCopy.addToTargetQualities(quality)
+            quality.addToStimuli(newStimulusCopy)
+        }
+
+        if (!newStimulusCopy.save(flush: true, insert: true)) {
+            render(view: "edit", id: newStimulusCopy.id, model: [stimulusInstance: newStimulusCopy])
+        }
+
+        redirect(action: "show", controller: "condition", id: condition.id)
+
+    }
+
 }

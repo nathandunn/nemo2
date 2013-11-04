@@ -62,7 +62,9 @@
                       value="${stimulusInstance.primeStimulusDuration}" hideIfNull="true"/>
         <g:tableEntry key="Prime stimulus quality (other)" number="6.11" term="NEMO_0000367"
                       ontological="${stimulusInstance.primeQuality}" hideIfNull="true"/>
-        <g:tableEntry key="Prime-Target ISI (ms)" number="6.12" term="NEMO_8410000"
+        %{--<g:tableEntry key="Prime-Target ISI (ms)" number="6.12" term="NEMO_8410000"--}%
+                      %{--value="${stimulusInstance.interStimulusInterval}" hideIfNull="true"/>--}%
+        <g:tableEntry key="Target-Probe Interval (ms)" number="6.12" term="NEMO_8410000"
                       value="${stimulusInstance.interStimulusInterval}" hideIfNull="true"/>
         <g:tableEntry key="Prime-Target SOA (ms)" number="6.13" term="NEMO_2541000"
                       value="${stimulusInstance.stimulusOnsetAsynchrony}" hideIfNull="true"/>

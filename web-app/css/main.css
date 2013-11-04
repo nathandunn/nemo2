@@ -1909,5 +1909,5 @@ table.resultTable {
 
 .hideshow-buttons{
   margin-left: 150px;
-
+    display: inline-block;
 }

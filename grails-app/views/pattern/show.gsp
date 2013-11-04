@@ -9,13 +9,13 @@
 
 <body>
 
-<g:render contextPath="/" template="searchMenu" model="[selected:'pattern']"/>
+<g:render contextPath="/" template="searchMenu" model="[selected: 'pattern']"/>
 
 <div id="instances" class="content scaffold-show" role="main">
     <br/>
 
 
-    <div class="pattern-header">
+    <div class="pattern-header" style="display: inline;">
         <strong>Viewing Effect</strong>: <g:link action="show" controller="term" id="${id}"><g:renderUrl
             input="${id}"/></g:link>
         <br/>
@@ -30,29 +30,24 @@
         </g:select>
         </g:form>
     </div>
-    <br/>
-    <div class="hideshow-buttons">
-        <input id="hideButton" type="button" value="Hide Images" onclick="
-            $('.erp-image').hide();
-            $('#showButton').show();
-            $('#hideButton').hide();
-        "/>
 
-        <input id="showButton" type="button" style="display: none;" value="Show Images" onclick="
-            $('.erp-image').show();
-            $('#showButton').hide();
-            $('#hideButton').show();
-        "/>
+    <div style="display: inline;">
     </div>
+    <br/>
     <table>
         <thead>
         <tr>
             <th>
-                <div class="erp-header">
+
+                <div style="display: inline-block;">
+                    <g:include view="erpAnalysisResult/showHide.gsp"/>
+                </div>
+                <div class="erp-header" style="display: inline-block;">
                     Pattern Instances
                     %{--<br/>--}%
                     <g:link action="show" controller="term" id="${url}">${label?.replaceAll("_", "&nbsp;")}</g:link>
                 </div>
+
             </th>
             <th class="erp-header">
                 Source Dataset
@@ -64,11 +59,11 @@
             <tr>
                 <td style="width: 50%;">
                     <g:if test="${instance.key.startsWith('http:')}">
-                    <strong class="erp-pattern-title">${instance.key}</strong>
-                        %{--<g:link controller="erpAnalysisResult" action="showIndividuals" id="${instance.value.id}"--}%
-                                %{--params="[time: time]">--}%
-                            %{--${instance.key}--}%
-                        %{--</g:link>--}%
+                        <strong class="erp-pattern-title">${instance.key}</strong>
+                    %{--<g:link controller="erpAnalysisResult" action="showIndividuals" id="${instance.value.id}"--}%
+                    %{--params="[time: time]">--}%
+                    %{--${instance.key}--}%
+                    %{--</g:link>--}%
                     </g:if>
                     <g:else>
                         <div class="erp-pattern-title">
@@ -92,7 +87,8 @@
                                 </g:ifImage>
 
                                 <g:ifRawImage key="${instance.key.encodeAsURL()}">
-                                    <div class="erp-image" class="image1-div" style="display: inline-table; text-align: center;">
+                                    <div class="erp-image" class="image1-div"
+                                         style="display: inline-table; text-align: center;">
                                         <strong>Extracted ERP Pattern</strong>
                                         <strong>Reconstructed ERP Data</strong>
                                         <br/>

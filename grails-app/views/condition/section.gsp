@@ -42,13 +42,13 @@
                 <g:link class="create" action="create" controller="condition" id="${experimentInstance.id}">
                     New Condition
                 </g:link>
-                <g:if test="${experimentInstance?.id}">
-                    <g:select name="condition"
-                              from="${edu.uoregon.nic.nemo.portal.Condition.listOrderByIdentifier()}"
-                              optionKey="id" optionValue="identifier"
-                              noSelection="['': '- Copy Condition To Experiment -']"
-                              onchange="document.location.href='${request.contextPath}/condition/copyCondition?id=${experimentInstance.id}&conditionId='+this.value"/>
-                </g:if>
+                %{--<g:if test="${experimentInstance?.id}">--}%
+                    %{--<g:select name="condition"--}%
+                              %{--from="${edu.uoregon.nic.nemo.portal.Condition.listOrderByIdentifier()}"--}%
+                              %{--optionKey="id" optionValue="identifier"--}%
+                              %{--noSelection="['': '- Copy Condition To Experiment -']"--}%
+                              %{--onchange="document.location.href='${request.contextPath}/condition/copyCondition?id=${experimentInstance.id}&conditionId='+this.value"/>--}%
+                %{--</g:if>--}%
             </div>
         </sec:ifAllGranted>
     </g:editable>

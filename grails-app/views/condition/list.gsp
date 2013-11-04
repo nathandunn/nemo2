@@ -17,7 +17,18 @@
                 <li><g:link class="create" action="create" id="${experimentHeader?.id}"><g:message
                         code="default.new.label"
                         args="[entityName]"/>s</g:link></li>
+
+                <g:if test="${experimentHeader?.id}">
+                <li>
+                    <g:select name="condition"
+                              from="${edu.uoregon.nic.nemo.portal.Condition.listOrderByIdentifier()}"
+                              optionKey="id" optionValue="identifier"
+                              noSelection="['': '- Copy Condition To Experiment -']"
+                              onchange="document.location.href='${request.contextPath}/condition/copyCondition?id=${experimentHeader.id}&conditionId='+this.value"/>
+                </li>
+                </g:if>
             </sec:ifAllGranted>
+
         </ul>
     </div>
 </g:if>

@@ -43,17 +43,17 @@
 
     <g:editable users="${experimentInstance?.laboratory?.users}">
         <sec:ifAllGranted roles="ROLE_VERIFIED">
-            <div class="nav" style="width: auto; display: inline-table;">
+            <div class="nav" style="width: auto; ">
                 <g:link class="create" action="create" controller="subjectGroup" id="${experimentInstance.id}">
                     New Subject Group
                 </g:link>
-                <g:if test="${experimentInstance?.id}">
-                    <g:select name="copySubjectGroup"
-                              from="${edu.uoregon.nic.nemo.portal.SubjectGroup.listOrderByIdentifier()}"
-                              optionKey="id" optionValue="identifier"
-                              noSelection="['': '- Copy Subject Group To Experiment -']"
-                              onchange="document.location.href='${request.contextPath}/subjectGroup/copySubjectGroup?id=${experimentInstance.id}&subjectGroupId='+this.value"/>
-                </g:if>
+                %{--<g:if test="${experimentInstance?.id}">--}%
+                    %{--<g:select name="copySubjectGroup"--}%
+                              %{--from="${edu.uoregon.nic.nemo.portal.SubjectGroup.listOrderByIdentifier()}"--}%
+                              %{--optionKey="id" optionValue="identifier"--}%
+                              %{--noSelection="['': '- Copy Subject Group To Experiment -']"--}%
+                              %{--onchange="document.location.href='${request.contextPath}/subjectGroup/copySubjectGroup?id=${experimentInstance.id}&subjectGroupId='+this.value"/>--}%
+                %{--</g:if>--}%
             </div>
         </sec:ifAllGranted>
     </g:editable>

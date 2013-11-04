@@ -17,6 +17,15 @@
                 <li><g:link class="create" action="create" id="${experimentHeader?.id}"><g:message
                         code="default.new.label"
                         args="[entityName]"/></g:link></li>
+                <g:if test="${experimentHeader?.id}">
+                    <li>
+                    <g:select name="copySubjectGroup"
+                              from="${edu.uoregon.nic.nemo.portal.SubjectGroup.listOrderByIdentifier()}"
+                              optionKey="id" optionValue="identifier"
+                              noSelection="['': '- Copy Subject Group To Experiment -']"
+                              onchange="document.location.href='${request.contextPath}/subjectGroup/copySubjectGroup?id=${experimentHeader.id}&subjectGroupId='+this.value"/>
+                    </li>
+                </g:if>
             </sec:ifAllGranted>
         </ul>
     </div>

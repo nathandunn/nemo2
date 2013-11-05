@@ -25,6 +25,11 @@
         <datasource-map />
       </configuration>
     </facet>
+    <facet type="gwt" name="GWT">
+      <configuration>
+        <setting name="gwtSdkUrl" value="file://$USER_HOME$/Downloads/gwt-2.5.1" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />

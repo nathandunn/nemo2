@@ -67,28 +67,33 @@ class PatternController {
 
             instancesMap = ontologyService.getErpsFromErpAnalysisResults(url)
             Integer maxTime = 0
-            Integer minTime =  Integer.MAX_VALUE
-            Map<Integer,Long> instances = new TreeMap<>()
-            for(String key in instancesMap.keySet()){
-                Integer time = searchService.parseTimeFromLabel(key)
+            Integer minTime = Integer.MAX_VALUE
+            Map<Integer, Long> instances = new TreeMap<>()
+            for (String key in instancesMap.keySet()) {
+                println "trying to parse ${key}"
+                if (key.matches(".*\\d.*") && key.indexOf("_object")<0) {
+                    println "contains number ${key}"
 
-                if(time==null){
-                    time = searchService.parseExponentTimeFromLabel(key)
-                }
+                    Integer time = searchService.parseTimeFromLabel(key)
 
-                if(time==null){
-                    time = searchService.parseExponentTimeFromLabel2(key)
-                }
+                    if (time == null) {
+                        time = searchService.parseExponentTimeFromLabel(key)
+                    }
 
-                if(time){
-                    instances.put(time,instancesMap.get(key).iterator().next().id)
+                    if (time == null) {
+                        time = searchService.parseExponentTimeFromLabel2(key)
+                    }
+
+                    if (time) {
+                        instances.put(time, instancesMap.get(key).iterator().next().id)
+                    }
                 }
 
             }
 //
 //            [instances: instancesMap, label: label, url: url, availableInstances: ontologyService.getInstanceMap(), id: url]
 
-            render view: "summary", model: [instances:instances]
+            render view: "summary", model: [instances: instances]
         }
     }
 

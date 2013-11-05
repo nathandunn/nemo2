@@ -264,14 +264,14 @@ public class Search implements EntryPoint, ParentSearch {
 
                         String meanString = "";
                         Double meanIntensity =individualJsonObject.get("meanIntensity").isNumber().doubleValue();
+                        meanString += " <a href='";
+                        meanString += individualJsonObject.get("linkFromUrl").isString().stringValue();
+                        meanString += "'>";
                         if(meanIntensity>0){
                             meanString += "+";
                         }
                         meanString += NumberFormat.getFormat("#0.##").format(meanIntensity) ;
-                        meanString += " <a href='";
-                        meanString += individualJsonObject.get("linkFromUrl").isString().stringValue();
-                        meanString += "'>";
-                        meanString += "details";
+//                        meanString += "details";
                         meanString += "</a>";
                         resultTable.setHTML(displayRow, 1, meanString);
 

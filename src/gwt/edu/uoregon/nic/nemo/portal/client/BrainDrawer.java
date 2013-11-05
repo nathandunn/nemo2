@@ -19,15 +19,16 @@ import java.util.TreeMap;
 public class BrainDrawer {
 
     final Integer brainSize = 400;
-    Search parent  ;
+    BrainSearchable parent  ;
     Integer headRadius = Math.round(brainSize / 2.5f);
     Integer brainCenter = brainSize / 2;
     private Map<BrainLocationEnum,RoiShape> roiShapeTreeMap = new TreeMap<BrainLocationEnum,RoiShape>();
+    DrawingArea canvas ;
 
-    protected DrawingArea drawBrain(Search search) {
+    protected DrawingArea drawBrain(BrainSearchable search) {
         this.parent = search ;
 
-        DrawingArea canvas = new DrawingArea(brainSize,brainSize) ;
+        canvas = new DrawingArea(brainSize,brainSize) ;
 
         Circle circle = new Circle(brainCenter, brainCenter, headRadius);
         canvas.add(circle);
@@ -178,6 +179,26 @@ public class BrainDrawer {
         new ClusterCircle(brainCenter+130, brainCenter +70, "P10", canvas);
 
 
+    }
+
+    public void highlightRegion(BrainLocationEnum brainLocation, Double doubleValue, Boolean significant) {
+        RoiShape roiShape =  roiShapeTreeMap.get(brainLocation);
+        if(significant){
+            if(doubleValue>0){
+                roiShape.setFillColor(RoiShape.POSITIVE_COLOR);
+            }
+            else{
+                roiShape.setFillColor(RoiShape.NEGATIVE_COLOR);
+            }
+        }
+        else{
+            roiShape.setFillColor(RoiShape.OFF_COLOR);
+        }
+        roiShape.drawMeanIntensity(canvas,doubleValue);
+    }
+
+    public void clearRegion(BrainLocationEnum brainLocationEnum) {
+        // TODO: not sure how to do this, or just redraw?
     }
 
     private class SelectAllClickHandler implements ClickHandler{

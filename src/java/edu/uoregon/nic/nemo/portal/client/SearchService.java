@@ -11,4 +11,6 @@ public interface SearchService extends RemoteService {
     String searchErps(Integer min, Integer max, List<BrainLocationEnum> locations);
     String searchErps(Integer minTime, Integer maxTime, List<BrainLocationEnum> locations,Integer minPeak,Integer maxPeak);
     String searchErps(Integer minTime, Integer maxTime, Map<BrainLocationEnum, SelectedLocationEnum> brainSelectedBrainLocationMap);
+
+    String findPeakIntensities(Long erpAnalysisId, Integer selectedTime);
 }

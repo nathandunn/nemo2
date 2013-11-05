@@ -2,7 +2,7 @@ package edu.uoregon.nic.nemo.portal.client;
 
 /**
  */
-public interface ParentSearch {
+public interface BrainSearchable {
 
     void doSearch();
 }

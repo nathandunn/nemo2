@@ -38,7 +38,7 @@
 <div id="brainPanel"></div>
 
 
-<div id="searchPanel"></div>
+%{--<div id="searchPanel"></div>--}%
 %{--ON the proper GWT page!--}%
   <!-- OPTIONAL: include this if you want history support -->
   %{--<iframe id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>--}%

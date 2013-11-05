@@ -1,0 +1,11 @@
+<module>
+    <!-- Inherit the core Web Toolkit stuff.                  -->
+    <inherits name="com.google.gwt.user.User"/>
+
+    <inherits name='com.google.gwt.json.JSON'/>
+    <inherits name='org.vaadin.gwtgraphics.GWTGraphics'/>
+
+
+    <!-- Specify the module entry point class.                   -->
+    <entry-point class="edu.uoregon.nic.nemo.portal.client.BrainDisplay"/>
+</module>

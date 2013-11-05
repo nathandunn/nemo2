@@ -23,6 +23,18 @@
         });
     </r:script>
 
+
+    <script>
+        var locations = {
+             erpAnalysisResultId: ${erpAnalysisResultInstance.id}
+            ,initialTime: ${currentTime}
+            ,times: ${times}
+            , baseTermUrl : '<g:createLink action="show" controller="term"/>'
+        } ;
+    </script>
+
+    <script type="text/javascript" src="${resource(dir: 'gwt/edu.uoregon.nic.nemo.portal.BrainDisplay', file: 'edu.uoregon.nic.nemo.portal.BrainDisplay.nocache.js')}"></script>
+
 </head>
 
 <body>
@@ -110,6 +122,10 @@
     </div>
 
 </div>
+
+<div id="brainPanel"></div>
+
+<div id="searchPanel"></div>
 
 </body>
 </html>

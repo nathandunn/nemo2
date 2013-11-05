@@ -8,27 +8,27 @@ import com.google.gwt.user.client.ui.CheckBox;
  */
 public class BrainLocationCheckBox extends CheckBox{
 
-    private ParentSearch parentSearch ;
+    private BrainSearchable brainSearchable;
     private String internalName ;
 
-    public BrainLocationCheckBox(ParentSearch parentSearch,BrainLocationEnum brainLocationEnum){
+    public BrainLocationCheckBox(BrainSearchable brainSearchable,BrainLocationEnum brainLocationEnum){
         super();
         internalName = brainLocationEnum.name();
-        this.parentSearch = parentSearch;
+        this.brainSearchable = brainSearchable;
         addValueChangeHandler(new ValueChangeHandler<Boolean>() {
             @Override
             public void onValueChange(ValueChangeEvent<Boolean> event) {
-                getParentSearch().doSearch();
+                getBrainSearchable().doSearch();
             }
         });
     }
 
-    public ParentSearch getParentSearch() {
-        return parentSearch;
+    public BrainSearchable getBrainSearchable() {
+        return brainSearchable;
     }
 
-    public void setParentSearch(ParentSearch parentSearch) {
-        this.parentSearch = parentSearch;
+    public void setBrainSearchable(BrainSearchable brainSearchable) {
+        this.brainSearchable = brainSearchable;
     }
 
     public String getInternalName() {

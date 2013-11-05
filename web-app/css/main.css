@@ -1948,3 +1948,9 @@ table.resultTable {
     /*padding: 10px;*/
     width: 35%;
 }
+
+.selected-time{
+  background-color: #d3d3d3;
+    font-weight: bold;
+    display: inline;
+}

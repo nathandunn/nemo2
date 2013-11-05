@@ -24,6 +24,9 @@ public class RoiShape extends Path{
     private final BrainLocationEnum brainLocationEnum ;
     private final BrainSearchable searchParent ;
     private final List<Dimension> dimensionList ;
+
+    private Text valueText = null ;
+    private Rectangle valueBackground = null ;
 //    private Path path;
     // assume that the first dimension is the
     public RoiShape(List<Dimension> dimensionList,BrainLocationEnum brainLocationEnum,BrainSearchable parent) {
@@ -72,18 +75,26 @@ public class RoiShape extends Path{
         averageX -= 15 ;
         averageY = averageY / (float) dimensionList.size();
 
-        Rectangle rectangle = new Rectangle(averageX.intValue()-5,averageY.intValue()-10,50,15);
-        rectangle.setFillColor("white");
-        rectangle.setFillOpacity(0.5f);
-        rectangle.setStrokeWidth(0);
-        rectangle.setRoundedCorners(8);
-        drawingArea.add(rectangle);
-        Text text = new Text(averageX.intValue(),averageY.intValue(),NumberFormat.getFormat("0.000").format(doubleValue));
-        text.setStrokeColor("black");
-        text.setFillColor("black");
-        text.setFontFamily("courier");
-        text.setFontSize(12);
-        drawingArea.add(text);
+        if(valueBackground==null){
+            valueBackground= new Rectangle(averageX.intValue()-5,averageY.intValue()-10,50,15);
+            valueBackground.setFillColor("white");
+            valueBackground.setFillOpacity(0.5f);
+            valueBackground.setStrokeWidth(0);
+            valueBackground.setRoundedCorners(8);
+            drawingArea.add(valueBackground);
+        }
+        String numberString = NumberFormat.getFormat("0.000").format(doubleValue);
+        if(valueText==null){
+            valueText = new Text(averageX.intValue(),averageY.intValue(),numberString);
+            drawingArea.add(valueText);
+        }
+        else{
+            valueText.setText(numberString);
+        }
+        valueText.setStrokeColor("black");
+        valueText.setFillColor("black");
+        valueText.setFontFamily("courier");
+        valueText.setFontSize(12);
 
     }
 }

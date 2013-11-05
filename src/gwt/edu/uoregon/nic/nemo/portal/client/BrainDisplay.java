@@ -2,6 +2,8 @@ package edu.uoregon.nic.nemo.portal.client;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.i18n.client.Dictionary;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
@@ -77,15 +79,7 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
 
         queryPanel.add(timesTable);
 
-        for (int i = 0; i < times.size(); i++) {
-            HTML timeButton;
-            if (times.get(i).equals(selectedTime)) {
-                timeButton = new HTML("<div class='selected-time'><b>" + times.get(i)+"</b></div>");
-            } else {
-                timeButton = new HTML("" + times.get(i));
-            }
-            timesTable.setWidget(i, 0, timeButton);
-        }
+        redrawTimes();
 
         queryPanel.setStyleName("queryPanel");
 
@@ -99,6 +93,29 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
 
         doSearch();
 
+    }
+
+    private void redrawTimes() {
+
+        for (int i = 0; i < times.size(); i++) {
+            final HTML timeButton;
+            final Integer aTime = times.get(i);
+            if (aTime.equals(selectedTime)) {
+                timeButton = new HTML("<div class='selected-time'>" + aTime +"</div>");
+            } else {
+                timeButton = new HTML("<div class='unselected-time'>" + aTime +"</div>");
+            }
+            timeButton.addClickHandler(new ClickHandler() {
+                @Override
+                public void onClick(ClickEvent clickEvent) {
+                    selectedTime = aTime ;
+                    redrawTimes();
+                    doSearch();
+                }
+            });
+
+            timesTable.setWidget(i, 0, timeButton);
+        }
     }
 
 
@@ -146,13 +163,12 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
                 JSONValue value = JSONParser.parseStrict(result);
                 JSONObject rootObject = value.isObject();
 
-                JSONObject individualObject ;
-                for(BrainLocationEnum brainLocationEnum : BrainLocationEnum.values()){
-                    if(rootObject.containsKey(brainLocationEnum.name())){
+                JSONObject individualObject;
+                for (BrainLocationEnum brainLocationEnum : BrainLocationEnum.values()) {
+                    if (rootObject.containsKey(brainLocationEnum.name())) {
                         individualObject = rootObject.get(brainLocationEnum.name()).isObject();
-                        displayMeanIntensity(brainLocationEnum,individualObject);
-                    }
-                    else{
+                        displayMeanIntensity(brainLocationEnum, individualObject);
+                    } else {
                         brainDrawer.clearRegion(brainLocationEnum);
                     }
                 }

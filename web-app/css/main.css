@@ -1448,7 +1448,6 @@ header {
     /*background-color: #96B3D3;*/
 }
 
-
 .pattern-table {
     /*border: 1px;*/
     /*border-style: solid;*/
@@ -1457,7 +1456,6 @@ header {
     border: 0 !important;
     /*background-color: #ff69b4;*/
 }
-
 
 .pattern-table table {
     /*border: 1px;*/
@@ -1895,7 +1893,7 @@ table.resultTable {
     height: 40px;
 }
 
-.link-title{
+.link-title {
     font-size: large;
     margin-left: auto;
     margin-right: auto;
@@ -1904,20 +1902,20 @@ table.resultTable {
     color: #00008b;
 }
 
-.link-title a{
+.link-title a {
     color: #00008b !important;
 }
 
-.erp-image{
- vertical-align: bottom;
+.erp-image {
+    vertical-align: bottom;
 }
 
-.hideshow-buttons{
-  margin-left: 150px;
+.hideshow-buttons {
+    margin-left: 150px;
     display: inline-block;
 }
 
-.pattern-summary{
+.pattern-summary {
     background-color: #F1F5F8;
     border: 1px;
     border-style: solid;
@@ -1938,7 +1936,7 @@ table.resultTable {
     display: inline-block;
 }
 
-.pattern-viewer{
+.pattern-viewer {
     padding: 10px;
     width: 35%;
     display: inline-block;
@@ -1949,8 +1947,18 @@ table.resultTable {
     width: 35%;
 }
 
-.selected-time{
-  background-color: #d3d3d3;
+.unselected-time {
+    display: inline;
+    cursor: pointer;
+    /*margin: 4px;*/
+    padding: 4px;
+}
+
+.selected-time {
+    background-color: #d3d3d3;
     font-weight: bold;
     display: inline;
+    /*margin: 4px;*/
+    padding: 4px;
 }
+

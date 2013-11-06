@@ -31,6 +31,19 @@ public class RoiDisplayShape extends RoiShape {
 //    private Path path;
     // assume that the first dimension is the
 
+    private class LocationClickHandler implements ClickHandler{
+        @Override
+        // http://localhost:8080/nemo/erpAnalysisResult/showIndividualsAtLocation/15?locationName=MFRONT
+        public void onClick(ClickEvent clickEvent) {
+            if (valueText != null && valueText.isVisible()) {
+                Long erpAnalysisResultId = searchParent.getId();
+                String newUrl = searchParent.getBaseUrl();
+                newUrl += "/" + erpAnalysisResultId;
+                newUrl += "?locationName=" + getBrainLocationEnum().name();
+                Window.Location.replace(newUrl);
+            }
+        }
+    }
 
     public RoiDisplayShape(List<Dimension> dimensionList, BrainLocationEnum brainLocationEnum, BrainSearchable parent) {
         // have to delcare this by default
@@ -48,20 +61,7 @@ public class RoiDisplayShape extends RoiShape {
         setFillColor(OFF_COLOR);
 //        setStyleName("clickable");
         if (this.brainLocationEnum != null) {
-
-            addClickHandler(new ClickHandler() {
-                @Override
-                // http://localhost:8080/nemo/erpAnalysisResult/showIndividualsAtLocation/15?locationName=MFRONT
-                public void onClick(ClickEvent clickEvent) {
-                    if (valueText != null && valueText.isVisible()) {
-                        Long erpAnalysisResultId = searchParent.getId();
-                        String newUrl = searchParent.getBaseUrl();
-                        newUrl += "/" + erpAnalysisResultId;
-                        newUrl += "?locationName=" + getBrainLocationEnum().name();
-                        Window.Location.replace(newUrl);
-                    }
-                }
-            });
+            addClickHandler(new LocationClickHandler());
         }
     }
 
@@ -84,6 +84,7 @@ public class RoiDisplayShape extends RoiShape {
             valueBackground.setStrokeWidth(0);
             valueBackground.setRoundedCorners(8);
             valueBackground.getElement().getStyle().setCursor(Style.Cursor.POINTER);
+            valueBackground.addClickHandler(new LocationClickHandler());
             drawingArea.add(valueBackground);
         }
         String numberString = NumberFormat.getFormat("0.000").format(doubleValue);
@@ -93,6 +94,7 @@ public class RoiDisplayShape extends RoiShape {
         if (valueText == null) {
             valueText = new Text(averageX.intValue(), averageY.intValue(), numberString);
             valueText.getElement().getStyle().setCursor(Style.Cursor.POINTER);
+            valueText.addClickHandler(new LocationClickHandler());
             drawingArea.add(valueText);
         } else {
             valueText.setText(numberString);

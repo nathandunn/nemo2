@@ -41,15 +41,15 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
     private BrainLocationEnum selectedLocation;
 
     public BrainDisplay() {
-        for (String s : locations.keySet()) {
-            GWT.log(s);
-        }
+//        for (String s : locations.keySet()) {
+//            GWT.log(s);
+//        }
         if (locations.keySet().contains("initialLocation")) {
             selectedLocation = BrainLocationEnum.getEnumForString(locations.get("initialLocation"));
         } else if (locations.keySet().contains("initialTime")) {
             selectedTime = Integer.parseInt(locations.get("initialTime"));
             String timeString = locations.get("times");
-            GWT.log(timeString);
+//            GWT.log(timeString);
             for (String timeA : timeString.split(",")) {
                 times.add(Integer.parseInt(timeA));
             }
@@ -204,7 +204,7 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
     private void displayMeanIntensity(BrainLocationEnum brainLocationEnum, JSONObject individualObject) {
         Boolean significant = individualObject.get("statisticallySignificant").isBoolean().booleanValue();
         Double doubleValue = individualObject.get("meanIntensity").isNumber().doubleValue();
-        GWT.log("sig: "+significant + " double: "+doubleValue);
+//        GWT.log("sig: "+significant + " double: "+doubleValue);
         brainDrawer.highlightRegion(brainLocationEnum,doubleValue,significant);
     }
 

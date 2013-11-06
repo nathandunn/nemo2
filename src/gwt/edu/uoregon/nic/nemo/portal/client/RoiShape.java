@@ -1,5 +1,6 @@
 package edu.uoregon.nic.nemo.portal.client;
 
+import com.google.gwt.dom.client.Style;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.i18n.client.NumberFormat;
@@ -30,6 +31,7 @@ public class RoiShape extends Path {
 
     public RoiShape() {
         super(0, 0);
+        setStyleName("clickable");
     }
 
     //    private Path path;
@@ -50,6 +52,7 @@ public class RoiShape extends Path {
         setStrokeWidth(strokeWidth);
         setFillColor(OFF_COLOR);
 
+        getElement().getStyle().setCursor(Style.Cursor.POINTER);
 
         addClickHandler(new ClickHandler() {
             @Override
@@ -108,5 +111,9 @@ public class RoiShape extends Path {
     public void removeValue() {
         valueText.setVisible(false);
         valueBackground.setVisible(false);
+    }
+
+    public BrainLocationEnum getBrainLocationEnum() {
+        return brainLocationEnum;
     }
 }

@@ -56,7 +56,7 @@ grails.project.dependency.resolution = {
 //        compile ":ui-performance:1.2.2"
         compile ":spring-security-ui:0.2"
         compile ":spring-security-core:1.2.7.3"
-        compile ':gwt:0.9.1'
+        compile ':gwt:0.9.2'
 
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.7.1"

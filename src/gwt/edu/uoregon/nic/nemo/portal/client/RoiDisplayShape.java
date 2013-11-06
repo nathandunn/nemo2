@@ -1,8 +1,10 @@
 package edu.uoregon.nic.nemo.portal.client;
 
+import com.google.gwt.dom.client.Style;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.i18n.client.NumberFormat;
+import com.google.gwt.user.client.Window;
 import org.vaadin.gwtgraphics.client.DrawingArea;
 import org.vaadin.gwtgraphics.client.shape.Rectangle;
 import org.vaadin.gwtgraphics.client.shape.Text;
@@ -28,6 +30,8 @@ public class RoiDisplayShape extends RoiShape{
 //    private Rectangle valueBackground = null ;
 //    private Path path;
     // assume that the first dimension is the
+
+
     public RoiDisplayShape(List<Dimension> dimensionList, BrainLocationEnum brainLocationEnum, BrainSearchable parent) {
         // have to delcare this by default
         this.brainLocationEnum = brainLocationEnum ;
@@ -42,24 +46,22 @@ public class RoiDisplayShape extends RoiShape{
         setFillOpacity(opacity);
         setStrokeWidth(strokeWidth);
         setFillColor(OFF_COLOR);
+//        setStyleName("clickable");
+        if(this.brainLocationEnum!=null){
+            getElement().getStyle().setCursor(Style.Cursor.POINTER);
 
-        addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent clickEvent) {
-//                Window.Location.
-//                String color = getFillColor();
-//                if (color.equals(OFF_COLOR)) {
-//                    setFillColor(POSITIVE_COLOR);
-//                } else if (color.equals(POSITIVE_COLOR)) {
-//                    setFillColor(NEGATIVE_COLOR);
-//                } else if (color.equals(NEGATIVE_COLOR)) {
-//                    setFillColor(BOTH_COLOR);
-//                } else if (color.equals(BOTH_COLOR)) {
-//                    setFillColor(OFF_COLOR);
-//                }
-//                searchParent.doSearch();
-            }
-        });
+            addClickHandler(new ClickHandler() {
+                @Override
+                // http://localhost:8080/nemo/erpAnalysisResult/showIndividualsAtLocation/15?locationName=MFRONT
+                public void onClick(ClickEvent clickEvent) {
+                    Long erpAnalysisResultId = searchParent.getId();
+                    String newUrl = searchParent.getBaseUrl();
+                    newUrl += "/" + erpAnalysisResultId;
+                    newUrl += "?locationName=" + getBrainLocationEnum().name();
+                    Window.Location.replace(newUrl);
+                }
+            });
+        }
     }
 
     public void drawMeanIntensity(DrawingArea drawingArea,Double doubleValue) {

@@ -1790,6 +1790,10 @@ table.resultTable {
     cursor: pointer;
 }
 
+.clickable-svg {
+    cursor: pointer;
+}
+
 .meanIntensity {
     display: inline-table;
 }

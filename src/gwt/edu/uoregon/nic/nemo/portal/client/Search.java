@@ -104,9 +104,9 @@ public class Search implements EntryPoint, BrainSearchable {
 
         resultTable.setWidth("80%");
         resultTable.setStyleName("resultTable");
-        resultTable.getRowFormatter().removeStyleName(0,"resultTable");
-        resultTable.getRowFormatter().addStyleName(0,"resultTableHeader");
-        resultTable.setHTML(0, 0, "<th>Experimental Contrast</th>" );
+        resultTable.getRowFormatter().removeStyleName(0, "resultTable");
+        resultTable.getRowFormatter().addStyleName(0, "resultTableHeader");
+        resultTable.setHTML(0, 0, "<th>Experimental Contrast</th>");
         resultTable.setHTML(0, 1, "<th>Mean Intensity (µV)</th>");
         resultTable.setHTML(0, 2, "<th>Peak Time (ms)</th>");
         resultTable.setHTML(0, 3, "<th>Location</th>");
@@ -179,8 +179,8 @@ public class Search implements EntryPoint, BrainSearchable {
         }
     }
 
-    Map<BrainLocationEnum,SelectedLocationEnum> getBrainSelectedBrainLocationMap() {
-        Map<BrainLocationEnum,SelectedLocationEnum> map = new TreeMap<BrainLocationEnum,SelectedLocationEnum>();
+    Map<BrainLocationEnum, SelectedLocationEnum> getBrainSelectedBrainLocationMap() {
+        Map<BrainLocationEnum, SelectedLocationEnum> map = new TreeMap<BrainLocationEnum, SelectedLocationEnum>();
         Map<BrainLocationEnum, RoiShape> shapeMap = brainDrawer.getRoiShapeTreeMap();
         for (BrainLocationEnum brainLocationEnum : brainDrawer.getRoiShapeTreeMap().keySet()) {
             RoiShape roiShape = shapeMap.get(brainLocationEnum);
@@ -189,13 +189,9 @@ public class Search implements EntryPoint, BrainSearchable {
 //            }
             if (roiShape.getFillColor().equals(RoiShape.POSITIVE_COLOR)) {
                 map.put(brainLocationEnum, SelectedLocationEnum.POSITIVE);
-            }
-            else
-            if (roiShape.getFillColor().equals(RoiShape.NEGATIVE_COLOR)) {
+            } else if (roiShape.getFillColor().equals(RoiShape.NEGATIVE_COLOR)) {
                 map.put(brainLocationEnum, SelectedLocationEnum.NEGATIVE);
-            }
-            else
-            if (roiShape.getFillColor().equals(RoiShape.BOTH_COLOR)) {
+            } else if (roiShape.getFillColor().equals(RoiShape.BOTH_COLOR)) {
                 map.put(brainLocationEnum, SelectedLocationEnum.BOTH);
             }
         }
@@ -232,26 +228,26 @@ public class Search implements EntryPoint, BrainSearchable {
                 Integer individualCount = Integer.valueOf((int) object.get("instanceCount").isNumber().doubleValue());
 
 //                countResults.setHTML("Erps: " + erpCount + " Instances: " + individualCount);
-                resultTable.getRowFormatter().setStyleName(0,"resultTableHeader");
+                resultTable.getRowFormatter().setStyleName(0, "resultTableHeader");
                 resultTable.setHTML(0, 0, "<th>Experimental Contrast</th>: " + erpCount);
-                resultTable.setHTML(0, 1, "<th>Mean Intensity (µV)</th>: "+individualCount);
+                resultTable.setHTML(0, 1, "<th>Mean Intensity (µV)</th>: " + individualCount);
                 resultTable.setHTML(0, 2, "<th>Peak Time (ms)</th>");
                 resultTable.setHTML(0, 3, "<th>Location</th>");
                 GWT.log("object " + object);
                 JSONArray values = object.get("searchResultDTOList").isArray();
                 GWT.log("values " + values);
-                int displayRow = 1 ;
-                for (int experimentContrast = 0; experimentContrast < values.size() ; experimentContrast++) {
+                int displayRow = 1;
+                for (int experimentContrast = 0; experimentContrast < values.size(); experimentContrast++) {
 
                     JSONObject experimentContrastValue = values.get(experimentContrast).isObject();
 
                     JSONArray individualList = experimentContrastValue.get("individuals").isObject().get("individualDTOList").isArray();
                     for (int j = 0; j < individualList.size(); j++) {
 
-                        if(j==0){
+                        if (j == 0) {
                             String erpName = experimentContrastValue.get("erpAnalysisResultName").isString().stringValue().replaceAll("\"", "");
-                            if(erpName.length()>20){
-                                erpName = erpName.substring(0,20)+"...";
+                            if (erpName.length() > 20) {
+                                erpName = erpName.substring(0, 20) + "...";
                             }
                             String linkName = experimentContrastValue.get("link").isString().stringValue().replaceAll("\"", "");
                             String html = "<a href='" + linkName + "'>" + erpName + "</a>";
@@ -263,14 +259,14 @@ public class Search implements EntryPoint, BrainSearchable {
 
 
                         String meanString = "";
-                        Double meanIntensity =individualJsonObject.get("meanIntensity").isNumber().doubleValue();
+                        Double meanIntensity = individualJsonObject.get("meanIntensity").isNumber().doubleValue();
                         meanString += " <a href='";
                         meanString += individualJsonObject.get("linkFromUrl").isString().stringValue();
                         meanString += "'>";
-                        if(meanIntensity>0){
+                        if (meanIntensity > 0) {
                             meanString += "+";
                         }
-                        meanString += NumberFormat.getFormat("#0.##").format(meanIntensity) ;
+                        meanString += NumberFormat.getFormat("#0.##").format(meanIntensity);
 //                        meanString += "details";
                         meanString += "</a>";
                         resultTable.setHTML(displayRow, 1, meanString);
@@ -282,7 +278,7 @@ public class Search implements EntryPoint, BrainSearchable {
                         htmlString += "'>";
 //                        htmlString += individualList.get(j).isObject().get("nameFromUrl").isString().stringValue();
                         Double peakTime = individualJsonObject.get("peakTime").isNumber().doubleValue();
-                        htmlString += NumberFormat.getFormat("#0.##").format(peakTime) ;
+                        htmlString += NumberFormat.getFormat("#0.##").format(peakTime);
 //                        htmlString += "ms ";
 
                         htmlString += "</a>";
@@ -294,16 +290,15 @@ public class Search implements EntryPoint, BrainSearchable {
                         locationString += "<a href='";
                         locationString += individualJsonObject.get("locationUrl").isString().stringValue();
                         locationString += "'>";
-                        locationString += location ;
+                        locationString += location;
                         locationString += "</a>";
 
                         resultTable.setHTML(displayRow, 3, locationString);
 
-                        if(experimentContrast%2==1){
-                            resultTable.getRowFormatter().setStyleName(displayRow,"resultTable-odd");
-                        }
-                        else{
-                            resultTable.getRowFormatter().setStyleName(displayRow,"resultTable-even");
+                        if (experimentContrast % 2 == 1) {
+                            resultTable.getRowFormatter().setStyleName(displayRow, "resultTable-odd");
+                        } else {
+                            resultTable.getRowFormatter().setStyleName(displayRow, "resultTable-even");
                         }
 
                         ++displayRow;
@@ -316,4 +311,13 @@ public class Search implements EntryPoint, BrainSearchable {
         });
     }
 
+    @Override
+    public Long getId() {
+        return null ;
+    }
+
+    @Override
+    public String getBaseUrl() {
+        return baseTermUrl;
+    }
 }

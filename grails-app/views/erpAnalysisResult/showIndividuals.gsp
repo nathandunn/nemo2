@@ -26,7 +26,7 @@
 
     <script>
         var locations = {
-            erpAnalysisResultId: ${erpAnalysisResultInstance.id}, initialTime: ${currentTime}, times: ${times}, baseTermUrl: '<g:createLink action="show" controller="term"/>'
+            erpAnalysisResultId: ${erpAnalysisResultInstance.id}, initialTime: ${currentTime}, times: ${times}, baseUrl: '<g:createLink action="showIndividualsAtLocation" controller="erpAnalysisResult"/>'
         };
     </script>
 

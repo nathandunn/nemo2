@@ -31,7 +31,7 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
     //    final FlexTable.FlexCellFormatter flexCellFormatter = resultTable.getFlexCellFormatter();
     final Dictionary locations = Dictionary.getDictionary("locations");
     final Integer imageWidth = 300;
-    final String baseTermUrl = locations.get("baseTermUrl");
+    final String baseUrl = locations.get("baseUrl");
     final Long erpAnalysisId = Long.parseLong(locations.get("erpAnalysisResultId"));
     final BrainDisplayDrawer brainDrawer = new BrainDisplayDrawer();
     final List<Integer> times = new ArrayList<Integer>();
@@ -185,6 +185,16 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
             }
 
         });
+    }
+
+    @Override
+    public Long getId() {
+        return erpAnalysisId ;
+    }
+
+    @Override
+    public String getBaseUrl() {
+        return baseUrl;
     }
 
     private void displayMeanIntensity(BrainLocationEnum brainLocationEnum, JSONObject individualObject) {

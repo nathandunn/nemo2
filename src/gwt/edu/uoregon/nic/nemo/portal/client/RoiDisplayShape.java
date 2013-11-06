@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  */
-public class RoiDisplayShape extends RoiShape{
+public class RoiDisplayShape extends RoiShape {
 
 //     public static final String OFF_COLOR ="gray";
 //     public static final String POSITIVE_COLOR ="red";
@@ -34,12 +34,12 @@ public class RoiDisplayShape extends RoiShape{
 
     public RoiDisplayShape(List<Dimension> dimensionList, BrainLocationEnum brainLocationEnum, BrainSearchable parent) {
         // have to delcare this by default
-        this.brainLocationEnum = brainLocationEnum ;
-        this.searchParent = parent ;
-        this.dimensionList = dimensionList ;
+        this.brainLocationEnum = brainLocationEnum;
+        this.searchParent = parent;
+        this.dimensionList = dimensionList;
         Dimension startPoint = this.dimensionList.get(0);
         moveTo(startPoint.getX(), startPoint.getY());
-        for(int i = 1 ; i < this.dimensionList.size() ; i++){
+        for (int i = 1; i < this.dimensionList.size(); i++) {
             Dimension dimension = this.dimensionList.get(i);
             lineTo(dimension.getX(), dimension.getY());
         }
@@ -47,52 +47,54 @@ public class RoiDisplayShape extends RoiShape{
         setStrokeWidth(strokeWidth);
         setFillColor(OFF_COLOR);
 //        setStyleName("clickable");
-        if(this.brainLocationEnum!=null){
-            getElement().getStyle().setCursor(Style.Cursor.POINTER);
+        if (this.brainLocationEnum != null) {
 
             addClickHandler(new ClickHandler() {
                 @Override
                 // http://localhost:8080/nemo/erpAnalysisResult/showIndividualsAtLocation/15?locationName=MFRONT
                 public void onClick(ClickEvent clickEvent) {
-                    Long erpAnalysisResultId = searchParent.getId();
-                    String newUrl = searchParent.getBaseUrl();
-                    newUrl += "/" + erpAnalysisResultId;
-                    newUrl += "?locationName=" + getBrainLocationEnum().name();
-                    Window.Location.replace(newUrl);
+                    if (valueText != null && valueText.isVisible()) {
+                        Long erpAnalysisResultId = searchParent.getId();
+                        String newUrl = searchParent.getBaseUrl();
+                        newUrl += "/" + erpAnalysisResultId;
+                        newUrl += "?locationName=" + getBrainLocationEnum().name();
+                        Window.Location.replace(newUrl);
+                    }
                 }
             });
         }
     }
 
-    public void drawMeanIntensity(DrawingArea drawingArea,Double doubleValue) {
+    public void drawMeanIntensity(DrawingArea drawingArea, Double doubleValue) {
         // take average X and Y and try?
-        Float averageX = 0f ;
+        Float averageX = 0f;
         Float averageY = 0f;
-        for(Dimension dimension : dimensionList){
+        for (Dimension dimension : dimensionList) {
             averageX += dimension.getX();
             averageY += dimension.getY();
         }
         averageX = averageX / (float) dimensionList.size();
-        averageX -= 15 ;
+        averageX -= 15;
         averageY = averageY / (float) dimensionList.size();
 
-        if(valueBackground==null){
-            valueBackground= new Rectangle(averageX.intValue()-5,averageY.intValue()-10,50,15);
+        if (valueBackground == null) {
+            valueBackground = new Rectangle(averageX.intValue() - 5, averageY.intValue() - 10, 50, 15);
             valueBackground.setFillColor("white");
             valueBackground.setFillOpacity(0.5f);
             valueBackground.setStrokeWidth(0);
             valueBackground.setRoundedCorners(8);
+            valueBackground.getElement().getStyle().setCursor(Style.Cursor.POINTER);
             drawingArea.add(valueBackground);
         }
         String numberString = NumberFormat.getFormat("0.000").format(doubleValue);
-        if(!numberString.startsWith("-")){
-            numberString = "+"+ numberString;
+        if (!numberString.startsWith("-")) {
+            numberString = "+" + numberString;
         }
-        if(valueText==null){
-            valueText = new Text(averageX.intValue(),averageY.intValue(),numberString);
+        if (valueText == null) {
+            valueText = new Text(averageX.intValue(), averageY.intValue(), numberString);
+            valueText.getElement().getStyle().setCursor(Style.Cursor.POINTER);
             drawingArea.add(valueText);
-        }
-        else{
+        } else {
             valueText.setText(numberString);
         }
         valueText.setStrokeColor("black");
@@ -102,14 +104,16 @@ public class RoiDisplayShape extends RoiShape{
 
         valueText.setVisible(true);
         valueBackground.setVisible(true);
+        getElement().getStyle().setCursor(Style.Cursor.POINTER);
     }
 
     public void removeValue() {
-        if(valueText!=null){
+        if (valueText != null) {
             valueText.setVisible(false);
         }
-        if(valueBackground!=null){
+        if (valueBackground != null) {
             valueBackground.setVisible(false);
         }
+        getElement().getStyle().setCursor(Style.Cursor.DEFAULT);
     }
 }

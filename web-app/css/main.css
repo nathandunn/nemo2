@@ -1976,16 +1976,28 @@ table.resultTable {
     cursor: pointer;
     /*margin: 4px;*/
     padding: 4px;
+    border: 1px;
+    border-style: solid;
+    border-color: #000000;
+    /*background-color: lightgoldenrodyellow;*/
+    background-color: #d3d3d3;
+    color: #000000;
+    border-spacing: 0;
 }
 
 .selected-time {
-    background-color: #d3d3d3;
     font-weight: bold;
+    background-color: #444444;
+    color: #ffffff;
     display: inline;
     /*margin: 4px;*/
     padding: 4px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+    /*-moz-border-radius: 15px;*/
+    /*border-radius: 15px;*/
+    border: 1px;
+    border-style: solid;
+    border-color: #000000;
+    border-spacing: 0;
 }
 
 table.time-selector {

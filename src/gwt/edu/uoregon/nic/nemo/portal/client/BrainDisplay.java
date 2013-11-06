@@ -114,9 +114,12 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
             final HTML timeButton;
             final Integer aTime = times.get(i);
             if (aTime.equals(selectedTime)) {
-                timeButton = new HTML("<div class='selected-time'>" + aTime +"</div>");
+//                timeButton = new HTML("<div class='selected-time'>" + aTime +"</div>");
+                timeButton = new HTML(aTime.toString());
+                timeButton.setStyleName("selected-time");
             } else {
-                timeButton = new HTML("<div class='unselected-time'>" + aTime +"</div>");
+                timeButton = new HTML(aTime.toString());
+                timeButton.setStyleName("unselected-time");
             }
             timeButton.addClickHandler(new ClickHandler() {
                 @Override

@@ -59,7 +59,7 @@ public class BrainDrawer {
         return canvas ;
     }
 
-    private void drawCircles(DrawingArea canvas) {
+    protected void drawCircles(DrawingArea canvas) {
         // cluster radius
 //        Integer clusterRadius = 10 ;
         new ClusterCircle(brainCenter, brainCenter - headRadius, "Nz", canvas);

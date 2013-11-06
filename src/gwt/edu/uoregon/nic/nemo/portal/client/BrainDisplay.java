@@ -33,7 +33,7 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
     final Integer imageWidth = 300;
     final String baseTermUrl = locations.get("baseTermUrl");
     final Long erpAnalysisId = Long.parseLong(locations.get("erpAnalysisResultId"));
-    final BrainDrawer brainDrawer = new BrainDrawer();
+    final BrainDisplayDrawer brainDrawer = new BrainDisplayDrawer();
     final List<Integer> times = new ArrayList<Integer>();
     final FlexTable timesTable = new FlexTable();
 
@@ -74,7 +74,7 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
         mainPanel.setStyleName("mainPanel");
 
 //        Grid queryPanel = new Grid(2,2);
-        HorizontalPanel queryPanel = new HorizontalPanel();
+        VerticalPanel queryPanel = new VerticalPanel();
         queryPanel.setWidth("30%");
 
         queryPanel.add(timesTable);
@@ -114,7 +114,7 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
                 }
             });
 
-            timesTable.setWidget(i, 0, timeButton);
+            timesTable.setWidget(0, i, timeButton);
         }
     }
 

@@ -12,38 +12,44 @@ import java.util.List;
 
 /**
  */
-public class RoiShape extends Path{
+public class RoiShape extends Path {
 
-     public static final String OFF_COLOR ="gray";
-     public static final String POSITIVE_COLOR ="red";
-     public static final String NEGATIVE_COLOR ="blue";
-     public static final String BOTH_COLOR ="purple";
+    public static final String OFF_COLOR = "gray";
+    public static final String POSITIVE_COLOR = "red";
+    public static final String NEGATIVE_COLOR = "blue";
+    public static final String BOTH_COLOR = "purple";
 
-    private final Float opacity = 0.5f ;
-    private final Integer strokeWidth = 1 ;
-    private final BrainLocationEnum brainLocationEnum ;
-    private final BrainSearchable searchParent ;
-    private final List<Dimension> dimensionList ;
+    protected final Float opacity = 0.5f;
+    protected final Integer strokeWidth = 1;
+    protected BrainLocationEnum brainLocationEnum;
+    protected BrainSearchable searchParent;
+    protected List<Dimension> dimensionList;
 
-    private Text valueText = null ;
-    private Rectangle valueBackground = null ;
-//    private Path path;
+    protected Text valueText = null;
+    protected Rectangle valueBackground = null;
+
+    public RoiShape() {
+        super(0, 0);
+    }
+
+    //    private Path path;
     // assume that the first dimension is the
-    public RoiShape(List<Dimension> dimensionList,BrainLocationEnum brainLocationEnum,BrainSearchable parent) {
+    public RoiShape(List<Dimension> dimensionList, BrainLocationEnum brainLocationEnum, BrainSearchable parent) {
         // have to delcare this by default
-        super(0,0);
-        this.brainLocationEnum = brainLocationEnum ;
-        this.searchParent = parent ;
-        this.dimensionList = dimensionList ;
+        super(0, 0);
+        this.brainLocationEnum = brainLocationEnum;
+        this.searchParent = parent;
+        this.dimensionList = dimensionList;
         Dimension startPoint = this.dimensionList.get(0);
         moveTo(startPoint.getX(), startPoint.getY());
-        for(int i = 1 ; i < this.dimensionList.size() ; i++){
+        for (int i = 1; i < this.dimensionList.size(); i++) {
             Dimension dimension = this.dimensionList.get(i);
             lineTo(dimension.getX(), dimension.getY());
         }
         setFillOpacity(opacity);
         setStrokeWidth(strokeWidth);
         setFillColor(OFF_COLOR);
+
 
         addClickHandler(new ClickHandler() {
             @Override
@@ -63,20 +69,20 @@ public class RoiShape extends Path{
         });
     }
 
-    public void drawMeanIntensity(DrawingArea drawingArea,Double doubleValue) {
+    public void drawMeanIntensity(DrawingArea drawingArea, Double doubleValue) {
         // take average X and Y and try?
-        Float averageX = 0f ;
+        Float averageX = 0f;
         Float averageY = 0f;
-        for(Dimension dimension : dimensionList){
+        for (Dimension dimension : dimensionList) {
             averageX += dimension.getX();
             averageY += dimension.getY();
         }
         averageX = averageX / (float) dimensionList.size();
-        averageX -= 15 ;
+        averageX -= 15;
         averageY = averageY / (float) dimensionList.size();
 
-        if(valueBackground==null){
-            valueBackground= new Rectangle(averageX.intValue()-5,averageY.intValue()-10,50,15);
+        if (valueBackground == null) {
+            valueBackground = new Rectangle(averageX.intValue() - 5, averageY.intValue() - 10, 50, 15);
             valueBackground.setFillColor("white");
             valueBackground.setFillOpacity(0.5f);
             valueBackground.setStrokeWidth(0);
@@ -84,11 +90,10 @@ public class RoiShape extends Path{
             drawingArea.add(valueBackground);
         }
         String numberString = NumberFormat.getFormat("0.000").format(doubleValue);
-        if(valueText==null){
-            valueText = new Text(averageX.intValue(),averageY.intValue(),numberString);
+        if (valueText == null) {
+            valueText = new Text(averageX.intValue(), averageY.intValue(), numberString);
             drawingArea.add(valueText);
-        }
-        else{
+        } else {
             valueText.setText(numberString);
         }
         valueText.setStrokeColor("black");
@@ -96,5 +101,12 @@ public class RoiShape extends Path{
         valueText.setFontFamily("courier");
         valueText.setFontSize(12);
 
+        valueText.setVisible(true);
+        valueBackground.setVisible(true);
+    }
+
+    public void removeValue() {
+        valueText.setVisible(false);
+        valueBackground.setVisible(false);
     }
 }

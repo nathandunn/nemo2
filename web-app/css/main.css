@@ -1707,6 +1707,7 @@ table.resultTable td {
     /*line-height: 2.5em;*/
     /*margin-left: auto !important;*/
     /*margin-right: auto !important;*/
+    text-align: center;
 }
 
 table.resultTable {
@@ -2007,4 +2008,12 @@ table.time-selector td, th, tr {
     margin-left: 20%;
     margin-right: auto;
     vertical-align: top;
+}
+
+.sidenote{
+    font-size: smaller;
+    text-align: right;
+    width: 80%;
+    margin-right: auto;
+    vertical-align: bottom;
 }

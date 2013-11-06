@@ -107,10 +107,14 @@ public class Search implements EntryPoint, BrainSearchable {
         resultTable.getRowFormatter().removeStyleName(0, "resultTable");
         resultTable.getRowFormatter().addStyleName(0, "resultTableHeader");
         resultTable.setHTML(0, 0, "<th>Experimental Contrast</th>");
-        resultTable.setHTML(0, 1, "<th>Mean Intensity (µV)</th>");
+        resultTable.setHTML(0, 1, "<th>Mean Intensity (µV)<sup>*</sup></th>");
         resultTable.setHTML(0, 2, "<th>Peak Time (ms)</th>");
         resultTable.setHTML(0, 3, "<th>Location</th>");
 
+        HTML html = new HTML("<sup>*</sup>Mean Intensity for Contrast");
+        html.setStyleName("sidenote");
+        html.addStyleName("resultTable");
+        resultPanel.add(html);
         resultPanel.add(resultTable);
         mainPanel.add(resultPanel);
 
@@ -229,8 +233,8 @@ public class Search implements EntryPoint, BrainSearchable {
 
 //                countResults.setHTML("Erps: " + erpCount + " Instances: " + individualCount);
                 resultTable.getRowFormatter().setStyleName(0, "resultTableHeader");
-                resultTable.setHTML(0, 0, "<th>Experimental Contrast</th>: " + erpCount);
-                resultTable.setHTML(0, 1, "<th>Mean Intensity (µV)</th>: " + individualCount);
+                resultTable.setHTML(0, 0, "<th>Experimental Contrast " + erpCount+"</th>");
+                resultTable.setHTML(0, 1, "<th>Mean Intensity (µV)<sup>*</sup> " + individualCount+"</th>");
                 resultTable.setHTML(0, 2, "<th>Peak Time (ms)</th>");
                 resultTable.setHTML(0, 3, "<th>Location</th>");
                 GWT.log("object " + object);

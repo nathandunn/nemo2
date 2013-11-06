@@ -530,5 +530,23 @@ class SearchService {
         }
     }
 
+    String findPeakIntensities(Long id, Integer time){
+        def erpAnalysisResultInstance = ErpAnalysisResult.get(id)
+        if (!erpAnalysisResultInstance) {
+            return 404
+//            flash.message = message(code: 'default.not.found.message', args: [message(code: 'erpAnalysisResult.label', default: 'File'), id])
+//            redirect(action: "list")
+//            return
+        }
+        List<Integer> times = (List<Integer>) Individual.executeQuery("select i.peakTime from Individual i where i.erpAnalysisResult = :erpAnalysisResult  group by i.peakTime order by i.peakTime asc"
+                , ["erpAnalysisResult": erpAnalysisResultInstance])
+        List<Individual> individualList = Individual.findAllByErpAnalysisResultAndPeakTime(erpAnalysisResultInstance, time)
+        Map<BrainLocationEnum, Individual> individualMap = new HashMap<>()
+
+        for (Individual individual in individualList) {
+            individualMap.put(individual.location, individual)
+        }
+        return individualMap as JSON
+    }
 }
 

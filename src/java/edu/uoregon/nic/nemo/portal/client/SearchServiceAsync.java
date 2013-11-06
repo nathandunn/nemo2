@@ -10,4 +10,6 @@ public interface SearchServiceAsync {
     void searchErps(Integer minTime, Integer maxTime, List<BrainLocationEnum> locations, Integer minPeak, Integer maxPeak, AsyncCallback<String> async);
 
     void searchErps(Integer minTime, Integer maxTime, Map<BrainLocationEnum, SelectedLocationEnum> brainSelectedBrainLocationMap, AsyncCallback<String> callback);
+
+    void findPeakIntensities(Long erpAnalysisId, Integer selectedTime, AsyncCallback<String> asyncCallback);
 }

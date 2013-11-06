@@ -24,7 +24,7 @@ import java.util.TreeMap;
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
-public class Search implements EntryPoint, ParentSearch {
+public class Search implements EntryPoint, BrainSearchable {
 
     private static SearchServiceAsync searchServiceAsync = GWT.create(SearchService.class);
     protected static List<BrainLocationEnum> brainLocationEnums = new ArrayList<BrainLocationEnum>();

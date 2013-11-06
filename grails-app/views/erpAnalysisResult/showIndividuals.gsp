@@ -84,23 +84,25 @@
 
 
     <div class="table-legend">
-        <br/>
     <br/>
         %{--<h3>--}%
         %{--Current Time ${currentTime} ms--}%
         %{--</h3>--}%
         %{--<h2>Mean Intensity (µV) at ROI's for a given Peak Time (ms)</h2>--}%
         %{--<h2>Average Difference in Amplitude (µV) for Experiment Contrast</h2>--}%
-    %{--<h2>Statistically Significant Effects: Difference in Amplitude (µV) for Experiment Contrast</h2>--}%
-    <div class="emphasize-link">Statistically Significant Effects: Difference in Amplitude (µV) for Experiment Contrast</div>
-        <br/>
-    <br/>
+        %{--<h2>Statistically Significant Effects: Difference in Amplitude (µV) for Experiment Contrast</h2>--}%
+        <div class="emphasize-link">Statistically Significant Effects</div>
 
-        <div class="significant">
+        <div class="significant float-right">
             Significant *
             <div class="significant-positive">Positive</div>&nbsp;
             <div class="significant-negative">Negative</div>
         </div>
+
+        <br/>
+
+        <div class="subtitle-link">Difference in Amplitude (µV) for Experiment Contrast</div>
+
 
         %{--<div id="tabs">--}%
         %{--<ul>--}%
@@ -125,6 +127,7 @@
     </div>
 
 </div>
+<br/>
 
 <div id="brainPanel"></div>
 

@@ -77,6 +77,7 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
         VerticalPanel queryPanel = new VerticalPanel();
 //        queryPanel.setWidth("30%");
         HorizontalPanel timePanel = new HorizontalPanel();
+        timePanel.setStyleName("queryPanel");
         HTML peakTimeLabel = new HTML("Peak Time (ms):");
         peakTimeLabel.setStyleName("peak-label");
         timePanel.add(peakTimeLabel);

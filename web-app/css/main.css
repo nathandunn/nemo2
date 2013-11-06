@@ -1654,10 +1654,16 @@ table.center-detail-table td, th, tr {
     /*vertical-align: top;*/
 }
 
+.queryPanel table{
+    margin-bottom: 0;
+}
+
 .queryPanel td, tr {
     /*border: none;*/
-    line-height: 0.2em;
-    /*vertical-align: top;*/
+    /*line-height: 0.2em;*/
+    vertical-align: bottom;
+    padding: 5px;
+    margin: 5px;
 }
 
 /*.mainResultPanel tr, td, table{*/
@@ -1790,13 +1796,13 @@ table.resultTable {
     line-height: 1em;
 }
 
-.clickable {
-    cursor: pointer;
-}
+/*.clickable {*/
+    /*cursor: pointer;*/
+/*}*/
 
-.clickable-svg {
-    cursor: pointer;
-}
+/*.clickable-svg {*/
+    /*cursor: pointer;*/
+/*}*/
 
 .meanIntensity {
     display: inline-table;
@@ -1805,6 +1811,10 @@ table.resultTable {
 .significant {
     display: inline-table;
     font-weight: bold;
+}
+
+.float-right{
+    float: right;
 }
 
 /*.significant a {*/
@@ -1887,7 +1897,13 @@ table.resultTable {
 .emphasize-link {
     display: inline-block;
     font-weight: bolder;
-    font-size: large;
+    font-size: x-large;
+}
+
+.subtitle-link{
+    display: inline-block;
+    /*font-weight: bolder;*/
+    font-size: medium;
 }
 
 .img-center img {
@@ -2007,7 +2023,7 @@ table.time-selector td, th, tr {
 .brain-display{
     margin-left: 20%;
     margin-right: auto;
-    vertical-align: top;
+    vertical-align: bottom;
 }
 
 .sidenote{

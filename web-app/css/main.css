@@ -1581,6 +1581,9 @@ table.center-detail-table td, th, tr {
     border-top-color: #a9a9a9;
     border-top-style: solid;
     border-top-width: 1px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    text-align: center;
 }
 
 .indent-dependent {

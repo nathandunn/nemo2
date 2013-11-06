@@ -79,6 +79,7 @@
     <table class="center-detail-table">
         <thead>
         <tr>
+            <th>Peak Time (ms)</th>
             <g:each in="${times}" var="time">
                 <th>
                     ${time}
@@ -88,6 +89,7 @@
         </thead>
         <tbody>
         <tr>
+            <th>Mean&nbsp;Intensity&nbsp;(µV)&nbsp;</th>
             <g:each in="${times}" var="time">
                 <td class="value-link">
                     <g:render template="meanIntensityForTime" model="[time: time]"/>

@@ -85,6 +85,7 @@
 
     <div class="table-legend">
         <br/>
+    <br/>
         %{--<h3>--}%
         %{--Current Time ${currentTime} ms--}%
         %{--</h3>--}%
@@ -93,6 +94,7 @@
     %{--<h2>Statistically Significant Effects: Difference in Amplitude (µV) for Experiment Contrast</h2>--}%
     <div class="emphasize-link">Statistically Significant Effects: Difference in Amplitude (µV) for Experiment Contrast</div>
         <br/>
+    <br/>
 
         <div class="significant">
             Significant *

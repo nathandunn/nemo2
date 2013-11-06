@@ -1,5 +1,7 @@
 package edu.uoregon.nic.nemo.portal.client;
 
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.i18n.client.NumberFormat;
 import org.vaadin.gwtgraphics.client.DrawingArea;
 import org.vaadin.gwtgraphics.client.shape.Rectangle;
@@ -41,9 +43,10 @@ public class RoiDisplayShape extends RoiShape{
         setStrokeWidth(strokeWidth);
         setFillColor(OFF_COLOR);
 
-//        addClickHandler(new ClickHandler() {
-//            @Override
-//            public void onClick(ClickEvent clickEvent) {
+        addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent clickEvent) {
+//                Window.Location.
 //                String color = getFillColor();
 //                if (color.equals(OFF_COLOR)) {
 //                    setFillColor(POSITIVE_COLOR);
@@ -55,8 +58,8 @@ public class RoiDisplayShape extends RoiShape{
 //                    setFillColor(OFF_COLOR);
 //                }
 //                searchParent.doSearch();
-//            }
-//        });
+            }
+        });
     }
 
     public void drawMeanIntensity(DrawingArea drawingArea,Double doubleValue) {

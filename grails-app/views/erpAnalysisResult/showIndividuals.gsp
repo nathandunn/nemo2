@@ -26,14 +26,12 @@
 
     <script>
         var locations = {
-             erpAnalysisResultId: ${erpAnalysisResultInstance.id}
-            ,initialTime: ${currentTime}
-            ,times: ${times}
-            , baseTermUrl : '<g:createLink action="show" controller="term"/>'
-        } ;
+            erpAnalysisResultId: ${erpAnalysisResultInstance.id}, initialTime: ${currentTime}, times: ${times}, baseTermUrl: '<g:createLink action="show" controller="term"/>'
+        };
     </script>
 
-    <script type="text/javascript" src="${resource(dir: 'gwt/edu.uoregon.nic.nemo.portal.BrainDisplay', file: 'edu.uoregon.nic.nemo.portal.BrainDisplay.nocache.js')}"></script>
+    <script type="text/javascript"
+            src="${resource(dir: 'gwt/edu.uoregon.nic.nemo.portal.BrainDisplay', file: 'edu.uoregon.nic.nemo.portal.BrainDisplay.nocache.js')}"></script>
 
 </head>
 
@@ -91,6 +89,9 @@
         %{--Current Time ${currentTime} ms--}%
         %{--</h3>--}%
         %{--<h2>Mean Intensity (µV) at ROI's for a given Peak Time (ms)</h2>--}%
+        %{--<h2>Average Difference in Amplitude (µV) for Experiment Contrast</h2>--}%
+    %{--<h2>Statistically Significant Effects: Difference in Amplitude (µV) for Experiment Contrast</h2>--}%
+    <div class="emphasize-link">Statistically Significant Effects: Difference in Amplitude (µV) for Experiment Contrast</div>
         <br/>
 
         <div class="significant">
@@ -99,25 +100,25 @@
             <div class="significant-negative">Negative</div>
         </div>
 
-        <div id="tabs">
-            <ul>
-                <g:each in="${times}" var="time">
-                    <li>
-                        <g:if test="${time == currentTime}">
-                            <a href="<g:createLink action='showIndividualTable' controller='erpAnalysisResult'
-                                                   id='${erpAnalysisResultInstance.id}'
-                                                   params='[time: time]'/>"><strong>${time}</strong></a>
-                        </g:if>
-                        <g:else>
-                            <a href="<g:createLink action='showIndividualTable' controller='erpAnalysisResult'
-                                                   id='${erpAnalysisResultInstance.id}'
-                                                   params='[time: time]'/>"><strong>${time}</strong></a>
-                        </g:else>
-                    </li>
-                </g:each>
-            </ul>
-        </div>
-        <br/>
+        %{--<div id="tabs">--}%
+        %{--<ul>--}%
+        %{--<g:each in="${times}" var="time">--}%
+        %{--<li>--}%
+        %{--<g:if test="${time == currentTime}">--}%
+        %{--<a href="<g:createLink action='showIndividualTable' controller='erpAnalysisResult'--}%
+        %{--id='${erpAnalysisResultInstance.id}'--}%
+        %{--params='[time: time]'/>"><strong>${time}</strong></a>--}%
+        %{--</g:if>--}%
+        %{--<g:else>--}%
+        %{--<a href="<g:createLink action='showIndividualTable' controller='erpAnalysisResult'--}%
+        %{--id='${erpAnalysisResultInstance.id}'--}%
+        %{--params='[time: time]'/>"><strong>${time}</strong></a>--}%
+        %{--</g:else>--}%
+        %{--</li>--}%
+        %{--</g:each>--}%
+        %{--</ul>--}%
+        %{--</div>--}%
+        %{--<br/>--}%
 
     </div>
 

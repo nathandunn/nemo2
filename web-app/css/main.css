@@ -1960,5 +1960,33 @@ table.resultTable {
     display: inline;
     /*margin: 4px;*/
     padding: 4px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+
+table.time-selector {
+    display: block;
+    width: 90%;
+    /*margin-left: auto;*/
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    /*margin-top: 10px;*/
+    /*margin-bottom: 10px;*/
+    /*font-size: 90%;*/
+    border-spacing: 0;
+}
+
+table.time-selector td, th, tr {
+    /*text-align: left;*/
+    padding-bottom: 2px;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-color: #a9a9a9;
+    border-style: none;
+    /*border-left-width: 1px;*/
+    /*border-right-width: 1px;*/
 }
 

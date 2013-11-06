@@ -69,15 +69,22 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
 
         RootPanel.get("brainPanel").add(canvas);
 
-        HorizontalPanel mainPanel = new HorizontalPanel();
-        mainPanel.setWidth("100%");
-        mainPanel.setStyleName("mainPanel");
+//        HorizontalPanel mainPanel = new HorizontalPanel();
+//        mainPanel.setWidth("100%");
+//        mainPanel.setStyleName("mainPanel");
 
 //        Grid queryPanel = new Grid(2,2);
         VerticalPanel queryPanel = new VerticalPanel();
-        queryPanel.setWidth("30%");
+//        queryPanel.setWidth("30%");
+        HorizontalPanel timePanel = new HorizontalPanel();
+        timePanel.add(new HTML("<b>Peak Time (ms):</b>"));
+        timePanel.add(timesTable);
+        queryPanel.add(timePanel);
+//        timesTable.setWidth("20%");
+        timesTable.setStyleName("time-selector");
 
-        queryPanel.add(timesTable);
+//        timesTable.setWidget(0,0,);
+
 
         redrawTimes();
 
@@ -85,10 +92,10 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
 
 
         queryPanel.add(canvas);
-        mainPanel.add(queryPanel);
+//        mainPanel.add(queryPanel);
 
 
-        RootPanel.get("searchPanel").add(mainPanel);
+        RootPanel.get("searchPanel").add(queryPanel);
 
 
         doSearch();
@@ -97,6 +104,7 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
 
     private void redrawTimes() {
 
+        timesTable.clear();
         for (int i = 0; i < times.size(); i++) {
             final HTML timeButton;
             final Integer aTime = times.get(i);
@@ -114,7 +122,7 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
                 }
             });
 
-            timesTable.setWidget(0, i, timeButton);
+            timesTable.setWidget(0, i+1, timeButton);
         }
     }
 

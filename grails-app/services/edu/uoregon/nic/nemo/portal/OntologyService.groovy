@@ -930,7 +930,7 @@ class OntologyService {
         Map<String, TreeSet<TermLinkContainer>> mappedInstances = new LinkedHashMap<String, TreeSet<TermLinkContainer>>()
 
         for (instanceKey in sortedInstances) {
-            def key = ontologyService.getLabelForUrl(instanceKey)?.replaceAll("_", " ")
+            def key = getLabelForUrl(instanceKey)?.replaceAll("_", " ")
             if (!key) {
                 if (instanceKey.startsWith(OntologyService.DATA_URL)) {
                     key = instanceKey.substring(OntologyService.DATA_URL.length())

@@ -12,6 +12,9 @@ class Individual {
     static constraints = {
     }
 
+    static mapping = {
+        mappedInstances type: "text"
+    }
 
     ErpAnalysisResult erpAnalysisResult
 

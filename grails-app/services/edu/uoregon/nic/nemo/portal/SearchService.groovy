@@ -3,6 +3,7 @@ package edu.uoregon.nic.nemo.portal
 import edu.uoregon.nemo.nic.portal.util.IndividualDTO
 import edu.uoregon.nemo.nic.portal.util.SearchResultDTO
 import edu.uoregon.nemo.nic.portal.util.SearchResultsDTO
+import edu.uoregon.nemo.nic.portal.util.TermLinkContainer
 import edu.uoregon.nic.nemo.portal.client.BrainLocationEnum
 import edu.uoregon.nic.nemo.portal.client.SelectedLocationEnum
 import grails.converters.JSON
@@ -102,6 +103,9 @@ class SearchService {
             if (time == null) {
                 time = parseExponentTimeFromLabel(url)
             }
+
+//            TreeSet<TermLinkContainer> mappedInstances = new TreeSet<>()
+            TreeSet<String> mappedInstances = new TreeSet<>()
             BrainLocationEnum location = parseLocationFromMeanIntensity(url)
             if (location != null && time != null) {
                 IndividualDTO newIndividualDTO = new IndividualDTO()
@@ -119,6 +123,14 @@ class SearchService {
                 newIndividualDTO.significant = significantSet.contains(url)
 
 //                        println "${url} -> meanIntensity keys ${meanIntensityMap.keySet().toArray()}"
+                ontologyService.generatedMappedInstances(erpAnalysisResult).values().each{ TreeSet<TermLinkContainer> it ->
+                    it.each { TermLinkContainer termLinkContainer ->
+                        mappedInstances.addAll(termLinkContainer.label)
+                    }
+                }
+
+                 ontologyService.generatedMappedInstances(erpAnalysisResult).values()
+
 
                 Individual individual = new Individual(
                         url: url
@@ -127,6 +139,7 @@ class SearchService {
                         , meanIntensity: newIndividualDTO.meanIntensity
                         , location: location
                         , erpAnalysisResult: erpAnalysisResult
+                        , mappedInstances: mappedInstances.join("|")
                 ).save(insert: true, flush: true)
 
             }

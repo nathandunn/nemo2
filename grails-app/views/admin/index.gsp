@@ -23,6 +23,9 @@
         <g:link controller="erpAnalysisResult" action="reinferAll">Re-infer all RDF files</g:link>
     </li>
     <li>
+        <g:link controller="erpAnalysisResult" action="recacheSearch">Recache Erp's</g:link>
+    </li>
+    <li>
         <g:link controller="erpAnalysisResult" action="cacheSearch">Cache Erp's</g:link>
     </li>
     <li>

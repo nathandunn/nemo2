@@ -1,5 +1,6 @@
 package edu.uoregon.nic.nemo.portal
 
+import edu.uoregon.nemo.nic.portal.util.TermLinkContainer
 import edu.uoregon.nic.nemo.portal.client.BrainLocationEnum
 
 /**
@@ -22,5 +23,6 @@ class Individual {
     Float meanIntensity
     BrainLocationEnum location
     Boolean statisticallySignificant
+    String mappedInstances
 
 }

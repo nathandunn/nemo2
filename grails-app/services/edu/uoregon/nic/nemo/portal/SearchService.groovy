@@ -125,7 +125,7 @@ class SearchService {
 //                        println "${url} -> meanIntensity keys ${meanIntensityMap.keySet().toArray()}"
                 ontologyService.generatedMappedInstances(erpAnalysisResult).values().each{ TreeSet<TermLinkContainer> it ->
                     it.each { TermLinkContainer termLinkContainer ->
-                        mappedInstances.addAll(termLinkContainer.label)
+                        mappedInstances.addAll(termLinkContainer.label+":"+termLinkContainer.url)
                     }
                 }
 
@@ -275,6 +275,7 @@ class SearchService {
             individualDTO.peakTimeUrl = timeUrl
             String locationUrl = grailsLinkGenerator.link(controller: "erpAnalysisResult", action: "showIndividualsAtLocation", params: [locationName: individual?.location?.name()], absolute: true, id: individual.erpAnalysisResultId).decodeURL()
             individualDTO.locationUrl = locationUrl
+            individualDTO.mappedInstances = individual.mappedInstances
 
             searchResultDTO.individuals.individualDTOList.add(individualDTO)
         }

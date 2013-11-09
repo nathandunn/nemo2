@@ -15,10 +15,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
 import org.vaadin.gwtgraphics.client.DrawingArea;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 
 /**
@@ -41,6 +38,7 @@ public class Search implements EntryPoint, BrainSearchable {
     final Button searchAllLocations = new Button("Search All Locations");
     final String baseTermUrl = locations.get("baseTermUrl");
     final BrainDrawer brainDrawer = new BrainDrawer();
+    final HTML summaryHtml = new HTML();
 
 
     /**
@@ -115,6 +113,7 @@ public class Search implements EntryPoint, BrainSearchable {
         html.setStyleName("sidenote");
         html.addStyleName("resultTable");
         resultPanel.add(html);
+        resultPanel.add(summaryHtml);
         resultPanel.add(resultTable);
         mainPanel.add(resultPanel);
 
@@ -233,14 +232,15 @@ public class Search implements EntryPoint, BrainSearchable {
 
 //                countResults.setHTML("Erps: " + erpCount + " Instances: " + individualCount);
                 resultTable.getRowFormatter().setStyleName(0, "resultTableHeader");
-                resultTable.setHTML(0, 0, "<th>Experimental Contrast " + erpCount+"</th>");
-                resultTable.setHTML(0, 1, "<th>Mean Intensity (µV)<sup>*</sup> " + individualCount+"</th>");
+                resultTable.setHTML(0, 0, "<th>Experimental Contrast " + erpCount + "</th>");
+                resultTable.setHTML(0, 1, "<th>Mean Intensity (µV)<sup>*</sup> " + individualCount + "</th>");
                 resultTable.setHTML(0, 2, "<th>Peak Time (ms)</th>");
                 resultTable.setHTML(0, 3, "<th>Location</th>");
                 GWT.log("object " + object);
                 JSONArray values = object.get("searchResultDTOList").isArray();
                 GWT.log("values " + values);
                 int displayRow = 1;
+                TreeSet<String> resultSummary = new TreeSet<String>();
                 for (int experimentContrast = 0; experimentContrast < values.size(); experimentContrast++) {
 
                     JSONObject experimentContrastValue = values.get(experimentContrast).isObject();
@@ -261,6 +261,10 @@ public class Search implements EntryPoint, BrainSearchable {
 
                         JSONObject individualJsonObject = individualList.get(j).isObject();
 
+                        String resultValues = individualJsonObject.get("mappedInstances").isString().stringValue();
+                        for (String splitResult : resultValues.split("\\|")) {
+                            resultSummary.add(splitResult);
+                        }
 
                         String meanString = "";
                         Double meanIntensity = individualJsonObject.get("meanIntensity").isNumber().doubleValue();
@@ -310,6 +314,19 @@ public class Search implements EntryPoint, BrainSearchable {
 
 //                    htmlString += "</ul>";
                 }
+
+                String resultHtml = "";
+                resultHtml += "<ul>" ;
+                for (String resultString : resultSummary) {
+                    if(!resultString.startsWith("unnamed")){
+                        resultHtml += "<li>"+resultString + "</li>";
+                    }
+                }
+                resultHtml += "</ul>";
+                GWT.log("resulTHML value " + resultHtml);
+                GWT.log("resultSummary.size(): " + resultSummary.size());
+
+                summaryHtml.setHTML(resultHtml);
                 popupPanel.hide();
             }
         });
@@ -317,7 +334,7 @@ public class Search implements EntryPoint, BrainSearchable {
 
     @Override
     public Long getId() {
-        return null ;
+        return null;
     }
 
     @Override

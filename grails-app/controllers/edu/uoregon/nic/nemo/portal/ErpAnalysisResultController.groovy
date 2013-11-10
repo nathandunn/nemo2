@@ -79,7 +79,9 @@ class ErpAnalysisResultController {
 //    }
 
     def recacheSearch() {
-        Individual.deleteAll(Individual.all)
+        Individual.withTransaction {
+            Individual.deleteAll(Individual.all)
+        }
         return cacheSearch()
     }
 

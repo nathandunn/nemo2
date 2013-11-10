@@ -2045,3 +2045,36 @@ table.time-selector td, th, tr {
     margin-right: auto;
     vertical-align: bottom;
 }
+
+.resultHtml{
+
+    border: 1px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    margin-right: auto;
+    margin-left: 0;
+
+    background-color: #F1F5F8;
+    /*border: 1px;*/
+    border-style: solid;
+    border-color: #a9a9a9;
+    /*border-collapse: separate;*/
+    /*margin-bottom: 80px;*/
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*margin-top: 80px;*/
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    /*max-width: 600px;*/
+
+    font-size: smaller;
+    /*text-align: right;*/
+    width: 70%;
+    /*margin-right: auto;*/
+    /*vertical-align: bottom;*/
+}

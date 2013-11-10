@@ -109,11 +109,15 @@ public class Search implements EntryPoint, BrainSearchable {
         resultTable.setHTML(0, 2, "<th>Peak Time (ms)</th>");
         resultTable.setHTML(0, 3, "<th>Location</th>");
 
+        summaryHtml.setStyleName("resultHtml");
+        resultPanel.add(summaryHtml);
+        summaryHtml.setVisible(false);
+
         HTML html = new HTML("<sup>*</sup>Mean Intensity for Contrast");
         html.setStyleName("sidenote");
         html.addStyleName("resultTable");
         resultPanel.add(html);
-        resultPanel.add(summaryHtml);
+
         resultPanel.add(resultTable);
         mainPanel.add(resultPanel);
 
@@ -318,18 +322,36 @@ public class Search implements EntryPoint, BrainSearchable {
                 String resultHtml = "";
 //                resultHtml += "<ul>" ;
                 for (String resultString : resultSummary) {
-                    if(!resultString.startsWith("unnamed")){
-                        String label = resultString.split(":")[0];
+                    if (!resultString.startsWith("unnamed")) {
+                        if (resultHtml.length() > 0) {
+                            resultHtml += " &bull; ";
+                        }
+                        String label = resultString.split(":")[0].replaceAll("_", " ");
+                        // yields erpAnalysisResult/NEMO_XXX
                         String url = resultString.split(":")[1];
-                        resultHtml += "<a href='"+url+"'>"+label+ "</a>";
+                        GWT.log("url[" + url + "]: " + url.lastIndexOf("/"));
+                        url = baseTermUrl + "/" + url;
+//                        url = "/pattern/show/"+url;
+
+                        resultHtml += "<a class='' href='" + url + "'>" + label + "</a> ";
 //                        resultHtml += "<li>"+resultString + "</li>";
                     }
                 }
+//                resultHtml += "</div>";
+
 //                resultHtml += "</ul>";
                 GWT.log("resulHTML value " + resultHtml);
                 GWT.log("resultSummary.size(): " + resultSummary.size());
 
                 summaryHtml.setHTML(resultHtml);
+
+                if (resultHtml.length() > 0) {
+                    summaryHtml.setVisible(true);
+                } else {
+                    summaryHtml.setVisible(false);
+                }
+
+
                 popupPanel.hide();
             }
         });

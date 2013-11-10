@@ -36,13 +36,15 @@ class SearchService {
 //        Individual.deleteAll(Individual.all)
 
 
-        List<ErpAnalysisResult> erpAnalysisResultList = ErpAnalysisResult.executeQuery("from ErpAnalysisResult erp where erp.inferredOntology is not null and erp.individuals.size=0")
+        List<ErpAnalysisResult> erpAnalysisResultList = ErpAnalysisResult.executeQuery("from ErpAnalysisResult erp where erp.inferredOntology is not null and erp.individuals.size=0 order by erp.artifactFileName asc")
 
         log.debug "# to be recached ${erpAnalysisResultList.size()}"
 
         for (ErpAnalysisResult erpAnalysisResult in erpAnalysisResultList) {
             log.warn "reaching ${erpAnalysisResult.artifactFileName}"
-            cacheErpResultIndividuals(erpAnalysisResult)
+            Individual.withTransaction {
+                cacheErpResultIndividuals(erpAnalysisResult)
+            }
         }
 
 //        ErpAnalysisResult.findAllByInferredOntologyIsNotNull([sort: "artifactFileName", order: "asc"]).each { ErpAnalysisResult erpAnalysisResult ->

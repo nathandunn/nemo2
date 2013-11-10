@@ -316,14 +316,17 @@ public class Search implements EntryPoint, BrainSearchable {
                 }
 
                 String resultHtml = "";
-                resultHtml += "<ul>" ;
+//                resultHtml += "<ul>" ;
                 for (String resultString : resultSummary) {
                     if(!resultString.startsWith("unnamed")){
-                        resultHtml += "<li>"+resultString + "</li>";
+                        String label = resultString.split(":")[0];
+                        String url = resultString.split(":")[1];
+                        resultHtml += "<a href='"+url+"'>"+label+ "</a>";
+//                        resultHtml += "<li>"+resultString + "</li>";
                     }
                 }
-                resultHtml += "</ul>";
-                GWT.log("resulTHML value " + resultHtml);
+//                resultHtml += "</ul>";
+                GWT.log("resulHTML value " + resultHtml);
                 GWT.log("resultSummary.size(): " + resultSummary.size());
 
                 summaryHtml.setHTML(resultHtml);

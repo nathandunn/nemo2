@@ -129,10 +129,8 @@ class SearchService {
                     }
                 }
 
-                 ontologyService.generatedMappedInstances(erpAnalysisResult).values()
 
-
-                Individual individual = new Individual(
+                new Individual(
                         url: url
                         , statisticallySignificant: newIndividualDTO.significant
                         , peakTime: time

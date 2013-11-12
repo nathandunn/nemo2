@@ -3,6 +3,7 @@ package edu.uoregon.nic.nemo.portal
 import edu.uoregon.nemo.nic.portal.util.IndividualDTO
 import edu.uoregon.nemo.nic.portal.util.SearchResultDTO
 import edu.uoregon.nemo.nic.portal.util.SearchResultsDTO
+import edu.uoregon.nemo.nic.portal.util.TermLinkContainer
 import edu.uoregon.nic.nemo.portal.client.BrainLocationEnum
 import edu.uoregon.nic.nemo.portal.client.SelectedLocationEnum
 import grails.converters.JSON
@@ -35,13 +36,15 @@ class SearchService {
 //        Individual.deleteAll(Individual.all)
 
 
-        List<ErpAnalysisResult> erpAnalysisResultList = ErpAnalysisResult.executeQuery("from ErpAnalysisResult erp where erp.inferredOntology is not null and erp.individuals.size=0")
+        List<ErpAnalysisResult> erpAnalysisResultList = ErpAnalysisResult.executeQuery("from ErpAnalysisResult erp where erp.inferredOntology is not null and erp.individuals.size=0 order by erp.artifactFileName asc")
 
         log.debug "# to be recached ${erpAnalysisResultList.size()}"
 
         for (ErpAnalysisResult erpAnalysisResult in erpAnalysisResultList) {
             log.warn "reaching ${erpAnalysisResult.artifactFileName}"
-            cacheErpResultIndividuals(erpAnalysisResult)
+            Individual.withTransaction {
+                cacheErpResultIndividuals(erpAnalysisResult)
+            }
         }
 
 //        ErpAnalysisResult.findAllByInferredOntologyIsNotNull([sort: "artifactFileName", order: "asc"]).each { ErpAnalysisResult erpAnalysisResult ->
@@ -102,6 +105,9 @@ class SearchService {
             if (time == null) {
                 time = parseExponentTimeFromLabel(url)
             }
+
+//            TreeSet<TermLinkContainer> mappedInstances = new TreeSet<>()
+            TreeSet<String> mappedInstances = new TreeSet<>()
             BrainLocationEnum location = parseLocationFromMeanIntensity(url)
             if (location != null && time != null) {
                 IndividualDTO newIndividualDTO = new IndividualDTO()
@@ -119,14 +125,21 @@ class SearchService {
                 newIndividualDTO.significant = significantSet.contains(url)
 
 //                        println "${url} -> meanIntensity keys ${meanIntensityMap.keySet().toArray()}"
+                ontologyService.generatedMappedInstances(erpAnalysisResult).values().each{ TreeSet<TermLinkContainer> it ->
+                    it.each { TermLinkContainer termLinkContainer ->
+                        mappedInstances.addAll(termLinkContainer.label+":"+termLinkContainer.url)
+                    }
+                }
 
-                Individual individual = new Individual(
+
+                new Individual(
                         url: url
                         , statisticallySignificant: newIndividualDTO.significant
                         , peakTime: time
                         , meanIntensity: newIndividualDTO.meanIntensity
                         , location: location
                         , erpAnalysisResult: erpAnalysisResult
+                        , mappedInstances: mappedInstances.join("|")
                 ).save(insert: true, flush: true)
 
             }
@@ -262,6 +275,7 @@ class SearchService {
             individualDTO.peakTimeUrl = timeUrl
             String locationUrl = grailsLinkGenerator.link(controller: "erpAnalysisResult", action: "showIndividualsAtLocation", params: [locationName: individual?.location?.name()], absolute: true, id: individual.erpAnalysisResultId).decodeURL()
             individualDTO.locationUrl = locationUrl
+            individualDTO.mappedInstances = individual.mappedInstances
 
             searchResultDTO.individuals.individualDTOList.add(individualDTO)
         }

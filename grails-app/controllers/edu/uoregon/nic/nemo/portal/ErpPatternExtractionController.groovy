@@ -55,15 +55,15 @@ class ErpPatternExtractionController {
                         , related: patternExtractionMethod]
             } else if (relatedClass.contains("PatternExtractionCondition")) {
                 PatternExtractionCondition patternExtractionCondition = PatternExtractionCondition.findById(relatedID)
-                model = [erpPatternExtractionInstanceList: ErpPatternExtraction.findAllByConditionOfInterestOrBaselineCondition(patternExtractionCondition,patternExtractionCondition, params)
-                        , erpPatternExtractionInstanceTotal: ErpPatternExtraction.countByConditionOfInterestOrBaselineCondition(patternExtractionCondition,patternExtractionCondition)
+                model = [erpPatternExtractionInstanceList: ErpPatternExtraction.findAllByConditionOfInterestOrBaselineCondition(patternExtractionCondition, patternExtractionCondition, params)
+                        , erpPatternExtractionInstanceTotal: ErpPatternExtraction.countByConditionOfInterestOrBaselineCondition(patternExtractionCondition, patternExtractionCondition)
                         , related: patternExtractionCondition]
             } else {
                 log.error "error handling related class: " + relatedClass + " for " + params.related
                 model = getRelatedErpPatternExtractions(id)
             }
         } else {
-        model = getRelatedErpPatternExtractions(id)
+            model = getRelatedErpPatternExtractions(id)
         }
 
         if (model.erpPatternExtractionInstanceList.size() == 1) {
@@ -113,13 +113,13 @@ class ErpPatternExtractionController {
         if (erpPatternExtractionInstance.baselineCondition != null && erpPatternExtractionInstance.baselineCondition == erpPatternExtractionInstance.conditionOfInterest) {
             erpPatternExtractionInstance.errors.rejectValue("baselineCondition", "", "Baseline Condition and Condition of Interest must be different")
             erpPatternExtractionInstance.errors.rejectValue("conditionOfInterest", "", "Condition of Interest and Baseline Condition must be different")
-            render(view: "create", model: [erpPatternExtractionInstance: erpPatternExtractionInstance, erpDataPreprocessings: ErpDataPreprocessing.findAllByExperiment(erpPatternExtractionInstance.experiment),experimentInstance: erpPatternExtractionInstance.experiment])
+            render(view: "create", model: [erpPatternExtractionInstance: erpPatternExtractionInstance, erpDataPreprocessings: ErpDataPreprocessing.findAllByExperiment(erpPatternExtractionInstance.experiment), experimentInstance: erpPatternExtractionInstance.experiment])
             return
         }
 
         if (!erpPatternExtractionInstance.save(flush: true)) {
             erpPatternExtractionInstance.id = null
-            render(view: "create", model: [erpPatternExtractionInstance: erpPatternExtractionInstance, erpDataPreprocessings: ErpDataPreprocessing.findAllByExperiment(erpPatternExtractionInstance.experiment),experimentInstance: erpPatternExtractionInstance.experiment])
+            render(view: "create", model: [erpPatternExtractionInstance: erpPatternExtractionInstance, erpDataPreprocessings: ErpDataPreprocessing.findAllByExperiment(erpPatternExtractionInstance.experiment), experimentInstance: erpPatternExtractionInstance.experiment])
             return
         }
 
@@ -291,12 +291,11 @@ class ErpPatternExtractionController {
 
         log.debug 'artifact FileName: ' + erpPatternExtractionInstance.artifactFileName
 
-
 //        handleErpPatternExtractionUpload(uploadedFile, erpPatternExtractionInstance)
 //        handleBinaryUpload(uploadedFile, erpPatternExtractionInstance)
         handleBinaryUpload(erpPatternExtractionInstance, uploadedFile)
 
-        redirect(action: "show",id:erpPatternExtractionInstance.id)
+        redirect(action: "show", id: erpPatternExtractionInstance.id)
 
     }
 
@@ -340,9 +339,12 @@ class ErpPatternExtractionController {
 //        response.setHeader("Content-Disposition", "attachment;filename=${erpPatternExtraction.artifactFileName}")
 //        log.debug "setting content type ot string "
 //        response.setContentType("text/plain")
-        response.setHeader("Content-Disposition", "attachment; filename=" + erpPatternExtraction.artifactFileName)
-        render(text: erpPatternExtraction.download, contentType: "application/download", encoding: "UTF-8")
-//        response.outputStream << erpPatternExtraction.download
+        if (erpPatternExtraction.download) {
+            response.setHeader("Content-Disposition", "attachment; filename=" + erpPatternExtraction.artifactFileName)
+            render(text: erpPatternExtraction.download, contentType: "application/download", encoding: "UTF-8")
+        } else {
+            response.status = 404
+        }
     }
 
     private boolean isTextFile(ErpPatternExtraction erpPatternExtraction) {

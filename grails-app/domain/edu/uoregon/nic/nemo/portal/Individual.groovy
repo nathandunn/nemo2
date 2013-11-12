@@ -1,5 +1,6 @@
 package edu.uoregon.nic.nemo.portal
 
+import edu.uoregon.nemo.nic.portal.util.TermLinkContainer
 import edu.uoregon.nic.nemo.portal.client.BrainLocationEnum
 
 /**
@@ -11,6 +12,9 @@ class Individual {
     static constraints = {
     }
 
+    static mapping = {
+        mappedInstances type: "text"
+    }
 
     ErpAnalysisResult erpAnalysisResult
 
@@ -22,5 +26,6 @@ class Individual {
     Float meanIntensity
     BrainLocationEnum location
     Boolean statisticallySignificant
+    String mappedInstances
 
 }

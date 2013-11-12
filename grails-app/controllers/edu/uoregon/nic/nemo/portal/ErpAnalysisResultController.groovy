@@ -78,6 +78,13 @@ class ErpAnalysisResultController {
 //        render(view: "searchResult", model: [results:searchResultsDTO.sortedSearchResults])
 //    }
 
+    def recacheSearch() {
+        Individual.withTransaction {
+            Individual.deleteAll(Individual.all)
+        }
+        return cacheSearch()
+    }
+
     def cacheSearch() {
         searchService.cacheSearch()
         redirect(action: "search")
@@ -617,8 +624,6 @@ class ErpAnalysisResultController {
             render(text: writer.toString(), contentType: "text/html")
             return
         }
-        Boolean edit = Boolean.valueOf(params.edit)
-        OWLOntologyManager owlOntologyManager = OWLManager.createOWLOntologyManager()
 //            log.debug "is RDF!!: "  + erpAnalysisResult.artifactFileName
         // move to service
         if (erpAnalysisResult.rdfContent && !erpAnalysisResult.inferredOntology) {
@@ -628,92 +633,9 @@ class ErpAnalysisResultController {
             return
         }
 
-        OWLReasoner reasoner = ontologyService.getReasonerForErpAnalysisResult(erpAnalysisResult)
-        OWLOntology localOntology = ontologyService.getOntologyFromErpAnalysisResult(erpAnalysisResult)
+        Map<String, TreeSet<TermLinkContainer>> mappedInstances =  ontologyService.generatedMappedInstances(erpAnalysisResult)
 
-        OWLClass parent = owlOntologyManager.getOWLDataFactory().getOWLClass(IRI.create(OntologyService.NS + QueryListEnum.SCALP_RECORDED_ERP_DIFFWAVE_COMPONENT.url))
-
-        Set<OWLNamedIndividual> individuals = reasoner.getInstances(parent, false).flattened
-        Set<OWLNamedIndividual> subclasses = reasoner.getSubClasses(parent, false).flattened
-
-        // let's create a map of all the instances with a list of subclasses
-        Map<String, TreeSet<TermLinkContainer>> instanceMap = new HashMap<String, TreeSet<TermLinkContainer>>()
-
-        for (OWLNamedIndividual instance in individuals) {
-            Collection<OWLClass> types = instance.getTypes(localOntology).flatten()
-            types = types.intersect(subclasses)
-            Set<TermLinkContainer> classTypes = new TreeSet<TermLinkContainer>()
-            for (OWLClass type in types) {
-                TermLinkContainer container = new TermLinkContainer()
-                container.url = type.toStringID()
-                container.label = ontologyService.getLabelForUrl(type.toStringID())
-                classTypes.add(container)
-                OWLClass owlUrl = owlOntologyManager.getOWLDataFactory().getOWLClass(IRI.create(instance.decodeURL()))
-                for (OWLClassExpression subclassExpression in owlUrl.getSubClasses(localOntology)) {
-                    container.label = ontologyService.getLabelForUrl(subclassExpression.toStringID())
-                }
-            }
-            instanceMap.put(instance.toStringID(), classTypes)
-        }
-
-        List<String> sortedInstances = new ArrayList<>(instanceMap.keySet())
-//        TC-RGLD2_+LN0-+LW0_ERP_+1016
-//        TC-RGLD2_+LN0-+LW0_ERP_+1072
-//        TC-RGLD2_+LN0-+LW0_ERP_+120
-//        TC-RGLD2_+LN0-+LW0_ERP_+1544
-//        TC-RGLD2_+LN0-+LW0_ERP_+160
-//        TC-RGLD2_+LN0-+LW0_ERP_+224
-//        TC-RGLD2_+LN0-+LW0_ERP_+296
-//        TC-RGLD2_+LN0-+LW0_ERP_+356
-        sortedInstances.sort(true) { a, b ->
-            String first = a
-            String second = b
-//            println "first [${first}] vs [${second}]"
-            if (a.contains("_+")) {
-                first = a.substring(a.lastIndexOf("_+") + 2)
-            } else if (a.contains("#NEMO_")) {
-                first = a.substring(a.lastIndexOf("#NEMO_") + 6)
-            }
-
-            if (b.contains("_+")) {
-                second = b.substring(b.lastIndexOf("_+") + 2)
-            } else if (b.contains("#NEMO_")) {
-                second = b.substring(b.lastIndexOf("#NEMO_") + 6)
-            }
-
-            try {
-                return first.toFloat() - second.toFloat()
-            } catch (e) {
-                println e
-                return first.compareTo(second)
-            }
-
-        }
-
-
-        Map<String, Set<TermLinkContainer>> mappedInstances = new LinkedHashMap<String, TreeSet<TermLinkContainer>>()
-
-        for (instanceKey in sortedInstances) {
-            def key = ontologyService.getLabelForUrl(instanceKey)?.replaceAll("_", " ")
-            if (!key) {
-                if (instanceKey.startsWith(OntologyService.DATA_URL)) {
-                    key = instanceKey.substring(OntologyService.DATA_URL.length())
-                } else {
-                    key = instanceKey
-                }
-            }
-            if (!key.startsWith("TESTEXPT")) {
-                Set<TermLinkContainer> values = instanceMap.get(instanceKey)
-//                for (TermLinkContainer instanceValue in instanceMap.get(instanceKey)) {
-////                    def value = ontologyService.getLabelForUrl(instanceValue.url)?.replaceAll("_", " ")
-////                    def value = instanceValue.url
-//                    values.add(instanceValue.url)
-////                    values.add(value ?: "empty:" + instanceValue.url)
-//                }
-                mappedInstances.put(key, values)
-            }
-        }
-
+        Boolean edit = Boolean.valueOf(params.edit)
         return render(view: "subclass-list", model: [instances: mappedInstances, erpAnalysisResult: erpAnalysisResult, edit: edit, experimentHeader: erpAnalysisResult.experiment])
     }
 

@@ -10,6 +10,7 @@ class AdminController {
 
     def index() {}
 
+
     def updateOntologies(){
         flash.message = "Updating Ontologies if Different"
         ontologyService.updateOntologies()

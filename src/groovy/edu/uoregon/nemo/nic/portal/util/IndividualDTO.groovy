@@ -18,6 +18,7 @@ class IndividualDTO implements Serializable,Comparable{
     Boolean significant = false
     String peakTimeUrl
     String locationUrl
+    String mappedInstances
 
 //    #GAF-EEGcloze_Unexpected-Expected_ERP_+240
     String getNameFromUrl(){

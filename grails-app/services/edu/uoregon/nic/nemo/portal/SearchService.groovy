@@ -125,9 +125,9 @@ class SearchService {
                 newIndividualDTO.significant = significantSet.contains(url)
 
 //                        println "${url} -> meanIntensity keys ${meanIntensityMap.keySet().toArray()}"
-                ontologyService.generatedMappedInstances(erpAnalysisResult).values().each{ TreeSet<TermLinkContainer> it ->
+                ontologyService.generatedMappedInstances(erpAnalysisResult).values().each { TreeSet<TermLinkContainer> it ->
                     it.each { TermLinkContainer termLinkContainer ->
-                        mappedInstances.addAll(termLinkContainer.label+":"+termLinkContainer.url)
+                        mappedInstances.addAll(termLinkContainer.label + ":" + termLinkContainer.url)
                     }
                 }
 
@@ -512,13 +512,17 @@ class SearchService {
 //            return null;
         } else if (s.lastIndexOf("_") >= 0) {
             s = s.substring(s.lastIndexOf("_") + 1)
+
             if (s.indexOf("e+") > 0) {
                 String[] splitString = s.split("e\\+")
                 Float floatValue = (splitString[0] as Float) * Math.pow(10, splitString[1] as Float)
                 return floatValue.round()
-            } else {
+            } else if (!Pattern.matches("[a-zA-Z]+", s)) {
                 return s as Integer
+            } else {
+                return null
             }
+
         } else {
             return 0
         }
@@ -544,7 +548,7 @@ class SearchService {
         }
     }
 
-    String findPeakIntensities(Long id, Integer time){
+    String findPeakIntensities(Long id, Integer time) {
         def erpAnalysisResultInstance = ErpAnalysisResult.get(id)
         if (!erpAnalysisResultInstance) {
             return 404
@@ -562,5 +566,6 @@ class SearchService {
         }
         return individualMap as JSON
     }
+
 }
 

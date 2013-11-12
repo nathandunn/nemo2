@@ -517,7 +517,8 @@ class SearchService {
                 String[] splitString = s.split("e\\+")
                 Float floatValue = (splitString[0] as Float) * Math.pow(10, splitString[1] as Float)
                 return floatValue.round()
-            } else if (!Pattern.matches("[a-zA-Z]+", s)) {
+            } else
+            if (!Pattern.matches("[a-zA-Z]+", s)) {
                 return s as Integer
             } else {
                 return null

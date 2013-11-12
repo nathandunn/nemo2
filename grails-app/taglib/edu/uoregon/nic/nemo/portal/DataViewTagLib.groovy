@@ -357,7 +357,9 @@ class DataViewTagLib {
                 } else {
                     timeString = timeString.substring(timeString.lastIndexOf("+") + 1)
                     try {
-                        time = timeString as Integer
+                        if (!Pattern.matches("[a-zA-Z]+", timeString)) {
+                            time = timeString as Integer
+                        }
                     } catch (e) {
                         log.warn "not a valid string to convert ${timeString} from ${time}", e
                         time = null

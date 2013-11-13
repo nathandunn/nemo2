@@ -24,7 +24,7 @@ class ConditionController {
 
     def list(Integer id) {
         if(params.max){
-           params.max = Math.min(params.int('max') ,100)
+           params.max = Math.min(params?.max as Integer ,100)
         }
         else{
             params.max = Math.min(10 ,100)

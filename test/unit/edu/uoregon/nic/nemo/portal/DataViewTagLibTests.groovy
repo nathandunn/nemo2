@@ -1,10 +1,6 @@
 package edu.uoregon.nic.nemo.portal
-
-
-
-import grails.test.mixin.*
-import org.junit.*
-
+import grails.test.mixin.Mock
+import grails.test.mixin.TestFor
 /**
  * See the API for {@link grails.test.mixin.web.GroovyPageUnitTestMixin} for usage instructions
  */
@@ -37,5 +33,13 @@ class DataViewTagLibTests {
         println "result2 [${result}]"
         assert result == instantString
 //        assert applyTemplate('<g:createIndividualLink time="${instantString}" value="${erpAnalysisResult}"/>') == 'Hello World'
+    }
+
+    void testStringIsNumber(){
+        assert "123123".matches("[0-9]+")
+        assert "123.123".matches("[0-9.]+")
+        assert !"123.a123".matches("[0-9.]+")
+        assert !"abc123".matches("[0-9.]+")
+        assert !"123abc".matches("[0-9.]+")
     }
 }

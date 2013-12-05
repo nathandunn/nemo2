@@ -357,11 +357,11 @@ class DataViewTagLib {
                 } else {
                     timeString = timeString.substring(timeString.lastIndexOf("+") + 1)
                     try {
-                        if (!Pattern.matches("[a-zA-Z]+", timeString)) {
+                        if (timeString.matches("[0.9.]+")) {
                             time = timeString as Integer
                         }
                     } catch (e) {
-                        log.warn "not a valid string to convert ${timeString} from ${time}", e
+                        log.warn "not a valid string to convert ${timeString} to integer", e
                         time = null
                     }
                 }

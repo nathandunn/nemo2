@@ -504,7 +504,7 @@ class SearchService {
                 try {
                     returnInteger = s as Integer
                 } catch (e) {
-                    log.error "Error converting ${s} from ${originalString} due to ${e}"
+                    log.warn "Error converting ${s} from ${originalString} due to ${e}"
                 }
                 return returnInteger
             }

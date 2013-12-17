@@ -33,6 +33,10 @@ public class BrainDrawer {
         Circle circle = new Circle(brainCenter, brainCenter, headRadius);
         canvas.add(circle);
 
+        Circle innerCircle = new Circle(brainCenter, brainCenter, headRadius-40);
+
+        canvas.add(innerCircle);
+
         // nose
         Integer noseWidth = 40;
         Integer noseHeigth = 30;
@@ -69,8 +73,8 @@ public class BrainDrawer {
         new ClusterCircle(brainCenter+20, brainCenter - 70, "AF2", canvas);
         new ClusterCircle(brainCenter-45, brainCenter - 70, "AF3", canvas);
         new ClusterCircle(brainCenter+45, brainCenter - 70, "AF4", canvas);
-        new ClusterCircle(brainCenter-45, brainCenter - 100, "Fp1", canvas,"black");
-        new ClusterCircle(brainCenter+45, brainCenter - 100, "Fp2", canvas,"black");
+        new ClusterCircle(brainCenter-45, brainCenter - 110, "Fp1", canvas,"black");
+        new ClusterCircle(brainCenter+45, brainCenter - 110, "Fp2", canvas,"black");
         new ClusterCircle(brainCenter-65, brainCenter - 70, "AF5", canvas);
         new ClusterCircle(brainCenter+65, brainCenter - 70, "AF6", canvas);
         new ClusterCircle(brainCenter-85, brainCenter - 80, "AF7", canvas);
@@ -85,8 +89,8 @@ public class BrainDrawer {
         new ClusterCircle(brainCenter-75, brainCenter - 45, "F5", canvas);
         new ClusterCircle(brainCenter+75, brainCenter - 45, "F6", canvas);
 
-        new ClusterCircle(brainCenter-100, brainCenter - 50, "F7", canvas,"black");
-        new ClusterCircle(brainCenter+100, brainCenter - 50, "F8", canvas,"black");
+        new ClusterCircle(brainCenter-105, brainCenter - 55, "F7", canvas,"black");
+        new ClusterCircle(brainCenter+105, brainCenter - 55, "F8", canvas,"black");
 
         new ClusterCircle(brainCenter-130, brainCenter - 75, "F9", canvas);
         new ClusterCircle(brainCenter+130, brainCenter - 75, "F10", canvas);
@@ -139,10 +143,10 @@ public class BrainDrawer {
         new ClusterCircle(brainCenter+85, brainCenter +10, "C6", canvas);
 
 
-        new ClusterCircle(brainCenter-105, brainCenter -10, "FT7", canvas);
-        new ClusterCircle(brainCenter+105, brainCenter -10, "FT8", canvas);
-        new ClusterCircle(brainCenter-110, brainCenter +10, "T7", canvas,"black");
-        new ClusterCircle(brainCenter+110, brainCenter +10, "T8", canvas,"black");
+        new ClusterCircle(brainCenter-120, brainCenter -15, "FT7", canvas);
+        new ClusterCircle(brainCenter+120, brainCenter -15, "FT8", canvas);
+        new ClusterCircle(brainCenter-120, brainCenter +10, "T7", canvas,"black");
+        new ClusterCircle(brainCenter+120, brainCenter +10, "T8", canvas,"black");
 
         new ClusterCircle(brainCenter-140, brainCenter -25, "FT9", canvas);
         new ClusterCircle(brainCenter+140, brainCenter -25, "FT10", canvas);
@@ -168,10 +172,10 @@ public class BrainDrawer {
         new ClusterCircle(brainCenter+75, brainCenter +60, "P6", canvas);
 
 
-        new ClusterCircle(brainCenter-105, brainCenter +40, "TP7", canvas);
-        new ClusterCircle(brainCenter+105, brainCenter +40, "TP8", canvas);
-        new ClusterCircle(brainCenter-95, brainCenter +65, "P7", canvas,"black");
-        new ClusterCircle(brainCenter+95, brainCenter +65, "P8", canvas,"black");
+        new ClusterCircle(brainCenter-110, brainCenter +40, "TP7", canvas);
+        new ClusterCircle(brainCenter+110, brainCenter +40, "TP8", canvas);
+        new ClusterCircle(brainCenter-100, brainCenter +65, "P7", canvas,"black");
+        new ClusterCircle(brainCenter+100, brainCenter +65, "P8", canvas,"black");
 
         new ClusterCircle(brainCenter-140, brainCenter +45, "TP9", canvas);
         new ClusterCircle(brainCenter+140, brainCenter +45, "TP10", canvas);
@@ -303,7 +307,8 @@ public class BrainDrawer {
 
         List<Dimension> midFrontalDimensions = new ArrayList<Dimension>();
         midFrontalDimensions.add(new Dimension(brainCenter - 50, brainCenter - 30));
-        midFrontalDimensions.add(new Dimension(brainCenter, brainCenter - headRadius+10));
+        midFrontalDimensions.add(new Dimension(brainCenter - 30, brainCenter - 80));
+        midFrontalDimensions.add(new Dimension(brainCenter + 30, brainCenter - 80));
         midFrontalDimensions.add(new Dimension(brainCenter + 50, brainCenter - 30));
         midFrontalDimensions.add(new Dimension(brainCenter - 50, brainCenter - 30));
         roiShapeTreeMap.put(BrainLocationEnum.MFRONT, new RoiShape(midFrontalDimensions, BrainLocationEnum.MFRONT, parent));
@@ -430,15 +435,17 @@ public class BrainDrawer {
         List<Dimension> midOccipitalDimensions = new ArrayList<Dimension>();
         midOccipitalDimensions.add(new Dimension(brainCenter - 30, brainCenter  + 80));
         midOccipitalDimensions.add(new Dimension(brainCenter + 30, brainCenter  + 80));
-        midOccipitalDimensions.add(new Dimension(brainCenter , brainCenter + headRadius ));
+        midOccipitalDimensions.add(new Dimension(brainCenter + 20, brainCenter  + 130));
+        midOccipitalDimensions.add(new Dimension(brainCenter - 20, brainCenter  + 130));
+//        midOccipitalDimensions.add(new Dimension(brainCenter , brainCenter + headRadius ));
         midOccipitalDimensions.add(new Dimension(brainCenter - 30, brainCenter  + 80));
         roiShapeTreeMap.put(BrainLocationEnum.MOCC, new RoiShape(midOccipitalDimensions, BrainLocationEnum.MOCC, parent));
 
         List<Dimension> leftOccipitalDimensions = new ArrayList<Dimension>();
         leftOccipitalDimensions.add(new Dimension(brainCenter - 30, brainCenter  + 80));
         leftOccipitalDimensions.add(new Dimension(brainCenter - 70, brainCenter  + 85));
-        leftOccipitalDimensions.add(new Dimension(brainCenter - 40, brainCenter  + 120));
-        leftOccipitalDimensions.add(new Dimension(brainCenter - 20, brainCenter  + 110));
+        leftOccipitalDimensions.add(new Dimension(brainCenter - 30, brainCenter  + 135));
+        leftOccipitalDimensions.add(new Dimension(brainCenter - 20, brainCenter  + 130));
         leftOccipitalDimensions.add(new Dimension(brainCenter - 30, brainCenter  + 80));
         roiShapeTreeMap.put(BrainLocationEnum.LOCC, new RoiShape(leftOccipitalDimensions, BrainLocationEnum.LOCC, parent));
 
@@ -453,8 +460,8 @@ public class BrainDrawer {
         List<Dimension> rightOccipitalDimensions = new ArrayList<Dimension>();
         rightOccipitalDimensions.add(new Dimension(brainCenter + 30, brainCenter  + 80));
         rightOccipitalDimensions.add(new Dimension(brainCenter + 70, brainCenter  + 85));
-        rightOccipitalDimensions.add(new Dimension(brainCenter + 40, brainCenter  + 120));
-        rightOccipitalDimensions.add(new Dimension(brainCenter + 20, brainCenter  + 110));
+        rightOccipitalDimensions.add(new Dimension(brainCenter + 30, brainCenter  + 135));
+        rightOccipitalDimensions.add(new Dimension(brainCenter + 20, brainCenter  + 130));
         rightOccipitalDimensions.add(new Dimension(brainCenter + 30, brainCenter  + 80));
         roiShapeTreeMap.put(BrainLocationEnum.ROCC, new RoiShape(rightOccipitalDimensions, BrainLocationEnum.ROCC, parent));
 

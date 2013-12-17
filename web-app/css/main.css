@@ -1583,7 +1583,8 @@ table.center-detail-table td, th, tr {
     border-top-width: 1px;
     /*margin-left: auto;*/
     /*margin-right: auto;*/
-    text-align: center;
+
+    /*text-align: center;*/
 }
 
 .indent-dependent {

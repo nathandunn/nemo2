@@ -28,6 +28,9 @@ public class BrainDisplayDrawer extends BrainDrawer{
         Circle circle = new Circle(brainCenter, brainCenter, headRadius);
         canvas.add(circle);
 
+        Circle innerCircle = new Circle(brainCenter, brainCenter, headRadius-40);
+        canvas.add(innerCircle);
+
         // nose
         Integer noseWidth = 40;
         Integer noseHeigth = 30;
@@ -78,7 +81,8 @@ public class BrainDisplayDrawer extends BrainDrawer{
 
         List<Dimension> midFrontalDimensions = new ArrayList<Dimension>();
         midFrontalDimensions.add(new Dimension(brainCenter - 50, brainCenter - 30));
-        midFrontalDimensions.add(new Dimension(brainCenter, brainCenter - headRadius+10));
+        midFrontalDimensions.add(new Dimension(brainCenter - 30, brainCenter - 80));
+        midFrontalDimensions.add(new Dimension(brainCenter + 30, brainCenter - 80));
         midFrontalDimensions.add(new Dimension(brainCenter + 50, brainCenter - 30));
         midFrontalDimensions.add(new Dimension(brainCenter - 50, brainCenter - 30));
         roiShapeTreeMap.put(BrainLocationEnum.MFRONT, new RoiDisplayShape(midFrontalDimensions, BrainLocationEnum.MFRONT, parent));
@@ -205,15 +209,17 @@ public class BrainDisplayDrawer extends BrainDrawer{
         List<Dimension> midOccipitalDimensions = new ArrayList<Dimension>();
         midOccipitalDimensions.add(new Dimension(brainCenter - 30, brainCenter  + 80));
         midOccipitalDimensions.add(new Dimension(brainCenter + 30, brainCenter  + 80));
-        midOccipitalDimensions.add(new Dimension(brainCenter , brainCenter + headRadius ));
+        midOccipitalDimensions.add(new Dimension(brainCenter + 20, brainCenter  + 130));
+        midOccipitalDimensions.add(new Dimension(brainCenter - 20, brainCenter  + 130));
+//        midOccipitalDimensions.add(new Dimension(brainCenter , brainCenter + headRadius ));
         midOccipitalDimensions.add(new Dimension(brainCenter - 30, brainCenter  + 80));
         roiShapeTreeMap.put(BrainLocationEnum.MOCC, new RoiDisplayShape(midOccipitalDimensions, BrainLocationEnum.MOCC, parent));
 
         List<Dimension> leftOccipitalDimensions = new ArrayList<Dimension>();
         leftOccipitalDimensions.add(new Dimension(brainCenter - 30, brainCenter  + 80));
         leftOccipitalDimensions.add(new Dimension(brainCenter - 70, brainCenter  + 85));
-        leftOccipitalDimensions.add(new Dimension(brainCenter - 40, brainCenter  + 120));
-        leftOccipitalDimensions.add(new Dimension(brainCenter - 20, brainCenter  + 110));
+        leftOccipitalDimensions.add(new Dimension(brainCenter - 30, brainCenter  + 135));
+        leftOccipitalDimensions.add(new Dimension(brainCenter - 20, brainCenter  + 130));
         leftOccipitalDimensions.add(new Dimension(brainCenter - 30, brainCenter  + 80));
         roiShapeTreeMap.put(BrainLocationEnum.LOCC, new RoiDisplayShape(leftOccipitalDimensions, BrainLocationEnum.LOCC, parent));
 
@@ -228,8 +234,8 @@ public class BrainDisplayDrawer extends BrainDrawer{
         List<Dimension> rightOccipitalDimensions = new ArrayList<Dimension>();
         rightOccipitalDimensions.add(new Dimension(brainCenter + 30, brainCenter  + 80));
         rightOccipitalDimensions.add(new Dimension(brainCenter + 70, brainCenter  + 85));
-        rightOccipitalDimensions.add(new Dimension(brainCenter + 40, brainCenter  + 120));
-        rightOccipitalDimensions.add(new Dimension(brainCenter + 20, brainCenter  + 110));
+        rightOccipitalDimensions.add(new Dimension(brainCenter + 30, brainCenter  + 135));
+        rightOccipitalDimensions.add(new Dimension(brainCenter + 20, brainCenter  + 130));
         rightOccipitalDimensions.add(new Dimension(brainCenter + 30, brainCenter  + 80));
         roiShapeTreeMap.put(BrainLocationEnum.ROCC, new RoiDisplayShape(rightOccipitalDimensions, BrainLocationEnum.ROCC, parent));
 
@@ -240,7 +246,6 @@ public class BrainDisplayDrawer extends BrainDrawer{
         rightOccipitalTemporalDimensions.add(new Dimension(brainCenter + 130, brainCenter  + 100));
         rightOccipitalTemporalDimensions.add(new Dimension(brainCenter + 70, brainCenter  + 85));
         roiShapeTreeMap.put(BrainLocationEnum.ROTEMP, new RoiDisplayShape(rightOccipitalTemporalDimensions, BrainLocationEnum.ROTEMP, parent));
-
     }
 
 }

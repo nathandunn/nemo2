@@ -34,7 +34,6 @@ public class BrainDrawer {
         canvas.add(circle);
 
         Circle innerCircle = new Circle(brainCenter, brainCenter, headRadius-40);
-
         canvas.add(innerCircle);
 
         // nose

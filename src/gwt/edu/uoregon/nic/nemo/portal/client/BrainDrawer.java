@@ -1,5 +1,6 @@
 package edu.uoregon.nic.nemo.portal.client;
 
+import com.google.gwt.dom.client.Style;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Window;
@@ -45,6 +46,7 @@ public class BrainDrawer {
         canvas.add(nosePath);
 
         drawLegend(canvas) ;
+        drawMatchType(canvas) ;
 
         drawCircles(canvas);
 
@@ -61,6 +63,7 @@ public class BrainDrawer {
 
         return canvas ;
     }
+
 
     protected void drawCircles(DrawingArea canvas) {
         // cluster radius
@@ -218,6 +221,39 @@ public class BrainDrawer {
         }
     }
 
+    private void drawMatchType(DrawingArea canvas) {
+        Text text = new Text(250,20,"Exact:");
+        text.setFillColor("black");
+        text.setStrokeWidth(0);
+        text.setStrokeColor("black");
+        text.setFontSize(14);
+        canvas.add(text);
+
+        final Circle circle = new Circle(310,15,10);
+        circle.setFillColor("gray");
+        circle.setStrokeWidth(1);
+        circle.setStrokeColor("black");
+        circle.getElement().getStyle().setCursor(Style.Cursor.POINTER);
+        canvas.add(circle);
+
+        circle.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent clickEvent) {
+                if(circle.getFillColor().equals("gray")){
+                    circle.setFillColor("black");
+                    parent.setExactSearch(true);
+                }
+                else{
+                    circle.setFillColor("gray");
+                    parent.setExactSearch(false);
+                }
+
+                parent.doSearch();
+            }
+        });
+
+    }
+
     private void drawLegend(DrawingArea canvas) {
         Text text = new Text(0,15,"Select Polarity:");
         text.setFillColor("black");
@@ -238,6 +274,7 @@ public class BrainDrawer {
         textOff.setFillColor("white");
         textOff.setStrokeWidth(0);
         textOff.setFontSize(12);
+        textOff.getElement().getStyle().setCursor(Style.Cursor.POINTER);
         canvas.add(textOff) ;
         legendOff.addClickHandler(new SelectAllClickHandler(SelectedLocationEnum.OFF));
         textOff.addClickHandler(new SelectAllClickHandler(SelectedLocationEnum.OFF));
@@ -251,6 +288,7 @@ public class BrainDrawer {
         textPositive.setFillColor("white");
         textPositive.setStrokeWidth(0);
         textPositive.setFontSize(12);
+        textPositive.getElement().getStyle().setCursor(Style.Cursor.POINTER);
         canvas.add(textPositive) ;
         legendPositive.addClickHandler(new SelectAllClickHandler(SelectedLocationEnum.POSITIVE));
         textPositive.addClickHandler(new SelectAllClickHandler(SelectedLocationEnum.POSITIVE));
@@ -264,6 +302,8 @@ public class BrainDrawer {
         textNegative.setFillColor("white");
         textNegative.setStrokeWidth(0);
         textNegative.setFontSize(12);
+        textNegative.getElement().getStyle().setCursor(Style.Cursor.POINTER);
+
         canvas.add(textNegative) ;
         legendNegative.addClickHandler(new SelectAllClickHandler(SelectedLocationEnum.NEGATIVE));
         textNegative.addClickHandler(new SelectAllClickHandler(SelectedLocationEnum.NEGATIVE));

@@ -7,6 +7,7 @@ import java.util.Map;
 
 public interface SearchServiceAsync {
     void searchErps(Integer min,Integer max,List<BrainLocationEnum> locations,AsyncCallback<String> callback);
+    void searchErps(Integer minTime, Integer maxTime, Map<BrainLocationEnum, SelectedLocationEnum> brainSelectedBrainLocationMap,boolean exactMatch,AsyncCallback<String> callback);
     void searchErps(Integer minTime, Integer maxTime, List<BrainLocationEnum> locations, Integer minPeak, Integer maxPeak, AsyncCallback<String> async);
 
     void searchErps(Integer minTime, Integer maxTime, Map<BrainLocationEnum, SelectedLocationEnum> brainSelectedBrainLocationMap, AsyncCallback<String> callback);

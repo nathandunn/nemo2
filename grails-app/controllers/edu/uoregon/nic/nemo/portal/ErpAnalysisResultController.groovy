@@ -1,16 +1,11 @@
 package edu.uoregon.nic.nemo.portal
-
 import edu.uoregon.nemo.nic.portal.util.NemoFileHandler
 import edu.uoregon.nemo.nic.portal.util.TermLinkContainer
 import edu.uoregon.nic.nemo.portal.client.BrainLocationEnum
 import grails.plugins.springsecurity.Secured
 import groovy.xml.MarkupBuilder
-import org.semanticweb.owlapi.apibinding.OWLManager
-import org.semanticweb.owlapi.model.*
-import org.semanticweb.owlapi.reasoner.OWLReasoner
 import org.springframework.dao.DataIntegrityViolationException
 import org.springframework.web.multipart.commons.CommonsMultipartFile
-import org.uoregon.nemo.nic.QueryListEnum
 
 class ErpAnalysisResultController {
 
@@ -283,7 +278,8 @@ class ErpAnalysisResultController {
             redirect(action: "list")
             return
         }
-        List<Integer> times = (List<Integer>) Individual.executeQuery("select i.peakTime from Individual i where i.erpAnalysisResult = :erpAnalysisResult  group by i.peakTime order by i.peakTime asc"
+        List<Integer> times =
+                (List<Integer>) Individual.executeQuery("select i.peakTime from Individual i where i.erpAnalysisResult = :erpAnalysisResult  group by i.peakTime order by i.peakTime asc"
                 , ["erpAnalysisResult": erpAnalysisResultInstance])
 
         Integer selectedTime = times.indexOf(time)

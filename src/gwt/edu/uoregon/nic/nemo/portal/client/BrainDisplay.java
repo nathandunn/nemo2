@@ -212,4 +212,8 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
         brainDrawer.highlightRegion(brainLocationEnum,doubleValue,significant);
     }
 
+    @Override
+    public void setExactSearch(boolean exactSearch) {
+        // really doesn't do anything here
+    }
 }

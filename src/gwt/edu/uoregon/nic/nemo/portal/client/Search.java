@@ -39,6 +39,7 @@ public class Search implements EntryPoint, BrainSearchable {
     final String baseTermUrl = locations.get("baseTermUrl");
     final BrainDrawer brainDrawer = new BrainDrawer();
     final HTML summaryHtml = new HTML();
+    private boolean exactSearch = false ;
 
 
     /**
@@ -217,7 +218,7 @@ public class Search implements EntryPoint, BrainSearchable {
         popupPanel.add(searchingLabel);
         popupPanel.center();
         popupPanel.show();
-        searchServiceAsync.searchErps(getMinTime(), getMaxTime(), getBrainSelectedBrainLocationMap(), new AsyncCallback<String>() {
+        searchServiceAsync.searchErps(getMinTime(), getMaxTime(), getBrainSelectedBrainLocationMap(),exactSearch, new AsyncCallback<String>() {
             @Override
             public void onFailure(Throwable caught) {
                 Window.alert("boo!" + caught.toString());
@@ -365,5 +366,10 @@ public class Search implements EntryPoint, BrainSearchable {
     @Override
     public String getBaseUrl() {
         return baseTermUrl;
+    }
+
+    @Override
+    public void setExactSearch(boolean exactSearch) {
+        this.exactSearch = exactSearch ;
     }
 }

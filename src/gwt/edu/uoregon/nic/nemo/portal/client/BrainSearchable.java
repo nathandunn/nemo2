@@ -7,4 +7,5 @@ public interface BrainSearchable {
     void doSearch();
     Long getId();
     String getBaseUrl();
+    void setExactSearch(boolean b);
 }

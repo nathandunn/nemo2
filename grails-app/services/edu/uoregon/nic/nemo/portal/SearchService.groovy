@@ -149,8 +149,11 @@ class SearchService {
 //        }
     }
 
-
     String searchErps(Integer minTime, Integer maxTime, Map<BrainLocationEnum, SelectedLocationEnum> brainSelectedBrainLocationMap) {
+        return searchErps(minTime, maxTime, brainSelectedBrainLocationMap, false)
+    }
+
+    String searchErps(Integer minTime, Integer maxTime, Map<BrainLocationEnum, SelectedLocationEnum> brainSelectedBrainLocationMap, boolean exactMatch) {
         cacheSearch()
 //        log.debug "erpSearch: min ${min} max ${max}"
 //        if (cachedSearches.size() == 0) {
@@ -177,7 +180,7 @@ class SearchService {
 //        List<Individual> individualList = Individual.findAllByPeakTimeGreaterThanAndPeakTimeLessThanAndStatisticallySignificant(minTime,maxTime,true)
             individualList = individualCriteria.list() {
 //                join "erpAnalysisResult"
-                fetchMode "erpAnalysisResult", FM.SELECT
+                fetchMode "erpAnalysisResult", FM.JOIN
                 and {
                     eq("statisticallySignificant", true)
                     ge("peakTime", minTime)
@@ -230,6 +233,77 @@ class SearchService {
 //                order("name", "asc")
             }
         }
+
+
+//        println "exact match ${individualList.size()}"
+        // MATCH exactly WHAT is not there
+
+        if (exactMatch) {
+
+            Set<BrainLocationEnum> brainLocationEnumSet = brainSelectedBrainLocationMap.keySet()
+            List<BrainLocationEnum> brainNotSelected = new ArrayList<>()
+            for (BrainLocationEnum brainLocationEnum in BrainLocationEnum.values()) {
+                if (!brainLocationEnumSet.contains(brainLocationEnum)) {
+                    brainNotSelected.add(brainLocationEnum)
+                }
+            }
+
+//            println "# not Selected ${brainNotSelected.size()}"
+//            println "# Selected ${brainLocationEnumSet.size()}"
+
+            List<Individual> replacementList = new ArrayList<>()
+
+
+            for (Individual individual in individualList) {
+                // this is at a single timepoint
+                List<Individual> sisterIndividuals = Individual.findAllByErpAnalysisResultAndPeakTimeAndStatisticallySignificant(individual.erpAnalysisResult, individual.peakTime, true)
+//                println "# of sistersm ${sisterIndividuals.size()} + ${brainLocationEnumSet.size()}"
+                if (sisterIndividuals.size() == brainLocationEnumSet.size()) {
+                    boolean match = true
+                    for (Individual sisterIndividual in sisterIndividuals) {
+//                        println "sister ${sisterIndidividual.peakTime} ${sisterIndidividual.location.name()} ${sisterIndidividual.statisticallySignificant}"
+                        if (!brainLocationEnumSet.contains(sisterIndividual.location)) {
+                            match = false
+                        } else {
+                            SelectedLocationEnum selectedLocationEnum = brainSelectedBrainLocationMap.get(sisterIndividual.location)
+                            switch (selectedLocationEnum) {
+                                case SelectedLocationEnum.POSITIVE:
+                                    if (sisterIndividual.meanIntensity <= 0) {
+                                        match = false
+                                    }
+                                    break
+                                case SelectedLocationEnum.NEGATIVE:
+                                    if (sisterIndividual.meanIntensity >= 0) {
+                                        match = false
+                                    }
+                                    break
+                                case SelectedLocationEnum.BOTH:
+                                    if (sisterIndividual.meanIntensity == 0) {
+                                        match = false
+                                    }
+                                    break
+                                default:
+                                    println "SHOULD NOT BE HERE "
+                                    break
+
+                            }
+                        }
+
+                    }
+
+                    if (match) {
+                        replacementList.add(individual)
+                    }
+                }
+            }
+
+            individualList = replacementList
+        }
+
+//                                    for(BrainLocationEnum brainLocationEnum in brainNotSelected){
+//                                        ne("location", brainLocationEnum)
+//                                    }
+
 
         stopTime = System.currentTimeMillis()
         log.debug("fetch time = ${stopTime - startTime}ms")
@@ -295,7 +369,7 @@ class SearchService {
         log.debug("JSON conversion time = ${stopTime - startTime}ms")
         startTime = System.currentTimeMillis()
 
-        log.debug "converted to JSON "
+        log.debug "converted to JSON results: ${results.erpCount} instances: ${results.instanceCount}"
 
         return returnObject
     }
@@ -517,8 +591,7 @@ class SearchService {
                 String[] splitString = s.split("e\\+")
                 Float floatValue = (splitString[0] as Float) * Math.pow(10, splitString[1] as Float)
                 return floatValue.round()
-            } else
-            if (!Pattern.matches("[a-zA-Z]+", s)) {
+            } else if (!Pattern.matches("[a-zA-Z]+", s)) {
                 return s as Integer
             } else {
                 return null

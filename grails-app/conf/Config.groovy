@@ -147,7 +147,7 @@ log4j = {
 //    debug 'grails.app.taglib'
 //    debug 'grails.app.taglib.edu.uoregon.nic.nemo.portal'
 //    debug 'grails.app.controllers'
-    debug 'grails.app.services'
+    info 'grails.app.services'
 //    debug 'grails.app.services.edu.uoregon.nic.nemo.portal.OntologyService'
 //    debug 'grails.app.services.edu.uoregon.nic.nemo.portal.DataStubService'
 //    debug 'grails.app.services.edu.uoregon.nic.nemo.portal.UserService'

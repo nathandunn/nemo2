@@ -364,8 +364,7 @@ public class BrainDrawer {
         List<Dimension> leftFrontalTemporalDimensions = new ArrayList<Dimension>();
         leftFrontalTemporalDimensions.add(new Dimension(brainCenter - 90, brainCenter - 30));
         leftFrontalTemporalDimensions.add(new Dimension(brainCenter - 70, brainCenter - 80));
-        leftFrontalTemporalDimensions.add(new Dimension(brainCenter - 30, brainCenter - 80));
-        leftFrontalTemporalDimensions.add(new Dimension(brainCenter - 40, brainCenter - 150));
+        leftFrontalTemporalDimensions.add(new Dimension(brainCenter - 90, brainCenter - 110));
         leftFrontalTemporalDimensions.add(new Dimension(brainCenter - 140, brainCenter - 80));
         leftFrontalTemporalDimensions.add(new Dimension(brainCenter - 90, brainCenter - 30));
         roiShapeTreeMap.put(BrainLocationEnum.LFTEMP, new RoiShape(leftFrontalTemporalDimensions, BrainLocationEnum.LFTEMP, parent));
@@ -374,8 +373,7 @@ public class BrainDrawer {
         List<Dimension> rightFrontalTemporalDimensions = new ArrayList<Dimension>();
         rightFrontalTemporalDimensions.add(new Dimension(brainCenter + 90, brainCenter - 30));
         rightFrontalTemporalDimensions.add(new Dimension(brainCenter + 70, brainCenter - 80));
-        rightFrontalTemporalDimensions.add(new Dimension(brainCenter + 30, brainCenter - 80));
-        rightFrontalTemporalDimensions.add(new Dimension(brainCenter + 40, brainCenter - 150));
+        rightFrontalTemporalDimensions.add(new Dimension(brainCenter + 90, brainCenter - 110));
         rightFrontalTemporalDimensions.add(new Dimension(brainCenter + 140, brainCenter - 80));
         rightFrontalTemporalDimensions.add(new Dimension(brainCenter + 90, brainCenter - 30));
         roiShapeTreeMap.put(BrainLocationEnum.RFTEMP, new RoiShape(rightFrontalTemporalDimensions, BrainLocationEnum.RFTEMP, parent));

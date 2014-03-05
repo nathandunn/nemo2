@@ -1,0 +1,44 @@
+Free Code Base Fork
+
+Free distributions require that source be distributed, that changes be provided back to the support community, and that intellectual property rights be asserted only to prevent others from asserting intellectual property rights.  This approach promotes the idea that the appropriate way to profit from software innovation is through the sale of programming services, not through the sale of value-added goods.  The free distribution approach argues that progress in software should come not from a pattern of investment in innovation and return on that investment, but on a commitment of innovation to the public in exchange for consulting or programming services.
+
+Free Fork License
+
+You create a software technology, consisting of a code base, documentation, and technical data/information.  A subset of this technology is designated for licensing into the open source community.  The subset that is to be licensed is first versioned for the open source community.  The version is made available to the open source community with the following restrictions:
+
+(a) the open source community may redistribute, make changes, and distribute changes
+(b) the software and any changes must be distributed with source
+(c) no proprietary changes are allowed
+(d) risk is with users
+(e) notice and open source base version identifier must be retained in source and docs
+(f) You have the right to develop comparable code for its non-free version
+
+You then make available the software technology in other formats as well, including permitting the creation of proprietary versions that do not require source release.  
+
+You can also create and maintain instructional materials distinct from the code base and primary documentation that would not be open to the open source community.  This combination of free distribution and controlled distribution provides resources to both the open source community and the proprietary business community in formats best serving the respective interests of these two groups of programmers.
+
+ 
+Free-Fork License
+
+Software Identifier
+Free Software Version 1.0
+Copyright (c) 2014 All rights reserved.
+
+This Free Software Version 1.0 (code and documentation), is made available to the open source community as a public service by the University of Oregon College of Arts and Sciences Information Technology Research Support Services (https://casit.uoregon.edu/services/scientific-programming).  
+
+Under this Free-Fork license, this software may be modified (including by changing, adding or deleting source statements and documentary materials, by creation and use of patches, diff files and the like, or by adding wrappers, shells, user interfaces, libraries and the like), and the original version and modified versions of the software may be copied, distributed, publicly displayed and performed, provided that
+
+(1) modified versions are distributed with source code and documentation (including for patches, diff files, wrappers, and other means of modifying the software), and with permission for others to use code and documentation as granted under this Free-Fork license, which may be combined with a comparable open source license such as those provided by GPL, BSD, Community Source, or opensource.org;
+
+(2) if modified, the source code, documentation, and user run-time elements are clearly labeled as modified versions of Free Software Version 1.0, including placing an identifier of origin (such as a name, initial, or other tag) after the version number;
+
+(3) users, modifiers, distributors, and others coming into possession or using the software in original or modified form accept the entire risk as to the possession, use, and performance of Free Software Version 1.0 and any modifications; 
+
+(4) this copyright management information (software identifier and version number, copyright notice and license) is retained in all versions of the software and documentation;
+
+(5) anyone may make modifications that are substantially similar to any modified versions of the software, and may use, copy, distribute, publicly display and perform such modifications, including making such modifications available under this Free-Fork license, without further obligation.
+
+(6) modifications to the software made using code, libraries, documentation, or other stuff subject to any other open source license may be controlled by such license provided Free Software Version 1.0 and any other modifications from whatever source are not otherwise subject to the other open source license unless expressly designated as such by the authors or owners of such modifications.
+
+(7) no permission is granted to distribute, publicly display, or publicly perform modifications to the software made using proprietary materials that cannot be released in source format under conditions equivalent to those of this Free-Fork license.
+

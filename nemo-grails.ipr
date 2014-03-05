@@ -193,7 +193,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/nemo-grails.iml" filepath="$PROJECT_DIR$/nemo-grails.iml" />
-      <module fileurl="file://$PROJECT_DIR$/nemo-grails-grailsPlugins.iml" filepath="$PROJECT_DIR$/nemo-grails-grailsPlugins.iml" />
     </modules>
   </component>
   <component name="ProjectResources">

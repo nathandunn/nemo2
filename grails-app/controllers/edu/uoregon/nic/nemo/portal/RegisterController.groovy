@@ -34,6 +34,8 @@ class RegisterController extends grails.plugins.springsecurity.ui.RegisterContro
             userLaboratory = Laboratory.findById(command.laboratoryId as Integer)
         }
 
+        println " laboratory id: ${command.laboratoryId} -> ${userLaboratory}"
+
         String salt = saltSource instanceof NullSaltSource ? null : command.username
         SecUser user = lookupUserClass().newInstance(
 //                email: command.email
@@ -41,8 +43,15 @@ class RegisterController extends grails.plugins.springsecurity.ui.RegisterContro
                 , accountLocked: true
                 , enabled: true
                 , fullName: command.fullName
-                , laboratory: userLaboratory
         )
+
+
+
+        if(userLaboratory){
+            user.addToLaboratories(userLaboratory)
+            userLaboratory.addToUsers(user)
+        }
+
 //        Role role = Role.findByAuthority(Role.ROLE_VERIFIED)
 //        SecUserRole secUserRole = new SecUserRole(
 //                secUser: user

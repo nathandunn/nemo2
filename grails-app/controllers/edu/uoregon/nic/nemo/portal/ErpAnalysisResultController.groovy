@@ -1,4 +1,5 @@
 package edu.uoregon.nic.nemo.portal
+
 import edu.uoregon.nemo.nic.portal.util.NemoFileHandler
 import edu.uoregon.nemo.nic.portal.util.TermLinkContainer
 import edu.uoregon.nic.nemo.portal.client.BrainLocationEnum
@@ -108,14 +109,14 @@ class ErpAnalysisResultController {
 
             if (relatedClass?.indexOf("AnalysisVariable") >= 0) {
                 AnalysisVariable analysisVariable = AnalysisVariable.findById(relatedID)
-                model = [erpAnalysisResultInstanceList: ErpAnalysisResult.findAllByDependentVariableOrIndependentVariable(analysisVariable, analysisVariable, params)
-                        , erpAnalysisResultInstanceTotal: ErpAnalysisResult.countByDependentVariableOrIndependentVariable(analysisVariable, analysisVariable)
-                        , related: analysisVariable]
+                model = [erpAnalysisResultInstanceList   : ErpAnalysisResult.findAllByDependentVariableOrIndependentVariable(analysisVariable, analysisVariable, params)
+                         , erpAnalysisResultInstanceTotal: ErpAnalysisResult.countByDependentVariableOrIndependentVariable(analysisVariable, analysisVariable)
+                         , related                       : analysisVariable]
             } else if (relatedClass?.indexOf("AnalysisMethod") >= 0) {
                 AnalysisMethod analysisMethod = AnalysisMethod.findById(relatedID)
-                model = [erpAnalysisResultInstanceList: ErpAnalysisResult.findAllByAnalysisMethod(analysisMethod, params)
-                        , erpAnalysisResultInstanceTotal: ErpAnalysisResult.countByAnalysisMethod(analysisMethod)
-                        , related: analysisMethod]
+                model = [erpAnalysisResultInstanceList   : ErpAnalysisResult.findAllByAnalysisMethod(analysisMethod, params)
+                         , erpAnalysisResultInstanceTotal: ErpAnalysisResult.countByAnalysisMethod(analysisMethod)
+                         , related                       : analysisMethod]
             } else {
                 log.error "error handling related class: " + relatedClass + " for " + params.related
                 model = getRelatedErpAnalysisResults(id)
@@ -163,7 +164,7 @@ class ErpAnalysisResultController {
         PatternExtractionCondition conditionOfInterest = null
         PatternExtractionCondition baselineCondition = null
 
-        if(experiment?.erpAnalysisResults?.size()==1){
+        if (experiment?.erpAnalysisResults?.size() == 1) {
             ErpAnalysisResult erpAnalysisResult = experiment.erpAnalysisResults.iterator().next()
             if (erpAnalysisResult?.erpPatternExpression) {
                 conditionOfInterest = erpAnalysisResult.erpPatternExpression.conditionOfInterest
@@ -172,8 +173,8 @@ class ErpAnalysisResultController {
         }
 
         [erpAnalysisResultInstance: new ErpAnalysisResult(params), erpDataPreprocessings: ErpDataPreprocessing.findAllByExperiment(experiment), experimentInstance: experiment
-                , conditionOfInterest: conditionOfInterest
-                , baselineCondition: baselineCondition
+         , conditionOfInterest    : conditionOfInterest
+         , baselineCondition      : baselineCondition
         ]
     }
 
@@ -266,8 +267,8 @@ class ErpAnalysisResultController {
 
 
         render view: "show", model: [erpAnalysisResultInstance: erpAnalysisResultInstance, experimentHeader: erpAnalysisResultInstance.experiment
-                , conditionOfInterest: conditionOfInterest
-                , baselineCondition: baselineCondition
+                                     , conditionOfInterest    : conditionOfInterest
+                                     , baselineCondition      : baselineCondition
         ]
     }
 
@@ -280,7 +281,7 @@ class ErpAnalysisResultController {
         }
         List<Integer> times =
                 (List<Integer>) Individual.executeQuery("select i.peakTime from Individual i where i.erpAnalysisResult = :erpAnalysisResult  group by i.peakTime order by i.peakTime asc"
-                , ["erpAnalysisResult": erpAnalysisResultInstance])
+                        , ["erpAnalysisResult": erpAnalysisResultInstance])
 
         Integer selectedTime = times.indexOf(time)
 
@@ -321,17 +322,24 @@ class ErpAnalysisResultController {
         List<Individual> individualList = Individual.findAllByErpAnalysisResultAndPeakTime(erpAnalysisResultInstance, time)
         Map<BrainLocationEnum, Individual> individualMap = new HashMap<>()
 
-        for (Individual individual in individualList) {
-            individualMap.put(individual.location, individual)
-        }
+        if (individualList && individualList?.size()>0) {
+
+            for (Individual individual in individualList) {
+                individualMap.put(individual.location, individual)
+            }
 
 //        http://purl.bioontology.org/NEMO/data/GAF-EEGcloze_Unexpected-Expected_ERP_+196_mean_intensity_MFRONT
-        String link = individualList.get(0).url
-        Integer lastIndexSlash = link.lastIndexOf("/")
-        Integer lastIndexIntensity = link.lastIndexOf("_mean_intensity")
-        link = link.substring(lastIndexSlash + 1, lastIndexIntensity)
+            String link = individualList.get(0).url
+            Integer lastIndexSlash = link.lastIndexOf("/")
+            Integer lastIndexIntensity = link.lastIndexOf("_mean_intensity")
+            link = link.substring(lastIndexSlash + 1, lastIndexIntensity)
 
-        render view: "showIndividualTable", model: [erpAnalysisResultInstance: erpAnalysisResultInstance, individuals: individualMap, times: times, currentTime: time, experimentHeader: erpAnalysisResultInstance.experiment, link: link]
+            render view: "showIndividualTable", model: [erpAnalysisResultInstance: erpAnalysisResultInstance, individuals: individualMap, times: times, currentTime: time, experimentHeader: erpAnalysisResultInstance.experiment, link: link]
+        }
+        else{
+            render view: "showIndividualTable", model: [erpAnalysisResultInstance: erpAnalysisResultInstance, individuals: individualMap, times: times, currentTime: time, experimentHeader: erpAnalysisResultInstance.experiment, link: ""]
+        }
+
     }
 
     def showIndividualLocationTable(Long id, String locationName) {
@@ -405,8 +413,8 @@ class ErpAnalysisResultController {
         }
 
         render view: "edit", model: [erpAnalysisResultInstance: erpAnalysisResultInstance, erpPatternExtractions: ErpPatternExtraction.findAllByExperiment(erpAnalysisResultInstance.experiment)
-                , conditionOfInterest: conditionOfInterest
-                , baselineCondition: baselineCondition
+                                     , conditionOfInterest    : conditionOfInterest
+                                     , baselineCondition      : baselineCondition
         ]
     }
 
@@ -629,7 +637,7 @@ class ErpAnalysisResultController {
             return
         }
 
-        Map<String, TreeSet<TermLinkContainer>> mappedInstances =  ontologyService.generatedMappedInstances(erpAnalysisResult)
+        Map<String, TreeSet<TermLinkContainer>> mappedInstances = ontologyService.generatedMappedInstances(erpAnalysisResult)
 
         Boolean edit = Boolean.valueOf(params.edit)
         return render(view: "subclass-list", model: [instances: mappedInstances, erpAnalysisResult: erpAnalysisResult, edit: edit, experimentHeader: erpAnalysisResult.experiment])

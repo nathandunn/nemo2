@@ -10,7 +10,6 @@ import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.json.client.JSONValue;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
 import org.vaadin.gwtgraphics.client.DrawingArea;
@@ -221,7 +220,7 @@ public class Search implements EntryPoint, BrainSearchable {
         searchServiceAsync.searchErps(getMinTime(), getMaxTime(), getBrainSelectedBrainLocationMap(),exactSearch, new AsyncCallback<String>() {
             @Override
             public void onFailure(Throwable caught) {
-                Window.alert("boo!" + caught.toString());
+                GWT.log("issue search for [" + exactSearch + "]:\n" + caught.toString());
                 popupPanel.hide();
             }
 

@@ -168,7 +168,8 @@ public class BrainDisplay implements EntryPoint, BrainSearchable {
         searchServiceAsync.findPeakIntensities(erpAnalysisId, selectedTime, new AsyncCallback<String>() {
             @Override
             public void onFailure(Throwable caught) {
-                Window.alert("boo!" + caught.toString());
+//                Window.alert("boo!" + caught.toString());
+                GWT.log("issue search for [" + erpAnalysisId + "] at time ["+selectedTime+"]:\n" + caught.toString());
                 popupPanel.hide();
             }
 

@@ -201,11 +201,11 @@ class ErpDataPreprocessingController {
             return
         }
 
-        if(erpDataPreprocessingInstance.dataFiles){
-            flash.message = "Disassociate ${erpDataPreprocessingInstance.dataFiles.size()} data file before deleting."
-            redirect(action: "show", id: id)
-            return
-        }
+//        if(erpDataPreprocessingInstance.dataFiles){
+//            flash.message = "Disassociate ${erpDataPreprocessingInstance.dataFiles.size()} data file before deleting."
+//            redirect(action: "show", id: id)
+//            return
+//        }
 
         try {
             erpDataPreprocessingInstance.cleaningTransformations?.clear()

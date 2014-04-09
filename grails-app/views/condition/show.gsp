@@ -60,7 +60,6 @@
 
     </table>
 
-
     <g:editable users="${conditionInstance?.experiment?.laboratory?.users}">
         <g:form>
             <fieldset class="buttons">
@@ -79,9 +78,9 @@
 
 
     <div class="indent-dependent">
-        <g:include view="stimulus/section.gsp" model="[stimuli: stimulusList]"/>
+        <g:include view="stimulus/section.gsp" model="[stimuli: stimulusList,experimentInstance:conditionInstance.experiment]"/>
 
-        <g:include view="response/section.gsp" model="[responses: responseList]"/>
+        <g:include view="response/section.gsp" model="[responses: responseList,experimentInstance:conditionInstance.experiment]"/>
     </div>
 
 </div>

@@ -8,6 +8,7 @@ class UserTagLib {
     def editable = { attrs, body ->
         def currentUser = springSecurityService.currentUser
         log.debug "has a current user ${currentUser}"
+        log.debug "attrs: ${attrs}"
         if(!currentUser) return
 
         if(userService.isAdmin(currentUser)){
@@ -17,6 +18,8 @@ class UserTagLib {
         }
 
         def users = attrs.users
+
+        log.debug "users: ${users}"
 
         if(users instanceof SecUser){
             if (currentUser == users){
@@ -28,12 +31,13 @@ class UserTagLib {
 
         def user = attrs.user ?: currentUser
 
-        log.debug "user ${currentUser}"
+        log.debug "A user! user ${attrs.user}"
+        log.debug "A user2! user ${user}"
 
         if(users){
-            println "users - ${users}"
+            log.debug "users - ${users}"
             for(u in users){
-                println "u ${u}"
+                log.debug "U ${u?.id} vs ${user.id}"
                 if(u.id == user.id){
                     out << body()
                     return

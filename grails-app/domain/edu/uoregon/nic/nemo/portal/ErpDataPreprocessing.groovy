@@ -23,7 +23,7 @@ class ErpDataPreprocessing {
         baselineLength nullable: false
 //        highpassFilterAlgorithm nullable: false
 //        lowpassFilterAlgorithm nullable: false
-        numberGoodTrials nullable: false
+        numberGoodTrials nullable: true
     }
 
     static mapping = {

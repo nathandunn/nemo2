@@ -36,7 +36,7 @@
         <fieldset class="buttons">
             <g:submitButton name="create" class="save"
                             value="${message(code: 'default.button.create.label', default: 'Create')}"/>
-            <g:link name="cancel" id="${experimentInstance.id}" class="cancel" action="list">Cancel</g:link>
+            <g:link name="cancel" class="cancel" action="list">Cancel</g:link>
         </fieldset>
     </g:form>
 </div>

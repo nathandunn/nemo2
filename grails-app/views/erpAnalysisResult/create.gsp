@@ -31,7 +31,7 @@
         <fieldset class="buttons">
             <g:submitButton name="create" class="save"
                             value="${message(code: 'default.button.create.label', default: 'Create')}"/>
-            <g:link name="cancel" class="cancel" controller="erpAnalysisResult" action="list" id="${experimentInstance.id}">Cancel</g:link>
+            <g:link name="cancel" class="cancel" controller="erpAnalysisResult" action="list">Cancel</g:link>
         </fieldset>
     </g:form>
 %{--<g:uploadForm action="save">--}%

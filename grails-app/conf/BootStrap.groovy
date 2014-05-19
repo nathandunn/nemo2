@@ -103,7 +103,7 @@ class BootStrap {
             println "re-inferring: " + erpAnalysisResult.artifactFileName
             ++ontologyServiceCount
             erpAnalysisResult.setInProcess()
-            ontologyService.inferRdfInstanceAsync(erpAnalysisResult, 'ndunn@cas.uoregon.edu')
+            ontologyService.inferRdfInstanceAsync(erpAnalysisResult, 'ndunn@me.com')
             println "re-inferring launched: " + erpAnalysisResult.artifactFileName
         }
         println "ontologies re-inferring ${ontologyServiceCount}"

@@ -9,7 +9,7 @@ class NemoMailService {
     def grailsLinkGenerator
 
     def adminUsers = [
-            'ndunn@cas.uoregon.edu',
+            'ndunn@me.com',
             'gfrishkoff@gsu.edu'
     ]
 
@@ -19,9 +19,9 @@ class NemoMailService {
             mailService.sendMail {
                 log.debug "sending mail"
                 log.debug "sending email to: " + userEmail
-                from 'ndunn@cas.uoregon.edu'
+                from 'ndunn@me.com'
                 to userEmail
-                cc 'ndunn@cas.uoregon.edu'
+                cc 'ndunn@me.com'
                 subject "Finished inferring datafile ${erpAnalysisResult.artifactFileName} "
 //                    htseq-grails/run/show/73
                 def bodyString = "Finished inferring the RDF file "
@@ -38,7 +38,7 @@ class NemoMailService {
             mailService.sendMail {
                 log.debug "sending error mail"
                 log.debug "sending error email to: " + userEmail
-                from 'ndunn@cas.uoregon.edu'
+                from 'ndunn@me.com'
                 to userEmail
                 subject "There was an error inferring the datafile ${erpAnalysisResult.artifactFileName} "
 //                    htseq-grails/run/show/73
@@ -54,8 +54,8 @@ class NemoMailService {
     def emailOtherInstitution(Laboratory laboratory) {
         mailService.sendMail {
             log.info "sending new institution mail"
-            from 'ndunn@cas.uoregon.edu'
-            to 'ndunn@cas.uoregon.edu'
+            from 'ndunn@me.com'
+            to 'ndunn@me.com'
             subject "Request for new Institution ${laboratory.institution} for Lab - ${laboratory.identifier}"
             def bodyString = "Request for new Institution \"${laboratory.institution}\" for Lab - "
             bodyString += "<a href='" + grailsLinkGenerator.link([absolute: true, action: 'show', id: laboratory.id, controller: 'laboratory']) + "'>${laboratory.identifier}</a> "
@@ -66,8 +66,8 @@ class NemoMailService {
     def emailOtherPi(Laboratory laboratory) {
         mailService.sendMail {
             log.info "sending new institution mail"
-            from 'ndunn@cas.uoregon.edu'
-            to 'ndunn@cas.uoregon.edu'
+            from 'ndunn@me.com'
+            to 'ndunn@me.com'
             subject "Request for new PI ${laboratory.principalInvestigatorRole} for Lab - ${laboratory.identifier}"
 //                    htseq-grails/run/show/73
             def bodyString = "Request for new PI \"${laboratory.principalInvestigatorRole}\" for Lab - "
@@ -80,7 +80,7 @@ class NemoMailService {
     def emailAdministratorsNewUser(SecUser newUser){
         def conf = SpringSecurityUtils.securityConfig
         mailService.sendMail {
-            to 'ndunn@cas.uoregon.edu'
+            to 'ndunn@me.com'
             from conf.ui.register.emailFrom
             subject "Registered new user ${newUser.fullName} - ${newUser.username}"
             def bodyString = "Registered new user [${newUser.username}] - "

@@ -17,7 +17,7 @@
         <br/>
         <br/>
         Please send any details of what your were doing to <a
-            href="mailto:ndunn@cas.uoregon.edu?subject=NEMO Error&body=Error Details">the site administrator</a> for a speedier resolution.
+            href="mailto:ndunn@me.com?subject=NEMO Error&body=Error Details">the site administrator</a> for a speedier resolution.
     </div>
     <br/>
 

@@ -39,12 +39,12 @@ class ExperimentController {
             if (relatedClass.contains("ExperimentalParadigm")) {
                 ExperimentalParadigm experimentalParadigm = ExperimentalParadigm.findById(relatedID)
                 List<Experiment> experimentList =
-                    Experiment.executeQuery("select e from Experiment e join e.experimentalParadigms ep where ep=:paradigm "
-                            , [paradigm: experimentalParadigm], params)
+                        Experiment.executeQuery("select e from Experiment e join e.experimentalParadigms ep where ep=:paradigm "
+                                , [paradigm: experimentalParadigm], params)
                 def count = experimentList?.size()
-                [experimentInstanceList: experimentList
-                        , experimentInstanceTotal: count
-                        , related: experimentalParadigm]
+                [experimentInstanceList   : experimentList
+                 , experimentInstanceTotal: count
+                 , related                : experimentalParadigm]
             }
         } else {
             def experiments = Experiment.list(params)
@@ -140,17 +140,16 @@ class ExperimentController {
 
 
         [
-                experimentInstance: experimentInstance
+                experimentInstance       : experimentInstance
                 , erpDataPreprocessingSet: experimentInstance.erpDataPreprocessings
-                , publications: experimentInstance.publications
-                , subjectGroups: subjectGroups
-                , conditions: conditions
-                , stimuli: stimuli
-                , responses: responses
-                , eegDataCollections: experimentInstance.eegDataCollections
+                , publications           : experimentInstance.publications
+                , subjectGroups          : subjectGroups
+                , conditions             : conditions
+                , stimuli                : stimuli
+                , responses              : responses
+                , eegDataCollections     : experimentInstance.eegDataCollections
         ]
     }
-
 
 
     @Secured(['ROLE_VERIFIED'])
@@ -303,8 +302,13 @@ class ExperimentController {
         if (!experiment) render ""
 //        String headItLink = experiment.createHeadItLink()
         String urlString = "http://headit.aciss.uoregon.edu/studies/${experiment.headItLink}/description"
-        URL url = new URL(urlString)
-        String content = url.getContent()
+        String content = ""
+        try {
+            URL url = new URL(urlString)
+            content = url.getContent()
+        } catch (e) {
+//            urlString = "http://headit.aciss.uoregon.edu/studies/${experiment.headItLink}"
+        }
         if (content.size() < 10) {
             urlString = "http://headit.aciss.uoregon.edu/studies/${experiment.headItLink}"
         }
